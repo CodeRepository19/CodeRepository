@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />	
+
+			<!-- Bootstrap library, font-awesome library, custom css references -->			
+			<link rel="stylesheet" href="assets/css/Header.css">
+			<link rel="stylesheet" href="assets/css/bootstrap.3.3.7.min.css">
+			<link rel="stylesheet" href="assets/css/Scrooltop.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+			<!-- Js files -->
+			<script src="assets/js/jquery-3.1.1.min.js"></script>
+			
+			<!-- Favicon icon -->
+			<link rel="shortcut icon" href="assets/icon/favicon.ico">
+
+			<title>String Methods</title>
+			
+			<!-- FONT FAMILY -->
+			<style>
+				body,xmp {
+				font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+				}	
+			</style>
+							
+			<script>
+			
+				<!-- Script for Scroll top event -->
+				$(document).ready(function() {
+				var btn = $('#button');
+				$(window).scroll(function() {
+				if ($(window).scrollTop() > 20 ) {
+				btn.addClass('show');
+				} else {
+				btn.removeClass('show');
+				}
+				});
+				btn.on('click', function(e) {
+				e.preventDefault();
+				$('html, body	').animate({scrollTop:0}, '20');
+				});
+				});
+				
+				<!--Script for Copy Code -->
+			function divcopy() {
+			var copyobject=$("#srcdiv").clone();
+			var $temp = $("<input>");
+			$("body").append($temp);
+			var myJSON = copyobject.html();;
+			$temp.val(myJSON).select();
+			document.execCommand("copy");
+			$temp.remove();
+			var tooltip = document.getElementById("myTooltip");
+			tooltip.title = "Copied";
+			}
+			function outFunc() {
+			var tooltip = document.getElementById("myTooltip");
+			tooltip.title = "Copy to Clipboard";
+			}
+			</script>
+
+			</head>
+<body>
+
+	<!-- Scroll top anchor tag -->
+		<a id="button"></a>
+		
+<!-- Page Header -->
+	<div class="page-title container-fluid">
+				<div class="container">
+					<div class="row">
+						<div class="span12" style="margin-top:7px;">                        						
+							<h2>JavaScript</h2>
+							<p>Source code & Example</p>
+							<a href = "index.html"><i class="fa fa-home fa-3x pull-right" style = "color: white;" aria-hidden="true"></i></a>						
+							</div>					
+					</div>
+				</div>
+			</div>
+
+<div class = "container" style="padding-bottom:5%;">
+<div class = "row">
+<h3><strong><xmp>String Methods Example:</xmp></strong></h3>
+<div class = "col-md-7">
+<h3><b>Source Code:</b></h3>
+<div  style = "overflow:scroll;">
+<button type="button" onmouseout="outFunc()" class="pull-right btn btn-dark" id = "divtarget" onClick="divcopy()">
+<span id="myTooltip" title="Copy to Clipboard"  class="fa fa-copy" style="font-size:25px;"></span>
+</button>
+<xmp id = "srcdiv">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>	
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" >  </script>
+<title>String Methods</title>
+</head>
+<body>
+<div>
+<script type="text/javascript">
+document.writeln("<strong>charAt(position) Method: </strong>" + "<br>"); 
+var msg = new String( "Hello World;" );
+document.writeln(" var msg = "+ msg + "<br>"); 
+document.writeln(" var result = msg.charAt(2);" + "<br>"); 
+var result=msg.charAt(1);  
+document.writeln("<strong>Output</strong> : " + msg.charAt(1)); 
+document.writeln("<hr>"); 
+
+document.writeln("<strong>charCodeAt(position) Method: </strong>" + "<br>"); 
+var msg = new String( "Hello World;" );
+document.writeln(" var msg = "+ msg + "<br>"); 
+document.writeln(" var result = msg.charCodeAt(2);" + "<br>"); 
+var result=msg.charCodeAt(1);  
+document.writeln("<strong>Output</strong> : " + msg.charCodeAt(1)); 
+document.writeln("<hr>"); 
+
+document.writeln("<strong>concat([string,,]) Method: </strong>" + "<br>"); 
+var str1 = new String( "Hello " );
+var str2 = new String( "World;" );
+document.writeln(" var str1 = "+ str1 + "<br>"); 
+document.writeln(" var str2 = "+ str2 + "<br>"); 
+document.writeln(" var result = str1.concat(str2);" + "<br>"); 
+var result=str1.concat(str2);  
+document.writeln("<strong>Output</strong> : " + str1.concat(str2)); 
+document.writeln("<hr>");
+
+document.writeln("<strong>indexOf(SearchString, Position) Method: </strong>" + "<br>"); 
+var str = "Hello, Here we done JavaScript String Method examples;";
+document.writeln(" var str = "+ str + "<br>"); 
+var result = str.indexOf('JavaScript');
+document.writeln(" var result = str.indexOf('JavaScript');" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.indexOf("JavaScript")); 
+document.writeln("<hr>"); 
+
+document.writeln("<strong>lastIndexOf(SearchString, Position) Method: </strong>" + "<br>"); 
+var str = "Hello, Here we done JavaScript String Method examples;";
+document.writeln(" var str = "+ str + "<br>"); 
+var result = str.lastIndexOf('examples');
+document.writeln(" var result = str.lastIndexOf('examples');" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.lastIndexOf("examples")); 
+document.writeln("<hr>");
+
+document.writeln("<strong>lastIndexOf(SearchString, Position) Method: </strong>" + "<br>"); 
+var str1 = new String( "These are String Methods examples;" );
+document.writeln(" var str = "+ str1 + "<br>");
+var result = str1.localeCompare( "JavScript" ); 
+document.writeln(" var result1 = str1.localeCompare('JavScript');" + "<br>");
+document.writeln("<strong>Output</strong> : " + str1.localeCompare("JavScript") + "<br>");  
+var index = str1.localeCompare( "Position ?");
+document.writeln(" var result2 = str1.localeCompare('Position ?');" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str1.localeCompare("Position ?")); 
+document.writeln("<hr>");
+
+document.writeln("<strong>match(RegExp) Method: </strong>" + "<br>"); 
+var str = "These are the String Methods Examples;";
+document.writeln(" var str = "+ str + "<br>");
+var result = str.match(/the/g); 
+document.writeln(" var result = str.match(/the/g);" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.match(/the/g)); 
+document.writeln("<hr>"); 
+
+document.writeln("<strong>replace(searchValue, replaceValue) Method: </strong>" + "<br>"); 
+var str = "Visit Code Repository for jQuery!;";
+document.writeln(" var str = "+ str + "<br>");
+var result = str.replace("jQuery", "JavaScript");
+document.writeln(" var result = str.replace('jQuery', 'JavaScript');" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.replace("jQuery", "JavaScript")); 
+document.writeln("<hr>");
+
+document.writeln("<strong>search(RegExp) Method: </strong>" + "<br>"); 
+var str = "Visit Code Repository for JavaScript;";
+document.writeln(" var str = "+ str + "<br>");
+var result = str.search(/JavaScript/i);
+document.writeln(" var result = str.search(/JavaScript/i);" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.search(/JavaScript/i)); 
+document.writeln("<hr>");
+
+document.writeln("<strong>slice(startNumber, endNumber) Method: </strong>" + "<br>"); 
+var str = "Visit Code Repository for JavaScript;";
+document.writeln(" var str = "+ str + "<br>");
+var result = str.slice(0, 5);
+document.writeln(" var result = str.slice(0, 5);" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.slice(0, 5)); 
+document.writeln("<hr>");
+
+document.writeln("<strong>slice(startNumber, endNumber) Method: </strong>" + "<br>"); 
+var str = "Visit Code Repository for JavaScript;";
+document.writeln(" var str = "+ str + "<br>");
+var result1 = str.split(" ");
+var result2= str.split(" ","2");
+document.writeln(" var result1 = str.split(' ');" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.split(' ')+"<br>"); 
+document.writeln(" var result2 = str.split(' ',2);" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.split(' ',2)); 
+document.writeln("<hr>");
+
+document.writeln("<strong>substr(start, length) Method: </strong>" + "<br>"); 
+var str = "Visit Code Repository for JavaScript;";
+document.writeln(" var str = "+ str + "<br>");
+var result = str.substr(0, 5);
+document.writeln(" var result = str.substr(0, 5);" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.substr(0,5)); 
+document.writeln("<hr>");
+
+document.writeln("<strong>substr(start, length) Method: </strong>" + "<br>"); 
+var str = "Visit Code Repository for JavaScript;";
+document.writeln(" var str = "+ str + "<br>");
+var result1 = str.substring(1, 3);
+var result2 = str.substring(3);
+document.writeln(" var result1 = str.substring(1, 3);" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.substring(1, 3)+"<br>"); 
+document.writeln(" var result2 = str.substring(3);" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.substring(3)); 
+document.writeln("<hr>");
+
+document.writeln("<strong>toLocaleLowerCase() Method: </strong>" + "<br>"); 
+var str = "Visit Code Repository for JavaScript;";
+document.writeln(" var str = "+ str + "<br>");
+var result = str.toLocaleLowerCase();
+document.writeln(" var result = str.toLocaleLowerCase();" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.toLocaleLowerCase()); 
+document.writeln("<hr>");
+
+document.writeln("<strong>toLocaleUpperCase() Method: </strong>" + "<br>"); 
+var str = "Visit Code Repository for JavaScript;";
+document.writeln(" var str = "+ str + "<br>");
+var result = str.toLocaleUpperCase();
+document.writeln(" var result = str.toLocaleUpperCase();" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.toLocaleUpperCase()); 
+document.writeln("<hr>");
+
+document.writeln("<strong>toLowerCase() Method: </strong>" + "<br>"); 
+var str = "Visit Code Repository for JavaScript;";
+document.writeln(" var str = "+ str + "<br>");
+var result = str.toLowerCase();
+document.writeln(" var result = str.toLowerCase();" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.toLowerCase()); 
+document.writeln("<hr>");
+
+document.writeln("<strong>toString()  Method: </strong>" + "<br>"); 
+var number = 1500;
+document.writeln(" var number = "+ number + "<br>");
+var result = number.toString();
+document.writeln(" var result = number.toString();" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + number.toString()); 
+document.writeln("<hr>");
+
+document.writeln("<strong>toUpperCase() Method: </strong>" + "<br>"); 
+var str = "Visit Code Repository for JavaScript;";
+document.writeln(" var str = "+ str + "<br>");
+var result = str.toUpperCase();
+document.writeln(" var result = str.toUpperCase();" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.toUpperCase()); 
+document.writeln("<hr>");
+
+document.writeln("<strong>valueOf() Method: </strong>" + "<br>"); 
+var str = "Visit Code Repository for JavaScript;";
+var num = 1500;
+document.writeln(" var str = "+ str + "<br>");
+document.writeln(" var num = "+ num + "<br>");
+var result1 = str.valueOf();
+var result2 = num.valueOf();
+document.writeln(" var result1 = str.valueOf();" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.valueOf()+"<br>"); 
+document.writeln(" var result2 = num.valueOf();" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + num.valueOf()); 
+document.writeln("<hr>");
+</script>
+</div>
+</body>
+</html>
+</xmp>
+</div>
+</div>
+<div class = "col-md-5">
+<h3><b>Output:</b></h3>
+<script type="text/javascript">
+
+<!-- charAt(position) -->
+document.writeln("<strong>charAt(position) Method: </strong>" + "<br>"); 
+var msg = new String( "Hello World;" );
+document.writeln(" var msg = "+ msg + "<br>"); 
+document.writeln(" var result = msg.charAt(2);" + "<br>"); 
+var result=msg.charAt(1);  
+document.writeln("<strong>Output</strong> : " + msg.charAt(1)); 
+document.writeln("<hr>"); 
+
+<!-- charCodeAt(position) -->
+document.writeln("<strong>charCodeAt(position) Method: </strong>" + "<br>"); 
+var msg = new String( "Hello World;" );
+document.writeln(" var msg = "+ msg + "<br>"); 
+document.writeln(" var result = msg.charCodeAt(2);" + "<br>"); 
+var result=msg.charCodeAt(1);  
+document.writeln("<strong>Output</strong> : " + msg.charCodeAt(1)); 
+document.writeln("<hr>"); 
+
+<!-- concat([string,,]) -->
+document.writeln("<strong>concat([string,,]) Method: </strong>" + "<br>"); 
+var str1 = new String( "Hello " );
+var str2 = new String( "World;" );
+document.writeln(" var str1 = "+ str1 + "<br>"); 
+document.writeln(" var str2 = "+ str2 + "<br>"); 
+document.writeln(" var result = str1.concat(str2);" + "<br>"); 
+var result=str1.concat(str2);  
+document.writeln("<strong>Output</strong> : " + str1.concat(str2)); 
+document.writeln("<hr>");
+
+<!-- indexOf(SearchString, Position) -->
+document.writeln("<strong>indexOf(SearchString, Position) Method: </strong>" + "<br>"); 
+var str = "Hello, Here we done JavaScript String Method examples;";
+document.writeln(" var str = "+ str + "<br>"); 
+var result = str.indexOf('JavaScript');
+document.writeln(" var result = str.indexOf('JavaScript');" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.indexOf("JavaScript")); 
+document.writeln("<hr>"); 
+
+<!-- lastIndexOf(SearchString, Position) -->
+document.writeln("<strong>lastIndexOf(SearchString, Position) Method: </strong>" + "<br>"); 
+var str = "Hello, Here we done JavaScript String Method examples;";
+document.writeln(" var str = "+ str + "<br>"); 
+var result = str.lastIndexOf('examples');
+document.writeln(" var result = str.lastIndexOf('examples');" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.lastIndexOf("examples")); 
+document.writeln("<hr>");
+
+<!-- localeCompare(string,position) -->
+document.writeln("<strong>lastIndexOf(SearchString, Position) Method: </strong>" + "<br>"); 
+var str1 = new String( "These are String Methods examples;" );
+document.writeln(" var str = "+ str1 + "<br>");
+var result = str1.localeCompare( "JavScript" ); 
+document.writeln(" var result1 = str1.localeCompare('JavScript');" + "<br>");
+document.writeln("<strong>Output</strong> : " + str1.localeCompare("JavScript") + "<br>");  
+var index = str1.localeCompare( "Position ?");
+document.writeln(" var result2 = str1.localeCompare('Position ?');" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str1.localeCompare("Position ?")); 
+document.writeln("<hr>");
+
+<!-- match(RegExp) -->
+document.writeln("<strong>match(RegExp) Method: </strong>" + "<br>"); 
+var str = "These are the String Methods Examples;";
+document.writeln(" var str = "+ str + "<br>");
+var result = str.match(/the/g); 
+document.writeln(" var result = str.match(/the/g);" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.match(/the/g)); 
+document.writeln("<hr>"); 
+
+<!-- replace(searchValue, replaceValue) -->
+document.writeln("<strong>replace(searchValue, replaceValue) Method: </strong>" + "<br>"); 
+var str = "Visit Code Repository for jQuery!;";
+document.writeln(" var str = "+ str + "<br>");
+var result = str.replace("jQuery", "JavaScript");
+document.writeln(" var result = str.replace('jQuery', 'JavaScript');" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.replace("jQuery", "JavaScript")); 
+document.writeln("<hr>");
+
+<!-- search(RegExp) -->
+document.writeln("<strong>search(RegExp) Method: </strong>" + "<br>"); 
+var str = "Visit Code Repository for JavaScript;";
+document.writeln(" var str = "+ str + "<br>");
+var result = str.search(/JavaScript/i);
+document.writeln(" var result = str.search(/JavaScript/i);" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.search(/JavaScript/i)); 
+document.writeln("<hr>");
+
+<!-- slice(startNumber, endNumber) -->
+document.writeln("<strong>slice(startNumber, endNumber) Method: </strong>" + "<br>"); 
+var str = "Visit Code Repository for JavaScript;";
+document.writeln(" var str = "+ str + "<br>");
+var result = str.slice(0, 5);
+document.writeln(" var result = str.slice(0, 5);" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.slice(0, 5)); 
+document.writeln("<hr>");
+
+<!-- split(separatorString, limitNumber) -->
+document.writeln("<strong>slice(startNumber, endNumber) Method: </strong>" + "<br>"); 
+var str = "Visit Code Repository for JavaScript;";
+document.writeln(" var str = "+ str + "<br>");
+var result1 = str.split(" ");
+var result2= str.split(" ","2");
+document.writeln(" var result1 = str.split(' ');" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.split(' ')+"<br>"); 
+document.writeln(" var result2 = str.split(' ',2);" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.split(' ',2)); 
+document.writeln("<hr>");
+
+<!-- substr(start, length) -->
+document.writeln("<strong>substr(start, length) Method: </strong>" + "<br>"); 
+var str = "Visit Code Repository for JavaScript;";
+document.writeln(" var str = "+ str + "<br>");
+var result = str.substr(0, 5);
+document.writeln(" var result = str.substr(0, 5);" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.substr(0,5)); 
+document.writeln("<hr>");
+
+<!-- substring(start, end) -->
+document.writeln("<strong>substr(start, length) Method: </strong>" + "<br>"); 
+var str = "Visit Code Repository for JavaScript;";
+document.writeln(" var str = "+ str + "<br>");
+var result1 = str.substring(1, 3);
+var result2 = str.substring(3);
+document.writeln(" var result1 = str.substring(1, 3);" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.substring(1, 3)+"<br>"); 
+document.writeln(" var result2 = str.substring(3);" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.substring(3)); 
+document.writeln("<hr>");
+
+<!-- toLocaleLowerCase() -->
+document.writeln("<strong>toLocaleLowerCase() Method: </strong>" + "<br>"); 
+var str = "Visit Code Repository for JavaScript;";
+document.writeln(" var str = "+ str + "<br>");
+var result = str.toLocaleLowerCase();
+document.writeln(" var result = str.toLocaleLowerCase();" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.toLocaleLowerCase()); 
+document.writeln("<hr>");
+
+<!-- toLocaleUpperCase() -->
+document.writeln("<strong>toLocaleUpperCase() Method: </strong>" + "<br>"); 
+var str = "Visit Code Repository for JavaScript;";
+document.writeln(" var str = "+ str + "<br>");
+var result = str.toLocaleUpperCase();
+document.writeln(" var result = str.toLocaleUpperCase();" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.toLocaleUpperCase()); 
+document.writeln("<hr>");
+
+<!-- toLowerCase() -->
+document.writeln("<strong>toLowerCase() Method: </strong>" + "<br>"); 
+var str = "Visit Code Repository for JavaScript;";
+document.writeln(" var str = "+ str + "<br>");
+var result = str.toLowerCase();
+document.writeln(" var result = str.toLowerCase();" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.toLowerCase()); 
+document.writeln("<hr>");
+
+<!-- toString()  -->
+document.writeln("<strong>toString()  Method: </strong>" + "<br>"); 
+var number = 1500;
+document.writeln(" var number = "+ number + "<br>");
+var result = number.toString();
+document.writeln(" var result = number.toString();" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + number.toString()); 
+document.writeln("<hr>");
+
+<!-- toUpperCase() -->
+document.writeln("<strong>toUpperCase() Method: </strong>" + "<br>"); 
+var str = "Visit Code Repository for JavaScript;";
+document.writeln(" var str = "+ str + "<br>");
+var result = str.toUpperCase();
+document.writeln(" var result = str.toUpperCase();" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.toUpperCase()); 
+document.writeln("<hr>");
+
+<!-- valueOf() -->
+document.writeln("<strong>valueOf() Method: </strong>" + "<br>"); 
+var str = "Visit Code Repository for JavaScript;";
+var num = 1500;
+document.writeln(" var str = "+ str + "<br>");
+document.writeln(" var num = "+ num + "<br>");
+var result1 = str.valueOf();
+var result2 = num.valueOf();
+document.writeln(" var result1 = str.valueOf();" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + str.valueOf()+"<br>"); 
+document.writeln(" var result2 = num.valueOf();" + "<br>"); 
+document.writeln("<strong>Output</strong> : " + num.valueOf()); 
+document.writeln("<hr>");
+
+</script>
+
+
+</div>
+</div>
+</div>
+
+<!-- Footer -->
+        <footer>
+            <div class="container-fluid">                               
+                <div class="row">
+                    <div class="copyright text-center">
+                        <p>Copyright 2019 - All rights reserved.</p>
+                    </div>                    
+                </div>
+            </div>
+        </footer>
+
+</body>
+</html>

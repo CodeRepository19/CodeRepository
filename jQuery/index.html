@@ -1,0 +1,2006 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+		<meta charset="utf-8">
+		<title>jQuery Code Repository</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Bootstrap library, font-awesome library, custom css references -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">   
+		<link rel="stylesheet" href="assets/css/style.css"> 
+		<link rel="stylesheet" href="assets/css/Scrooltop.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- jQuery UI and Custom CSS files -->
+		<link rel="stylesheet" href="assets/css/jQuery_Custom.css">
+		<link rel="stylesheet" href="assets/css/jquery-ui.css">
+
+		<!-- jQuery UI and jQuery library files -->
+		<script src="assets/js/jquery.js"></script>
+		<script src="assets/js/jquery-ui.js"></script>
+
+		<!-- Favicon icon -->
+		<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+
+		<!-- FONT FAMILY -->
+		<style>
+			body,xmp {
+			font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+			}	
+		</style>
+		
+		<script>
+		
+		<!-- Script for Scroll top event -->
+				$(document).ready(function() {
+				var btn = $('#button');
+				$(window).scroll(function() {
+				if ($(window).scrollTop() > 500 ) {
+				btn.addClass('show');
+				} else {
+				btn.removeClass('show');
+				}
+				});
+				btn.on('click', function(e) {
+				e.preventDefault();
+				$('html, body	').animate({scrollTop:0}, '500');
+				});
+				});
+				
+		$(function(){
+		$('#tabs,#tabs1,#tabs2,#tabs3,#tabs4,#tabs5').tabs({
+		collapsible:true,
+		show:'slide',
+		});
+		});
+				
+		$(document).ready(function()
+		{
+		$(".html-code").hide();
+		$(".codebox-title").on('click', function(event)
+		{
+		$(this).siblings(".html-code").fadeToggle(300);
+		});
+		});
+		</script>
+
+</head>
+
+<body>
+
+	<!-- Scroll top anchor tag -->
+		<a id="button"></a>
+		
+<!-- Page Header -->
+<div class="page-title container-fluid">
+<div class="container">
+<div class="row" style ="display:flex;">
+<div style="width:12%;">         						
+<strong><p style="font-size:35px;">SpSoft</p></strong><br>
+<!-- <p style="font-size:10px;">Code Repository</p> -->
+</div>
+<div style="border-left: 2px solid white;margin-top:7px;margin-bottom:7px;"></div>
+<div class="span12" style="margin-left:8px;margin-top:3px;">                      						
+<h2>jQuery</h2>
+<p>Here are the Examples and Reference Links</p>
+<a href = "..\index.html"><i class="fa fa-home fa-3x pull-right" style = "color: white;" aria-hidden="true"></i></a>						
+</div>					
+</div>
+</div>
+</div>
+<p class = "pull-left Refp">Last Updated : 21-Jan-2019</p>			
+<a class = "pull-right Refa" target="_blank" href = "References.html">Reference Url's</a>	
+
+<!-- Body Content Starts Here -->
+<div class="container tagcontainer">		 			
+<!-- Section for jQuery introduction -->
+<div class="introclass">
+<h2 >Basic Flow of a jQuery Application </h2>
+<blockquote>
+<p>Most jQuery applications will follow a sequence of steps like:</p>
+Locate one or more page elements according to some criteria.
+<aside>Perform some action(s) on those elements: like Modify CSS, Modify HTML, Add event handlers Etc.</aside>
+</blockquote>
+<h2 >Adding jQuery to Your Web Pages</h2>
+<blockquote>
+<p>We can include jQuery on our web pages by following ways:</p>
+Download the jQuery library from jQuery.com and include in the head section of web page as shown below
+<aside>
+<pre>
+<code>
+&lt;script src="jquery-3.3.1.min.js"&gt;&lt;/script&gt;
+</code>
+</pre>
+</aside>
+<aside>Include jQuery from a CDN, like Google as shown below</aside>
+<aside>
+<pre>
+<code>
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;
+</code>
+</pre>
+</aside>
+</blockquote>
+</div>
+
+<!-- Section for jQuery Topics -->
+<div class="example">
+
+<!-- Section for jQuery document ready function -->
+<div class="codebox">
+<div class="codebox-title"><h4>jQuery ready() Method</h4></div>
+<ul class="html-code"> 
+<blockquote>
+<p>A page can't be manipulated safely until the document is "ready." jQuery detects this state of readiness for you.
+Code included inside <strong>$(document).ready()</strong> will only run once the page Document Object Model (DOM) is ready for JavaScript code to execute.
+Code included inside <strong>$(window).on("load",function() { ... })</strong> will run once the entire page (images or iframes), not just the DOM, is ready.
+</p>
+</blockquote>
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+// A $(document).ready() block.
+$(document).ready(function() {
+console.log("ready!");
+});
+</script> 
+</xmp>
+</span>
+</div><br>
+<blockquote>
+<p>We can write <strong>$(document).ready()</strong> in shorthand <strong>$()</strong> form .</p>
+</blockquote>
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+// Shorthand for $(document).ready()
+$(function() {
+console.log("ready!");
+});
+</script> 
+</xmp>
+</span>
+</div><br>
+<blockquote>
+<p>You can also pass a named function to <strong>$(document).ready()</strong> instead of passing an anonymous function.</p>
+</blockquote>
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(mycustomFn);
+// or:
+$(window).on( "load", mycustomFn );
+// Below is the function which is to be called in ready function instead of an anonymous function.
+function mycustomFn(jQuery) {
+// Code to run when the document is ready.
+}
+</script> 
+</xmp>
+</span>
+</div><br>
+<blockquote>
+<p>The example below shows <strong>$(document).ready()</strong> and <strong>$(window).on("load")</strong> in action. The code tries to load a website URL in an <strong>&lt;iframe&gt;</strong> and checks for both events:</p>
+</blockquote>
+<div id="tab-1">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="JQueryWindowLoad.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+$(document).ready(function() {
+console.log("document loaded");
+});
+$(window).on("load", function() {
+console.log( "window loaded");
+});
+</script>
+</head>
+<body>
+<iframe src="http://techcrunch.com"></iframe>
+</body>
+</html>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+</ul>
+</div>
+
+<!-- Section for jQuery ajax function -->
+<div class="codebox">
+<div class="codebox-title"><h4>jQuery - AJAX</h4></div>
+<ul class="html-code"> 
+<p>
+AJAX is used for exchanging data with a server, and updating parts of a web page - without reloading the whole page.
+Using jQuery AJAX methods we can request text, HTML, XML, or JSON from a remote 
+server using both HTTP Get and HTTP Post methods and you can load the external data directly into the selected HTML elements of our web page
+</p>
+<div id="tabs">
+<ul>
+<li><a href="#tab-1">jQuery load() Method</a></li>
+<li><a href="#tab-2">jQuery $.get() Method</a></li>
+<li><a href="#tab-3">jQuery $.post() Method</a></li>
+</ul>
+
+<div id="tab-1">
+<p>
+The jQuery <strong>load()</strong> method is a simple, but powerful AJAX method. The <strong>load()</strong> method loads data from a server and puts the returned data into the selected element.
+The following example loads the content of the file "testdata.txt" into a specific <strong>&lt;div&gt;</strong> element:
+</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="JqueryLoad.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("button").click(function(){
+$("#maindiv").load("testdata.txt");
+});
+});
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<div id="tab-2">
+<p>The <strong>$.get()</strong> method requests data from the server with an HTTP GET request.</p>
+<p><strong>Syntax:</strong>&nbsp;&nbsp;$.get(<i>URL,callback</i>);</p>
+<p>The required URL parameter specifies the URL you wish to request.</p>
+<p>The optional callback parameter is the name of a function to be executed if the request succeeds.</p>
+<p>The following example uses the <strong>$.get()</strong> method to retrieve data from a file on the server:</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="JqueryAjaxGet.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("button").click(function(){
+$.get("home.aspx", function(data, status){
+alert("Data: " + data + "\nStatus: " + status);
+});
+});
+});
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<div id="tab-3">
+<p>The <strong>$.post()</strong> method requests data from the server using an HTTP POST request.</p>
+<p><strong>Syntax:</strong>&nbsp;&nbsp;$.post(<i>URL,data,callback</i>);</p>
+<p>The required URL parameter specifies the URL you wish to request.</p>
+<p>The optional data parameter specifies some data to send along with the request.</p>
+<p>The following example uses the <strong>$.post()</strong> method to send some data along with the request:</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="JqueryAjaxPost.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("button").click(function(){
+$.post("submitPage_post.aspx",
+{
+name: "Ramesh",
+city: "Hyderabad"
+},
+function(data,status){
+alert("Data: " + data + "\nStatus: " + status);
+});
+});
+});
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+</div>
+</ul>
+</div>
+
+<!-- Section for jQuery Selectors -->
+<div class="codebox">
+<div class="codebox-title"><h4>jQuery - Selectors</h4></div>
+<ul class="html-code">    
+<p>There are several selectors available for jQuery But All the jQuery selectors are based on the same principle except some tweaking. we have listed some important selectors that are used in most frequently</p>						
+<div id="tabs">
+<ul>
+<li><a href="#tab-1">Tag ID Selector</a></li>
+<li><a href="#tab-2">Tag Class Selector</a></li>
+<li><a href="#tab-3">Tag Name Selector</a></li>
+<li><a href="#tab-4">Attribute Selector</a></li>
+<li><a href="#tab-5">Compound Selector</a></li>
+<li><a href="#tab-6">Custom Selector</a></li>
+</ul>
+
+<div id="tab-1">
+<p>The Tag ID selector selects a single element with the unique ID on the page.
+For example, the following jQuery code will select and highlight an element having the ID attribute id="elementid", when the document is ready.
+</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="TagIdSelector.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("#elementid").css("background", "yellow");
+});
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<div id="tab-2">
+<p>The Tag Class selector selects the elements with a specific class Name in Document. For example, the following jQuery code will select and highlight the elements having the class attribute class="highlight" when the document is ready.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="TagClassSelector.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$(".highlight").css("background", "yellow");
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<div id="tab-3">
+<p>The Tag name selector selects the elements based on the element name in the DOM. For example,the following jQuery code will select and highlight all the tables when the document is ready.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="TagNameSelector.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("table").css("background", "yellow");
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<div id="tab-4">
+<p>The Tag attribute selector selects an element by one of its HTML attributes, such as a link's href attribute or an input's type attribute, etc. For example, the following jQuery code will select and highlight all the text inputs i.e. textbox elements with the type="text", when the document is ready.
+</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="AttributeSelector.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+// Highlight paragraph elements
+$('input[type="text"]').css("background", "yellow");
+});
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<div id="tab-5">
+<p>Compound selector means combining the multiple selectors to make your selection even more precise. For instance, you can combine the class selector with an element selector to find the elements in a document that has certain type and class.
+</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="CompoundCssSelector.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+// Highlight only paragraph elements with class mark
+$("p.mark").css("background", "yellow");
+
+// Highlight only span elements inside the element with ID mark
+$("#mark span").css("background", "yellow");
+
+// Highlight li elements inside the ul elements
+$("ul li").css("background", "red");
+
+// Highlight li elements only inside the ul element with id mark
+$("ul#mark li").css("background", "yellow");
+
+// Highlight li elements inside all the ul element with class mark
+$("ul.mark li").css("background", "green");
+
+// Highlight all anchor elements with target blank
+$('a[target="_blank"]').css("background", "yellow");
+});
+</script>  
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<div id="tab-6">
+<p>jQuery provides its own custom selectors to further enhancing the capabilities of selecting elements on a page.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="CustomSelector.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+// Highlight table rows appearing at odd places
+$("tr:odd").css("background", "yellow");
+
+// Highlight table rows appearing at even places
+$("tr:even").css("background", "orange");
+
+// Highlight first paragraph element
+$("p:first").css("background", "red");
+
+// Highlight last paragraph element
+$("p:last").css("background", "green");
+
+// Highlight all input elements with type text inside a form
+$("form :text").css("background", "purple");
+
+// Highlight all input elements with type password inside a form
+$("form :password").css("background", "blue");
+
+// Highlight all input elements with type submit inside a form
+$("form :submit").css("background", "violet");
+});
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+					
+</div>
+</ul>
+</div>
+
+<!-- Section for jQuery Effects -->
+<div class="codebox">
+<div class="codebox-title"><h4>jQuery - Effects</h4></div>
+<ul class="html-code">    				
+<div id="tabs">
+<ul>
+<li><a href="#tab-1">Animate</a></li>
+<li><a href="#tab-2">Callback</a></li>
+<li><a href="#tab-3">Chaining</a></li>
+<li><a href="#tab-4">Fade in & Fade Out</a></li>
+<li><a href="#tab-5">Hide/Show</a></li>
+<li><a href="#tab-6">Slide</a></li>
+<li><a href="#tab-7">stop()</a></li>
+</ul>
+
+<div id="tab-1">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Animation.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("button").click(function(){
+$(".box")
+.animate({width: "300px"})
+.animate({height: "300px"})
+.animate({marginLeft: "150px"})
+.animate({borderWidth: "10px"})
+.animate({opacity: 0.5});
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<div id="tab-2">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Callback.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+<!-- Script for jQuery with callback function-->
+$(document).ready(function(){
+$("#btn1").click(function(){
+$("#div1").slideToggle("slow", function(){
+alert("The slide toggle effect has completed.");
+});
+});   
+});				
+<!-- Script for jQuery without callback function-->
+$(document).ready(function(){
+$("#btn2").click(function(){
+$("#div1").slideToggle("slow");
+alert("The slide toggle effect has completed.");
+});   
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<div id="tab-3">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Chaining.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("#btn1").click(function(){
+$("#div1")					
+.animate({width: "100%"})
+.animate({fontSize: "20px"})					
+.animate({borderWidth: 30});
+});      			
+$("#btn2").click(function(){
+$("#div1").removeAttr("style");
+});
+});  
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<div id="tab-4">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="FadeInandOut.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$(".btn-info").click(function(){
+$("p.normal").fadeOut();
+$("p.fast").fadeOut("fast");
+$("p.slow").fadeOut("slow");
+$("p.very-fast").fadeOut(50);
+$("p.very-slow").fadeOut(2000);
+});
+$(".btn-warning").click(function(){
+$("p.normal").fadeIn();
+$("p.fast").fadeIn("fast");
+$("p.slow").fadeIn("slow");
+$("p.very-fast").fadeIn(50);
+$("p.very-slow").fadeIn(2000);
+});
+});
+</script>	
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<div id="tab-5">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="HideandShow.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$(".btn-info").click(function(){
+$("p.normal").hide();
+$("p.fast").hide("fast");
+$("p.slow").hide("slow");
+$("p.very-fast").hide(50);
+$("p.very-slow").hide(2000);
+});
+
+$(".btn-warning").click(function(){
+$("p.normal").show();
+$("p.fast").show("fast");
+$("p.slow").show("slow");
+$("p.very-fast").show(50);
+$("p.very-slow").show(2000);
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<div id="tab-6">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Slide.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>
+$(document).ready(function(){    
+$(".btn-info").click(function(){
+$("p.normal").slideUp();
+$("p.fast").slideUp("fast");
+$("p.slow").slideUp("slow");
+$("p.very-fast").slideUp(50);
+$("p.very-slow").slideUp(2000);
+});
+$(".btn-warning").click(function(){
+$("p.normal").slideDown();
+$("p.fast").slideDown("fast");
+$("p.slow").slideDown("slow");
+$("p.very-fast").slideDown(50);
+$("p.very-slow").slideDown(2000);
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<div id="tab-7">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Stop.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$(".btn-info").click(function(){
+$("img").animate({left: "+=150px"}, 2000);
+});
+$(".btn-danger").click(function(){
+$("img").stop();
+});
+$(".btn-primary").click(function(){
+$("img").animate({left: "-=120px"}, 2000);
+});
+$(".btn-warning").click(function(){
+$("img").animate({left: "0"}, "fast");
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+					
+</div>
+</ul>
+</div>
+
+<!-- Section for jQuery Filtering -->
+<div class="codebox">
+<div class="codebox-title"><h4>jQuery Filtering</h4></div>
+<ul class="html-code">    
+<p class="space">jQuery provides several methods such as filter(), first(), last(), eq(), slice(), has(), not(), etc. that you can use to narrow down the search for elements in a DOM tree.</p>				
+<div id="tabs">
+<ul>
+<li><a href="#tab-1">first() Method</a></li>
+<li><a href="#tab-2">last() Method</a></li>
+<li><a href="#tab-3">eq() Method</a></li>
+<li><a href="#tab-4">filter() Method</a></li>
+<li><a href="#tab-5">not() Method</a></li>
+<li><a href="#tab-6">has() Method</a></li>
+<li><a href="#tab-7">slice() Method</a></li>
+</ul>
+
+<!-- First Element fliter -->
+<div id="tab-1">
+<p>
+A jQuery object that represents a set of DOM elements, the .first() method constructs a new jQuery object from the first element in that set.
+</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="FirstElement.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("ul li").first().addClass("highlight");
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Last Element fliter -->
+<div id="tab-2">
+<p>
+A jQuery object that represents a set of DOM elements, the .last() method constructs a new jQuery object from the last element in that set.
+</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="LastElement.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("ul li").last().addClass("highlight");
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<div id="tab-3">
+<p>
+<p>The jQuery eq() method filters the set of matched elements and returns only one element with a specified index number. The following example will highlight the second &lt;li&gt; element within the &lt;ul&gt; element by adding the class .highlight on document ready.</p>
+</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="ElementByIndex.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("ul li").eq(2).addClass("highlight");
+});  
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<div id="tab-4">
+<p>The jQuery filter() method can take the selector or a function as its argument to filters the set of matched elements based on a specific criteria. The supplied selector or function to the filter() method is tested against each element in the set of matched elements and all the elements that <em>matching</em> the supplied selector or pass the function's test will be included in the result.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="ElementBySelectors.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("ul li").filter(":even").addClass("highlight");
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<div id="tab-5">
+<p>The jQuery not() method filters the set of matched elements and returns all elements that does not met the specified conditions.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="ElementByNotFunction.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("ul li").not(":even").addClass("highlight");
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<div id="tab-6">
+<p>The jQuery has() method filters the set of matched elements and returns only those elements that has the specified descendant element. The following example will highlight all the &lt;li&gt; elements that has the descendant code>&lt;ul&gt; elements.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="ElementsBySpecificChildElements.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("ul li").has("ul").addClass("highlight");
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<div id="tab-7">
+<p>The jQuery slice() method filters the set of matched elements specified by a range of indices. This method accepts <em>start</em> and <em>end</em> (optional) index number as arguments, where the start index specifies the position at which the elements begin to be selected and the end index specify the position at which the elements stop being selected.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="ElementByRange.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("ul li").slice(0, 4).addClass("highlight");
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+					
+</div>
+</ul>
+</div>
+
+<!--jQuery Dimensions-->
+<div class="codebox">
+<div class="codebox-title"><h4>jQuery - Dimensions</h4></div>
+<ul class="html-code"> 
+<p>
+jQuery provides several methods, such as height(), innerHeight(), outerHeight(), width(), innerWidth() and outerWidth to get and set the CSS dimensions for the elements. Check out the following illustration to understand how these methods are calculating the dimensions of an element's box.
+</p>   				
+<div id="tabs">
+<ul>
+<li><a href="#tab-1">Get Width & Height</a></li>
+<li><a href="#tab-2">Set Width & Height</a></li>
+<li><a href="#tab-3">Get Inner Width & Height</a></li>
+<li><a href="#tab-4">Set Inner Width & Height</a></li>
+<li><a href="#tab-5">Get Outer Width & Height</a></li>
+<li><a href="#tab-6">Set Outer Width & Height</a></li>
+</ul>
+
+<!--Get Width & Height Dimension-->
+<div id="tab-1">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Get Width & Height.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("#a").click(function(){
+var divWidth = $("#get").width();
+var divHeight = $("#get").height();
+$("#output").html("Width: " + divWidth + "px" + ", " + "Height: " + divHeight +"px");
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!--Set Width & Height Dimension-->
+<div id="tab-2">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Set Width & Height.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("#a").click(function(){
+$("#set").width(500).height(400);
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!--Get Inner Width & Height-->
+<div id="tab-3">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Get Inner Width & Height.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("#a").click(function(){
+var divWidth = $("#inner1").innerWidth();
+var divHeight = $("#inner1").innerHeight();
+$("#output").html("Inner Width: " + divWidth + "px" +", " + "Inner Height: " + divHeight+"px");
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!--Set Inner Width & Height Dimension-->
+<div id="tab-4">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Set Inner Width & Height.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("#a").click(function(){
+$("#set").innerWidth(500).innerHeight(350);
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!--Get Outer Width & Height Dimension-->
+<div id="tab-5">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Get Outer Width & Height.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("#a").click(function(){
+var divWidth = $("#outer").outerWidth(true);
+var divHeight = $("#outer").outerHeight(true);
+$("#output").html("Outer Width: " + divWidth + "px" +", " + "Outer Height: " + divHeight+"px");
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!--Set Outer Width & Height Dimension-->
+<div id="tab-6">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Set Outer Width & Height.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("#a").click(function(){
+$("#set").outerWidth(400).outerHeight(400);
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+					
+</div>
+</ul>
+</div>
+
+<!-- Commonly Used jQuery Methods -->
+<div class="codebox">
+<div class="codebox-title"><h4>Commonly Used jQuery Methods</h4></div>
+<ul class="html-code"> 
+<p>Events are actions that can be detected by your Web Application. mouse click, web page loading, Taking mouse over an element, Submitting an HTML form, A keystroke on your keyboard are some examples for events. Methods are attached to the events we have listed some important jQuery methods that are used regularly in a web application development.</p>                                                 
+<div id="tabs1">
+<ul>
+<li><a href="#tab1-1">click()</a></li>
+<li><a href="#tab1-2">dblclick()</a></li>
+<li><a href="#tab1-3">hover()</a></li>
+<li><a href="#tab1-4">mouseenter() and mouseleave()</a></li>
+<li><a href="#tab1-6">keypress()</a></li>
+<li><a href="#tab1-7">keydown()</a></li>
+<li><a href="#tab1-8">keyup()</a></li>
+<li><a href="#tab1-9">change()</a></li>
+<li><a href="#tab1-10">focus()</a></li>
+<li><a href="#tab1-11">blur()</a></li>
+</ul>
+
+<!-- Click Event -->
+<div id="tab1-1">
+<p>The click() method attaches an event handler function to an HTML element. The 
+function is executed when the user clicks on the HTML element.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="ClickEvent.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("p").click(function(){
+$("p").fadeOut(1000);
+alert('Click Event Works');
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Double Click Method -->
+<div id="tab1-2">
+<p>The dblclick() method attaches an event handler function to an HTML element. The 
+function is executed when the user double clicks on the HTML element.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="DoubleClickEvent.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("p").dblclick(function(){
+$("p").fadeOut(1000);
+alert('Double Click Event Works');
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Hover Method -->
+<div id="tab1-3">
+<p>The hover() method specifies two functions to run when the mouse pointer 
+hovers over the selected elements.
+This method triggers both the mouseenter
+and mouseleave events.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="HoverEvent.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("p").hover(function(){
+$("p").slideUp(1000);
+alert('Hover Event Works');
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- MouseEnter and MouseLeave Methods -->
+<div id="tab1-4">
+<p>The mouseenter() method attaches an event handler function to an HTML 
+element. The function is executed when the mouse pointer enters the HTML element:
+The mouseleave() method attaches an event handler function to an HTML 
+element. The function is executed when the mouse pointer leaves the HTML element:</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="MouseEnter-MouseLeaveEvents.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>
+$(document).ready(function(){
+$('img').mouseenter(function(){
+$('img').attr({'src':'assets/images/4.jpg'});
+});
+$('img').mouseleave(function(){
+$('img').attr({'src':'assets/images/6.jpg'});
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Keypress Method -->
+<div id="tab1-6">
+<p>The keypress() method triggers the keypress event, or attaches a function to
+run when a keypress event occurs.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="KeypressEvent.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$('input').keypress(function(){
+$("p").show().fadeOut();
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Keydown Event -->
+<div id="tab1-7">
+<p>The keydown() method triggers the keydown event, or attaches a function to 
+run when a keydown event occurs.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="KeydownEvent.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+<script type="text/javascript">
+$(document).ready(function(){
+$('input').keydown(function(){
+$("p").show().fadeOut();
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Keyup Event -->
+<div id="tab1-8">
+<p>The keyup event occurs when a keyboard key is released. The keyup() method triggers the keyup event, or attaches a function to run when a keyup event occurs.</p><div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="KeyupEvent.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$('input').keyup(function(){
+$("p").show().fadeOut(2000);
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Change Event -->
+<div id="tab1-9">
+<p>The change event occurs when the value of an element has been changed (only works 
+on &lt;input&gt;, &lt;textarea&gt; and &lt;select&gt; elements). The change() method triggers the change event, or attaches a function to run when 
+a change event occurs.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="ChangeEvent.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">   
+$("select").change(function () {    
+document.getElementById("Result").innerHTML="Selected Technology: "+document.getElementById("selectedvalue").value;  
+});  
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Focus Event -->
+<div id="tab1-10">
+<p>The focus event occurs when an element gets focus (when selected by a mouse click or by 
+"tab-navigating" to it). The focus() method triggers the focus event, or attaches a function to run when a focus event occurs.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="FocusEvent.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$('input').focus(function(){
+$("p").show().fadeOut(2000);
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Blur Event -->
+<div id="tab1-11">
+<p>The blur event occurs when an element loses focus. The blur() method triggers the blur event, or attaches a function to run when a blur event occurs.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="BlurEvent.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$('input').blur(function(){
+$("p").show().fadeOut(2000);
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>						
+
+</div>
+</ul>
+</div>
+
+<!-- Section for jQuery Remove Elements & Attribute -->
+<div class="codebox">
+<div class="codebox-title"><h4>jQuery - Remove Elements & Attribute</h4></div>
+<ul class="html-code">                                                        
+<div id="tabs3">
+<ul>
+<li><a href="#tab3-1">Remove Elements</a></li>
+<li><a href="#tab3-2">Remove Attribute</a></li>
+</ul>
+
+<!-- Remove Elements -->
+<div id="tab3-1">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="RemoveElements.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("button").click(function(){
+$(".main").empty();
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Remove Attribute -->
+<div id="tab3-2">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="RemoveAttribute.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("button").click(function(){
+$("a").removeAttr("href");
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>					
+
+</div>
+</ul>
+</div>
+
+<!-- Section for jQuery Add and Remove CSS Classes -->
+<div class="codebox">
+<div class="codebox-title"><h4>jQuery - Add and Remove CSS Classes</h4></div>
+<ul class="html-code">                                                        
+<div id="tabs4">
+<ul>
+<li><a href="#tab4-1">Add CSS Class to HTML Element</a></li>
+<li><a href="#tab4-2">Remove CSS Class from HTML Element</a></li>
+<li><a href="#tab4-3">Toggle CSS Class of HTML Element</a></li>
+</ul>
+
+<!-- Add CSS Class to HTML Element -->
+<div id="tab4-1">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="AddCssClasstoHTMLElement.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("button").click(function(){
+$("h1").addClass("header");
+$("p.info").addClass("result");
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Remove CSS Class from HTML Element -->
+<div id="tab4-2">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="RemoveCssClassfromHTMLElement.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("button").click(function(){
+$("h1").removeClass("header");
+$("p").removeClass("result");
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Toggle CSS Class of HTML Element -->
+<div id="tab4-3">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="ToggleCssClassesofHTMLElement.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(document).ready(function(){
+$("button").click(function(){
+$("h5").toggleClass("header");
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>				
+
+</div>
+</ul>
+</div>
+
+</div>
+</div>
+
+<!-- jQuery UI section starting-->
+<div class="container tagcontainer">
+<div class="example">
+
+<!-- Section For jQueryUI library -->
+<div class="codebox">
+<div class="codebox-title"><h3>jQuery UI : Library</h3></div>
+<div class="html-code">
+<p>UI stands for user-interface and the jQuery UI library provides a lot of user interface enhancements for our web site. These UI enhancements include animations, widgets and advanced effects to provide a user experience like no other. To use jQuery UI library we must include the core jQuery library. as shown below.</p> 
+<h2>Adding jQuery UI to our Web Pages</h2>
+<div>
+<p><strong>Include jQuery, jQuery UI library files from a CDN, of jquery as shown below</strong></p>
+<xmp style="margin:-10px;color:#FF5722 !important;font-weight:bold;    background-color: transparent;">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.3/themes/hot-sneaks/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-2.1.3.js"></script>
+<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+</xmp>
+</div>
+</div>
+</div>
+
+<!-- Section For jQueryUI Interactions -->
+<div class="codebox">
+<div class="codebox-title"><h4>jQueryUI - Interactions</h4></div>
+<ul class="html-code">  
+<p>jQuery UI provides a set of mouse-based interactions as building blocks for rich interfaces and complex widgets.</p>         
+<div id="tabs1">
+<ul>
+<li><a href="#tab1-1">Draggable</a></li>
+<li><a href="#tab1-2">Droppable</a></li>
+<li><a href="#tab1-3">Resizable</a></li>
+<li><a href="#tab1-4">Selectable</a></li>
+<li><a href="#tab1-5">Sortable</a></li>
+</ul>
+
+<div id="tab1-1">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Draggable.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(function(){
+$("#draggable").draggable();
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<div id="tab1-2">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Droppable.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(function (){
+$(".drag").draggable();
+$(".drop").droppable({
+drop:function(event, ui){
+$("#info").html("dropped!");
+},
+over:function(event, ui){
+$("#info").html("moving in!");
+},
+out:function(event, ui){
+$("#info").html("moving out!");
+}
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<div id="tab1-3">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Resizable.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(function(){
+$("#resize").resizable();
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<div id="tab1-4">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Selectable.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(function(){
+$("#items").selectable({
+selected: function (event, ui){
+var selected = $("li[class$='ui-selected']").length;
+$("#info").html("you selected " + selected + " items!");
+}
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<div id="tab1-5">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Sortable.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$("#sortable").sortable();
+$("#sortable").disableSelection();
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</ul>
+</div>
+
+<!-- Section For jQueryUI Widgets -->
+<div class="codebox">
+<div class="codebox-title"><h4>jQueryUI - Widgets</h4></div>
+<ul class="html-code">                                                        
+<div id="tabs5">
+<ul>
+<li><a href="#tab5-1">Accordion</a></li>
+<li><a href="#tab5-2">Autocomplete</a></li>
+<li><a href="#tab5-3">Datepicker</a></li>
+<li><a href="#tab5-4">Dialog</a></li>
+<li><a href="#tab5-5">Menu</a></li>
+<li><a href="#tab5-6">Progressbar</a></li>
+<li><a href="#tab5-7">Selectmenu</a></li>
+<li><a href="#tab5-8">Slider</a></li>
+<li><a href="#tab5-9">Tabs</a></li>
+<li><a href="#tab5-10">Tooltip</a></li>
+</ul>
+
+<!-- Accordion -->
+<div id="tab5-1">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="JQuery-UI Accordion.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>
+$(function(){
+$('#main').accordion({
+collapsible:true
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Autocomplete -->
+<div id="tab5-2">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="JQuery-UI Autocomplete.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>
+$(function(){
+var cityList = ['Hyderabad','Rajahmundry','Hubli','Amalapuram','Kovvuru'];
+$('#ac').autocomplete({
+source: function(request,response ){
+var matches = $.map( cityList, function(acItem){
+if( acItem.toUpperCase().indexOf(request.term.toUpperCase()) === 0){
+return acItem;
+}
+});
+response(matches);
+}
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Datepicker -->
+<div id="tab5-3">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="JQuery-UI Datepicker.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>
+$(function(){
+$('#datepicker').datepicker({
+showAnim:'slide',
+durational:'slow',
+dateFormat:'dd MM yy'
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Dialog -->
+<div id="tab5-4">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="JQuery-UI Dialog.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>
+$(function(){
+$('#a').click(function(){
+$('#dialog').dialog({
+title:'Dialog Box!',
+modal:true,
+buttons: {Cancel: function(){
+$(this).dialog('close');
+}
+},
+show:'size'
+});
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Menu -->
+<div id="tab5-5">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="JQuery-UI Menu.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>
+$(function(){
+$("#menu").menu();
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Progressbar -->
+<div id="tab5-6">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="JQuery-UI Progressbar.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>
+$(function(){
+$('#progress').progressbar({
+value:500,
+max: 1000
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Selectmenu -->
+<div id="tab5-7">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="JQuery-UI Selectmenu.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>
+$(function(){
+$("#salutation").selectmenu();
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slider -->
+<div id="tab5-8">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="JQuery-UI Slider.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>
+$(function(){
+$('#slider').slider({
+values: [15,45],
+min:1,
+max: 100,
+range: true,
+slide:function(event,ui){
+var val_0 = ui.values[0];
+var val_1 = ui.values[1];
+$('#get_val').html(val_0+' /'+val_1);
+}
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Tabs -->
+<div id="tab5-9">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="JQuery-UI Tabs.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>
+$(function(){
+$('#tabs').tabs({
+collapsible:true,
+show:'slide',
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Tooltip -->
+<div id="tab5-10">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="JQuery-UI Tooltip.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>
+$(function(){
+$(document).tooltip();
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>			
+
+</div>
+</ul>
+</div>
+
+<!-- Section For jQueryUI Effects -->
+<div class="codebox">
+<div class="codebox-title"><h4>jQueryUI - Effects</h4></div>
+<ul class="html-code">  
+<span>jQuery UI provides a set of mouse-based effects as building blocks for rich interfaces and complex widgets.</span>                                                      
+<div id="tabs1">
+<ul>
+<li><a href="#tab1-1">Color Animation</a></li>
+<li><a href="#tab1-2">Effects</a></li>
+<li><a href="#tab1-3">Switch Animation</a></li>
+</ul>
+
+<div id="tab1-1">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="JQuery-UI ColorAnimation.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(function(){
+var state = true;
+$(".btn-info").on("click",function(){
+if(state){
+$("#effect").animate({
+backgroundColor: "#aa0000",
+color: "#fff",
+width: 500
+},1000);
+}else{
+$("#effect").animate({
+backgroundColor: "#fff",
+color: "#000",
+width: 240
+},1000);
+}
+state = !state;
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<div id="tab1-2">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="JQuery-UI Effects.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(function(){
+function runEffect(){
+var selectedEffect = $("#effectTypes").val();
+var options ={};
+if (selectedEffect ==="scale"){
+options ={percent: 50};
+}else if(selectedEffect === "size"){
+options = {to:{width: 200,height: 60}};
+}
+$("#effect").toggle(selectedEffect,options,500);
+};
+$(".btn-info").on("click",function(){
+runEffect();
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<div id="tab1-3">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="JQuery-UI Switch.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+$(function(){
+$(".btn-info").on("click",function(){
+$(".newClass").switchClass("newClass","anotherNewClass",1000);
+$(".anotherNewClass").switchClass("anotherNewClass","newClass",1000);
+});
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</ul>
+</div>
+
+
+</div>
+</div>
+
+</body>
+		
+		<!-- Footer Part -->
+		<iframe src="Footer.html" style="border: none;" scrolling="no" width="99.7%" height="50"></iframe>
+		
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />	
+
+			<!-- Bootstrap library, font-awesome library, custom css references -->			
+			<link rel="stylesheet" href="assets/css/Header.css">
+			<link rel="stylesheet" href="assets/css/Scrooltop.css">
+			<link rel="stylesheet" href="assets/css/bootstrap.3.3.7.min.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+			<!-- Js files -->
+			<script src="assets/js/jquery-3.1.1.min.js"></script>
+			
+			<!-- Favicon icon -->
+			<link rel="shortcut icon" href="assets/icon/favicon.ico">
+
+			<title>Array Methods</title>
+			
+			<!-- FONT FAMILY -->
+			<style>
+				body,xmp {
+				font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+				}	
+			</style>
+			
+			<!--Script for Copy Code -->
+			<script type="text/javascript">		
+			function divcopy() {
+			var copyobject=$("#srcdiv").clone();
+			var $temp = $("<input>");
+			$("body").append($temp);
+			var myJSON = copyobject.html();;
+			$temp.val(myJSON).select();
+			document.execCommand("copy");
+			$temp.remove();
+			var tooltip = document.getElementById("myTooltip");
+			tooltip.title = "Copied";
+			}
+			function outFunc() {
+			var tooltip = document.getElementById("myTooltip");
+			tooltip.title = "Copy to Clipboard";
+			}
+			
+			<!-- Script for Scroll top event -->
+				$(document).ready(function() {
+				var btn = $('#button');
+				$(window).scroll(function() {
+				if ($(window).scrollTop() > 500 ) {
+				btn.addClass('show');
+				} else {
+				btn.removeClass('show');
+				}
+				});
+				btn.on('click', function(e) {
+				e.preventDefault();
+				$('html,body').animate({scrollTop:0}, '500');
+				});
+				});
+			</script>
+
+			</head>
+<body>
+
+<!-- Scroll top anchor tag -->
+<a id="button"></a>
+		
+<!-- Page Header -->
+<div class="page-title container-fluid">
+				<div class="container">
+					<div class="row">
+						<div class="span12" style="margin-top:7px;">                        						
+							<h2>JavaScript</h2>
+							<p>Source code & Example</p>
+							<a href = "index.html"><i class="fa fa-home fa-3x pull-right" style = "color: white;" aria-hidden="true"></i></a>						
+							</div>					
+					</div>
+				</div>
+			</div>
+
+<div class = "container" style="padding-bottom:5%;">
+<div class = "row">
+<h3><strong><xmp>Array Methods Example:</xmp></strong></h3>
+<div class = "col-md-7">
+<h3><b>Source Code:</b></h3>
+<div  style = "overflow:scroll;">
+<button type="button" onmouseout="outFunc()" class="pull-right btn btn-dark" id = "divtarget" onClick="divcopy()">
+<span id="myTooltip" title="Copy to Clipboard"  class="fa fa-copy" style="font-size:25px;"></span>
+</button>
+<xmp id = "srcdiv">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>	
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" >  </script>
+<title>Array Methods</title>
+</head>
+<body>
+<script type="text/javascript">
+
+document.writeln("<b>Concat Method: </b>"); 
+var concat1=["PHP","DotNet","Python"];  
+var concat2=["Java","TypeScript","JavaScript"];  
+var result=concat1.concat(concat2);  
+document.writeln(result + "<br>" + "<br>"); 
+
+document.writeln("<b>Every Method: </b>"); 
+var marks=[70,55,32,33,2];  
+function verify(value){  
+return value>10;
+}   
+document.writeln(marks.every(verify) + "<br>" + "<br>");  
+
+document.writeln("<b>Filter Method: </b>"); 
+var marks=[70,55,32,33,2];  
+function verify(value){  
+return value>30;    
+}  
+document.writeln(marks.filter(verify) + "<br>" + "<br>");  
+
+document.writeln("<b>ForEach Method: </b>"); 
+var course = ["Java", "C++", "PHP"];  
+course.forEach(function(fetch) {  
+document.writeln(fetch + "<br>" + "<br>");  
+});    
+
+document.writeln("<b>IndexOf Method: </b>"); 
+var course=["C","C++","Python","C++","Java"];  
+var result= course.indexOf("C++");  
+document.writeln(result + "<br>" + "<br>"); 
+
+document.writeln("<b>Join Method: </b>"); 
+var course=["AngularJs","Node.js","JQuery"];
+var result=course.join('-'); 
+document.write(result + "<br>" + "<br>");
+
+document.writeln("<b>LastIndexOf Method: </b>"); 
+var course=["C","C++","Python","C++","Java"];  
+var result= course.lastIndexOf("C++");  
+document.writeln(result + "<br>" + "<br>"); 
+
+document.writeln("<b>Map Method: </b>"); 
+var numbers=[6.3,7.5,8.3];  
+var result=numbers.map(Math.round);  
+document.writeln(result + "<br>" + "<br>");  
+
+document.writeln("<b>Pop Method: </b>"); 
+var course=["AngularJS","Node.js","JQuery"];  
+document.writeln("Orginal array: "+course+"<br>");  
+document.writeln("Extracted element: "+course.pop()+"<br>");  
+document.writeln("Remaining elements: "+ course + "<br>" + "<br>");  
+
+document.writeln("<b>Push Method: </b>"); 
+var course=["AngularJS","Node.js"];  
+course.push("JQuery");  
+document.writeln(course + "<br>" + "<br>"); 
+
+document.writeln("<b>Reverse Method: </b>"); 
+var course=["AngulaJS","Node.js","JQuery"];  
+var rev=course.reverse();  
+document.writeln(rev + "<br>" + "<br>");  
+
+document.writeln("<b>Shift Method: </b>"); 
+var course=["AngularJS","Node.js","JQuery"];  
+var result=course.shift();  
+document.writeln(result + "<br>" + "<br>");  
+
+document.writeln("<b>Slice Method: </b>"); 
+var course=["AngularJS","Node.js","JQuery","Bootstrap"];
+var result=course.slice(1,2);  
+document.writeln(result + "<br>" + "<br>");  
+
+document.writeln("<b>Sort Method: </b>"); 
+var course=["AngularJS","Node.js","JQuery","Bootstrap"]; 
+var result=course.sort();  
+document.writeln(result + "<br>" + "<br>");  
+
+document.writeln("<b>Splice Method: </b>"); 
+var days=["Monday","Tuesday","Thursday","Friday"];  
+var result=days.splice(2,0,"Wednesday");  
+document.writeln(days + "<br>" + "<br>");  
+
+document.writeln("<b>Unshift Method: </b>"); 
+var course=["AngularJS","Node.js"];  
+var result=course.unshift("JQuery");  
+document.writeln(course + "<br>" + "<br>");    
+</script>
+</body>
+</html>
+</xmp>
+</div>
+</div>
+<div class = "col-md-5">
+<h3><b>Output:</b></h3>
+<script type="text/javascript">
+
+document.writeln("<b>Concat Method: </b>"); 
+var concat1=["PHP","DotNet","Python"];  
+var concat2=["Java","TypeScript","JavaScript"];  
+var result=concat1.concat(concat2);  
+document.writeln(result + "<br>" + "<br>"); 
+
+document.writeln("<b>Every Method: </b>"); 
+var marks=[70,55,32,33,2];  
+function verify(value){  
+return value>10;
+}   
+document.writeln(marks.every(verify) + "<br>" + "<br>");  
+
+document.writeln("<b>Filter Method: </b>"); 
+var marks=[70,55,32,33,2];  
+function verify(value){  
+return value>30;    
+}  
+document.writeln(marks.filter(verify) + "<br>" + "<br>");  
+
+document.writeln("<b>ForEach Method: </b>"); 
+var course = ["Java", "C++", "PHP"];  
+course.forEach(function(fetch) {  
+document.writeln(fetch + "<br>" + "<br>");  
+});    
+
+document.writeln("<b>IndexOf Method: </b>"); 
+var course=["C","C++","Python","C++","Java"];  
+var result= course.indexOf("C++");  
+document.writeln(result + "<br>" + "<br>"); 
+
+document.writeln("<b>Join Method: </b>"); 
+var course=["AngularJs","Node.js","JQuery"];
+var result=course.join('-'); 
+document.write(result + "<br>" + "<br>");
+
+document.writeln("<b>LastIndexOf Method: </b>"); 
+var course=["C","C++","Python","C++","Java"];  
+var result= course.lastIndexOf("C++");  
+document.writeln(result + "<br>" + "<br>"); 
+
+document.writeln("<b>Map Method: </b>"); 
+var numbers=[6.3,7.5,8.3];  
+var result=numbers.map(Math.round);  
+document.writeln(result + "<br>" + "<br>");  
+
+document.writeln("<b>Pop Method: </b>"); 
+var course=["AngularJS","Node.js","JQuery"];  
+document.writeln("Orginal array: "+course+"<br>");  
+document.writeln("Extracted element: "+course.pop()+"<br>");  
+document.writeln("Remaining elements: "+ course + "<br>" + "<br>");  
+
+document.writeln("<b>Push Method: </b>"); 
+var course=["AngularJS","Node.js"];  
+course.push("JQuery");  
+document.writeln(course + "<br>" + "<br>"); 
+
+document.writeln("<b>Reverse Method: </b>"); 
+var course=["AngulaJS","Node.js","JQuery"];  
+var rev=course.reverse();  
+document.writeln(rev + "<br>" + "<br>");  
+
+document.writeln("<b>Shift Method: </b>"); 
+var course=["AngularJS","Node.js","JQuery"];  
+var result=course.shift();  
+document.writeln(result + "<br>" + "<br>");  
+
+document.writeln("<b>Slice Method: </b>"); 
+var course=["AngularJS","Node.js","JQuery","Bootstrap"];
+var result=course.slice(1,2);  
+document.writeln(result + "<br>" + "<br>");  
+
+document.writeln("<b>Sort Method: </b>"); 
+var course=["AngularJS","Node.js","JQuery","Bootstrap"]; 
+var result=course.sort();  
+document.writeln(result + "<br>" + "<br>");  
+
+document.writeln("<b>Splice Method: </b>"); 
+var days=["Monday","Tuesday","Thursday","Friday"];  
+var result=days.splice(2,0,"Wednesday");  
+document.writeln(days + "<br>" + "<br>");  
+
+document.writeln("<b>Unshift Method: </b>"); 
+var course=["AngularJS","Node.js"];  
+var result=course.unshift("JQuery");  
+document.writeln(course + "<br>" + "<br>");  
+</script>
+</div>
+</div>
+</div>
+
+<!-- Footer -->
+        <footer>
+            <div class="container-fluid">                               
+                <div class="row">
+                    <div class="copyright text-center">
+                        <p>Copyright 2019 - All rights reserved.</p>
+                    </div>                    
+                </div>
+            </div>
+        </footer>
+
+</body>
+</html>

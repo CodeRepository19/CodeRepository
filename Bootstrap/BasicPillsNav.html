@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />	
+
+			<!-- Bootstrap library, font-awesome library, custom css references -->
+			<link rel="stylesheet" href="assets/css/Header.css">
+			<link rel="stylesheet" href="assets/css/bootstrap-3.3.7.min.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+			<!-- Js files -->
+			<script src="assets/js/jquery-3.1.1.min.js"></script>
+			
+			<!-- Favicon icon -->
+			<link rel="shortcut icon" href="assets/icon/favicon.ico">
+
+			<title>Basic Pills Nav</title>
+
+			<!-- CSS -->
+			<style type="text/css">
+			.navs{
+			margin: 20px;
+			}
+		
+			body,xmp {
+			font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+			}	
+		
+			</style>
+
+			<!-- Script for Click Event-->
+			<script type="text/javascript">
+			
+			<!--Script for Copy Code -->
+			function divcopy() {
+			var copyobject=$("#srcdiv").clone();
+			var $temp = $("<input>");
+			$("body").append($temp);
+			var myJSON = copyobject.html();;
+			$temp.val(myJSON).select();
+			document.execCommand("copy");
+			$temp.remove();
+			var tooltip = document.getElementById("myTooltip");
+			tooltip.title = "Copied";
+			}
+			function outFunc() {
+			var tooltip = document.getElementById("myTooltip");
+			tooltip.title = "Copy to Clipboard";
+			}
+			</script>
+
+			</head>
+<body>
+
+<!-- Header part -->
+<div class="page-title container-fluid">
+<div class="container">
+<div class="row" style ="display:flex;">
+<div class="span12">                        						
+<h2>Bootstrap</h2>
+<p>Source code & Example</p>
+<a href = "index.html"><i class="fa fa-home fa-3x pull-right" style = "color: white;" aria-hidden="true"></i></a>						
+</div>					
+</div>
+</div>
+</div>
+
+<div class = "container">
+<div class = "row">
+<h3><strong><xmp>Basic Pills Nav:</xmp></strong></h3>
+<div class = "col-md-7">
+<h3><b>Source Code:</b></h3>
+<div  style = "overflow:scroll;">
+<button type="button" onmouseout="outFunc()" class="pull-right btn btn-dark" id = "divtarget" onClick="divcopy()">
+<span id="myTooltip" title="Copy to Clipboard"  class="fa fa-copy" style="font-size:25px;"></span>
+</button>
+<xmp id = "srcdiv">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basic Pills Nav</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+.navs{
+margin: 20px;
+}
+</style>
+</head>
+<body>
+<div class="nav">
+<ul class="nav nav-pills">
+<li class="active"><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">Settings</a></li>
+</ul>
+</div>
+</body>
+</html>                            
+</xmp>
+</div>
+</div>
+<div class = "col-md-5">
+<h3><b>Output:</b></h3>
+<div class="nav">
+<ul class="nav nav-pills">
+<li class="active"><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">Settings</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Footer -->
+        <footer>
+            <div class="container-fluid">                               
+                <div class="row">
+                    <div class="copyright text-center">
+                        <p>Copyright 2019 - All rights reserved.</p>
+                    </div>                    
+                </div>
+            </div>
+        </footer>
+		
+</body>
+</html>

@@ -1,0 +1,2393 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+		<meta charset="utf-8">
+		<title>Bootstrap Code Repository</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Bootstrap library, font-awesome library, custom css references -->		
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">   
+		<link rel="stylesheet" href="assets/css/style.css"> 
+		<link rel="stylesheet" href="assets/css/Scrooltop.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+
+		<!-- jquery UI and Custom CSS files -->
+		<link rel="stylesheet" href="assets/css/jQuery_Custom.css">
+		<link rel="stylesheet" href="assets/css/jquery-ui.css">
+
+		<!-- jquery UI and jquery library files -->
+		<script src="assets/js/jquery.js"></script>
+		<script src="assets/js/jquery-ui.js"></script>
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="assets/icon/favicon.ico">
+
+		<!-- FONT FAMILY -->
+		<style>
+			body,xmp {
+			font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+			}	
+		</style>
+		
+		<script>
+		
+		<!-- Script for Scroll top event -->
+				$(document).ready(function() {
+				var btn = $('#button');
+				$(window).scroll(function() {
+				if ($(window).scrollTop() > 500 ) {
+				btn.addClass('show');
+				} else {
+				btn.removeClass('show');
+				}
+				});
+				btn.on('click', function(e) {
+				e.preventDefault();
+				$('html, body').animate({scrollTop:0}, '500');
+				});
+				});
+			
+		<!-- Tabs section hide and show	 -->
+		$(function(){
+		$('#tabs,#tabs1,#tabs2,#tabs3,#tabs4,#formtabs,#imagetabs,#tabs5,#tabs6,#tabs7,#tabletabs').tabs({
+		collapsible:true,
+		show:'slide',
+		});
+		});
+				
+		$(document).ready(function()
+		{
+		$(".html-code").hide();
+		$(".codebox-title").on('click', function(event)
+		{
+		$(this).siblings(".html-code").fadeToggle(300);
+		});
+		});
+		</script>
+
+</head>
+
+<body>
+
+<!-- Scroll top anchor tag -->
+<a id="button"></a>
+		
+<!-- Header part -->
+<div class="page-title container-fluid">
+
+		<div class="container">
+			<div class="row" style ="display:flex;">
+			
+			<!-- first col -->
+			<div style="width:12%;">         						
+			<strong><p style="font-size:35px;">SpSoft</p></strong><br>
+			</div>
+			
+			<!-- second col -->
+			<div style="border-left: 2px solid white;margin-top:7px;margin-bottom:7px;"></div>
+			
+			<!-- third col -->
+			<div class="span12" style="margin-left:8px;margin-top:3px;">                        						
+			<h2>Bootstrap</h2>
+			<p>Here are the Examples and Reference Links</p>
+			<a href = "..\index.html"><i class="fa fa-home fa-3x pull-right" style = "color: white;" aria-hidden="true"></i></a>						
+			</div>	
+			
+			</div>
+		</div>
+</div>
+
+<p class = "pull-left Refp">Last Updated : 29-Jan-2019</p>			
+<a class = "pull-right Refa" target="_blank" href = "References.html">Reference Url's</a>	
+
+<!-- Body Content Starts Here -->
+<div class="container tagcontainer">		 			
+<!-- Section for jQuery introduction -->
+<div class="introclass">
+<h2>Bootstrap Introduction</h2>
+<blockquote>
+<p >Bootstrap is the most popular and powerful front-end (HTML, CSS, and JavaScript) framework for faster and easier responsive web development.</p>
+</blockquote>
+<h2 >Adding Bootstrap to our Web Pages</h2>
+<blockquote>
+<p>There are two versions available for download, <strong>compiled Bootstrap</strong> and <strong>Bootstrap source</strong> files. We can download  Bootstrap files from <strong><a href="http://getbootstrap.com/getting-started/" target="_blank" rel="nofollow">here</a></strong>. Compiled download contain compiled and minified version of CSS and JavaScript files as well as icons in font format for faster and easier web development, while the source contain original source files for all CSS and JavaScript, along with a local copy of the docs. Compiled Bootstrap version can increase the performance of our website since files are compiled and minified.</p>
+</blockquote>
+<h2>Understanding the File Structure</h2>
+<blockquote>
+<p>After downloading the compiled Bootstrap, unzip the compressed folder to see the structure. We'll find the three folders named css, js and fonts. We can also find the minified version for both css and js for each file.</p>
+<p>There are four font files (glyphicons-halflings-regular.*) inside the fonts folder. These fonts file includes more than 250 icons from the Glyphicon Halflings set.</p>
+<div class="tip-box">
+<p><strong>Please Note:</strong> This is the most basic form of Bootstrap for quick usage in any web project. Please note that Bootstrap's JavaScript plugins require jQuery to be included. We can download the latest version of jQuery form here <strong><a rel="nofollow" href="https://jquery.com/download/" target="_blank">https://jquery.com/download/</a></strong></p>
+</div>
+</blockquote>
+<blockquote>
+<h2>Making HTML File as a Bootstrap Template</h2>
+<p>To make HTML file as a Bootstrap template, just include the Bootstrap CSS and JS files. We should include JavaScript files at the bottom of the page before closing of the &lt;body&gt; tag (i.e. &lt;/body&gt;) to improve the performance of our web pages.</p>
+</blockquote>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="BootstrapTemplete.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Basic Bootstrap Template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<body>
+    <h1>Hello, world!</h1>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Section for Bootstrap Topics -->
+<div class="example">
+
+<!-- Section for Bootstrap Grid System -->
+<div class="codebox">
+<div class="codebox-title">
+<h4>Bootstrap Grid System</h4></div>
+
+<ul class="html-code"> 
+<blockquote>
+<p>Bootstrap introduces the responsive mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. Bootstrap includes predefined grid classes for quickly making grid layouts for different types of devices like cell phones, tablets, laptops and desktops, etc. For example, you can use the <b>.col-xs-*</b> class to create grid columns for extra small devices like cell phones, similarly the <b>.col-sm-*</b> class for small screen devices like tablets, the <b>.col-md-*</b> class for medium size devices like desktops and the <b>.col-lg-*</b> for large desktop screens.</p>
+</blockquote>
+<div id="tabs1">
+<ul>
+<li><a href="#tabs1-1">Creating Two Column Layouts</a></li>
+<li><a href="#tabs1-2">Creating Three Column Layouts</a></li>
+<li><a href="#tabs1-3">Layouts with Column Wrapping Feature</a></li>
+<li><a href="#tabs1-4">Creating Multi-Column Layouts</a></li>
+</ul>
+
+<!-- creating a Two column layouts -->
+<div id="tabs1-1">
+<blockquote>
+<p>The following example will show you how to create two column layouts for small, medium and large devices like tables, laptops and desktops etc. However, on mobile phones, the columns will automatically become horizontal as default.</p>
+</blockquote>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="BootstrapTwoColumn.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="container">
+    <!--Row with two equal columns-->
+    <div class="row">
+        <div class="col-sm-6"><!--Column left--></div>
+        <div class="col-sm-6"><!--Column right--></div>
+    </div>
+    
+    <!--Row with two columns divided in 1:2 ratio-->
+    <div class="row">
+        <div class="col-sm-4"><!--Column left--></div>
+        <div class="col-sm-8"><!--Column right--></div>
+    </div>
+    
+    <!--Row with two columns divided in 1:3 ratio-->
+    <div class="row">
+        <div class="col-sm-3"><!--Column left--></div>
+        <div class="col-sm-9"><!--Column right--></div>
+    </div>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- creating a Three column layouts -->
+<div id="tabs1-2">
+<blockquote>
+<p>The following example will typically create three column layouts for laptops and desktops screens. It also works in tablets in landscape mode if screen resolution is more than or equal to 992 pixels (e.g. Apple iPad). However, in portrait mode it will be horizontal as usual.</p>
+</blockquote>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="BootstrapThreeColumn.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="container">
+    <!--Row with three equal columns-->
+    <div class="row">
+        <div class="col-md-4"><!--Column left--></div>
+        <div class="col-md-4"><!--Column middle--></div>
+        <div class="col-md-4"><!--Column right--></div>
+    </div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>				
+
+<!-- Bootstrap Layouts with Column Wrapping Feature -->
+<div id="tabs1-3">
+<blockquote>
+<p>Now we are going to create more flexible layouts that changes the column orientation based on the viewport size. The following example will create a three column layout on medium devices like laptops and desktops, as well as on tablets (e.g. Apple iPad) in landscape mode, but on small devices like tablets in portrait mode, it will change into a two column layout where the third column moves at the bottom of the first two columns.</p>
+</blockquote>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="BootstrapColumnWrapping.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3 col-md-2"><!--Column one--></div>
+        <div class="col-sm-9 col-md-8"><!--Column two--></div>
+        <div class="col-sm-12 col-md-2"><!--Column three--></div>
+    </div>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Bootstrap Creating Multi column Layouts -->
+<div id="tabs1-4">
+<blockquote>
+<p>With the new Bootstrap mobile first grid system you can easily control how your website layout will render on different types of devices that have different screen sizes like cell phones, tablets, desktops, etc.</p>
+<p>If height of any column is taller than the other it doesn't clear properly and break the layout. To fix this, use the combination of a <b>.clearfix</b> class and the responsive utility classes.</p>
+<p>Since the default grid system has 12 columns and in our layout sum of the every three column number, i.e. <b>col-md-*</b> is equal to 12 that's why we cleared columns after every third occurrence. In any other scenario where columns numbers are different for every column you should use <b>.clearfix</b> after the column that makes the complete 12 column grid.</p>
+</blockquote>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="BootstrapMultiColumnLayout.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"><p>Box 1</p></div>
+        <div class="col-md-4"><p>Box 2</p></div>
+        <div class="col-md-4"><p>Box 3</p></div>
+        <div class="clearfix visible-md-block"></div>
+        <div class="col-md-4"><p>Box 4</p></div>
+        <div class="col-md-4"><p>Box 5</p></div>
+        <div class="col-md-4"><p>Box 6</p></div>
+        <div class="clearfix visible-md-block"></div>
+        <div class="col-md-4"><p>Box 7</p></div>
+        <div class="col-md-4"><p>Box 8</p></div>
+        <div class="col-md-4"><p>Box 9</p></div>
+        <div class="clearfix visible-md-block"></div>
+        <div class="col-md-4"><p>Box 10</p></div>
+        <div class="col-md-4"><p>Box 11</p></div>
+        <div class="col-md-4"><p>Box 12</p></div>
+    </div>
+</div>
+</xmp>
+<br/>
+<aside>
+<blockquote>
+<p><strong>Please Note:</strong> The <a href="#responsive-class">responsive utility class</a> <b>.visible-md-block</b> makes the <b>.clearfix</b> class effective only on medium size devices and it is hidden on other devices.</p>
+</blockquote>
+</aside>
+</span>
+</div>
+</div>
+</div>
+</div>			
+</div>
+<aside>
+<blockquote>
+<p><strong>Please Note:</strong> Since Bootstrap grid system is based on 12 columns, so to keep the columns in a one line (i.e. side by side), the sum of the grid column numbers in each row should be equal to 12. If we see the above examples carefully we will find the numbers of grid columns (i.e. <b>col-sm-*</b>) add up to twelve (6+6, 4+8 and 3+9) for every row.
+</p>
+</blockquote>
+</aside>	
+</div>
+</ul>
+
+<!-- Section for Bootstrap Layout System -->
+<div class="codebox">
+<div class="codebox-title"><h4>Bootstrap Layout System</h4></div>
+
+<ul class="html-code"> 
+<blockquote>
+<p>There are three types of layouts available in Bootstrap3 these are Fixed Layout, Fluid Layout and Responsive Layout.</p>
+</blockquote>
+<div id="tabs1">
+<ul>
+<li><a href="#tabs1-1">Bootstrap Fixed Layout</a></li>
+<li><a href="#tabs1-2">Bootstrap Fluid Layout</a></li>
+<li><a href="#tabs1-3">Bootstrap Responsive Layout</a></li>
+</ul>
+
+<!-- creating Bootstrap Fixed Layouts -->
+<div id="tabs1-1">
+<blockquote>
+<p>The process of creating the fixed yet responsive layout starts with the <b>.container</b> class. After that create rows with the <b>.row</b> class to wrap the horizontal groups of columns. Rows must be placed within a <b>.container</b> for proper alignment and padding.</p>
+<p>Further columns can be created inside the rows using the predefined grid classes like <b>.col-xs-*</b>, <b>.col-sm-*</b>, <b>.col-md-*</b> and <b>.col-lg-*</b> where <b>*</b> represent grid number and should be from 1 to 12.</p>
+<p><strong>Please Note:</strong> Actual content like text, images, videos, etc. should be placed within columns, and only columns may be the immediate children of rows.</p>
+</blockquote>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="BootstrapFixedLayout.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Page Title</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#" target="_blank">Home</a></li>
+                    <li><a href="#" target="_blank">About</a></li>
+                    <li><a href="#" target="_blank">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Learn to Create Websites</h1>
+            <p>This section will display the paragraph about creating the website</p>
+            <p><a href="#" target="_blank" class="btn btn-success btn-lg">Get started today</a></p>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <h2>HTML</h2>
+                <p>This section will display the paragraph about HTML</p>
+                <p><a href="#" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+            </div>
+            <div class="col-xs-4">
+                <h2>CSS</h2>
+                <p>This section will display the paragraph about CSS</p>
+                <p><a href="#" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+            </div>
+            <div class="col-xs-4">
+                <h2>Bootstrap</h2>
+               <p>This section will display the paragraph about Bootstrap</p>
+                <p><a href="#" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-xs-12">
+                <footer>
+                    <p>&copy; Copyright 2019 </p>
+                </footer>
+            </div>
+        </div>
+    </div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- creating Bootstrap Fluid Layout -->
+<div id="tabs1-2">
+<blockquote>
+<p>The class <b>.container-fluid</b> simply applies the horizontal margin with the value <b>auto</b> and left and right padding of 15px on element to offset the left and right margin of -15px (i.e.&nbsp;<b>margin:&nbsp;0&nbsp;-15px;</b>) used on the <b>.row</b> class.</p>
+</blockquote>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="BootstrapFluidLayout.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="#">Tutorial Republic</a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="nav navbar-nav">
+<li class="active"><a href="https://www.tutorialrepublic.com" target="_blank">Home</a></li>
+<li><a href="https://www.tutorialrepublic.com/about-us.php" target="_blank">About</a></li>
+<li><a href="https://www.tutorialrepublic.com/contact-us.php" target="_blank">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<div class="jumbotron">
+<div class="container-fluid">
+<h1>Learn to Create Websites</h1>
+<p>This section will display the paragraph about creating the website</p>
+<p><a href="#" target="_blank" class="btn btn-success btn-lg">Get started today</a></p> 
+</div>
+</div>
+<div class="container-fluid">
+<div class="row">
+<div class="col-xs-4">
+<h2>HTML</h2>
+<p>This section will display the paragraph about HTML</p>
+<p><a href="#" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+</div>
+<div class="col-xs-4">
+<h2>CSS</h2>
+<p>This section will display the paragraph about CSS</p>
+<p><a href="#" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+</div>
+<div class="col-xs-4">
+<h2>Bootstrap</h2>
+<p>This section will display the paragraph about Bootstrap</p>
+<p><a href="#" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+</div>
+</div>
+<hr>
+<div class="row">
+<div class="col-xs-12">
+<footer>
+<p>&copy; Copyright 2019 </p>
+</footer>
+</div>
+</div>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>				
+
+<!-- Creating Bootstrap Responsive Layout -->
+<div id="tabs1-3">
+<blockquote>
+<p>Bootstrap is responsive and mobile friendly from the start. Its four tiers grids classes provides better control over the layout as well as how it will be rendered on different types of devices like cell phones, tablets, desktop and laptops, large screen devices etc.</p>
+</blockquote>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="BootstrapResponsiveLayout.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Page Title</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#" target="_blank">Home</a></li>
+                    <li><a href="#" target="_blank">About</a></li>
+                    <li><a href="#" target="_blank">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+      <div class="container">
+        <div class="jumbotron">
+            <h1>jumbotron</h1>
+            <p>A jumbotron indicates a big box for calling extra attention to some special content or information. A jumbotron is displayed as a grey box with rounded corners. It also enlarges the font sizes of the text inside it. Tip: Inside a jumbotron you can put nearly any valid HTML, including other Bootstrap elements/classes.</p>
+            <p><a href="#" target="_blank" class="btn btn-success btn-lg">Get started today</a></p>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-2">
+                <h2>HTML</h2>
+                <p>HTML is a markup language that is used for creating web pages. The HTML tutorial section will help you understand the basics of HTML, so that you can create your own web pages or website.</p>
+                <p><a href="#" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2">
+                <h2>CSS</h2>
+                <p>CSS is used for describing the presentation of web pages. The CSS tutorial section will help you learn the essentials of CSS, so that you can fine control the style and layout of your HTML document.</p>
+                <p><a href="#" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+            </div>
+            <div class="clearfix visible-sm-block"></div>
+            <div class="col-sm-6 col-md-4 col-lg-2">
+                <h2>Bootstrap</h2>
+                <p>Bootstrap is a powerful front-end framework for faster and easier web development. The Bootstrap tutorial section will help you learn the techniques of Bootstrap so that you can create web your own website with much less efforts.</p>
+                <p><a href="#" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+            </div>
+            <div class="clearfix visible-md-block"></div>
+            <div class="col-sm-6 col-md-4 col-lg-2">
+                <h2>References</h2>
+                <p>The references section outlines all the standard HTML tags and CSS properties along with other useful references such as color names and values, symbols and character entities, web safe fonts, language codes, HTTP messages and much more.</p>
+                <p><a href="#" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+            </div>
+            <div class="clearfix visible-sm-block"></div>
+            <div class="col-sm-6 col-md-4 col-lg-2">
+                <h2>Examples</h2>
+                <p>The examples section encloses an extensive collection of examples on various topic that you can try and test yourself using online HTML editor.</p>
+                <p><a href="#" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2">
+                <h2>FAQ</h2>
+                <p>The collection of Frequently Asked Questions (FAQ) provides brief answers to many common questions related to web design and development.</p>
+                <p><a href="#" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-12">
+                <footer>
+                    <p>&copy; Copyright 2019 </p>
+                </footer>
+            </div>
+        </div>
+    </div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+			
+</div>	
+</div>
+
+
+<!-- Section for Bootstrap Typography -->
+<div class="codebox">
+<div class="codebox-title"><h4>Bootstrap Typography</h4></div>
+
+<ul class="html-code"> 
+<div id="tabs1">
+<ul>
+<li><a href="#tabs1-1">Bootstrap headings</a></li>
+<li><a href="#tabs1-2">Bootstrap text formatting</a></li>
+<li><a href="#tabs1-3">Bootstrap text alignment</a></li>
+<li><a href="#tabs1-4">Bootstrap text emphasis classes</a></li>
+<li><a href="#tabs1-5">Bootstrap Blockquotes</a></li>
+</ul>
+
+<!-- Bootstrap Headings -->
+<div id="tabs1-1">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="BootstrapHeadings.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div>
+<h3 style="color:#d08315">Bootstrap headings</h3>
+<div class="h1">h1. Angular</div>
+<div class="h2">h2. Bootstrap</div>
+<div class="h3">h3. jquery</div>
+<div class="h4">h4. JavaScript</div>
+<div class="h5">h5. Java</div>
+<div class="h6">h6. PHP</div>
+<hr>
+<h3 style="color:#d08315">Bootstrap headings with secondary text</h3>
+<div class="h1">h1. Angular <span class="small">14 September 2016</span></div>
+<div class="h2">h2. Bootstrap <span class="small">19 August 2011</span></div>
+<div class="h3">h3. jquery <span class="small">26 August 2006</span></div>
+<div class="h4">h4. JavaScript <span class="small">4 December 1995</span></div>
+<div class="h5">h5. Java <span class="small">23 January 1996</span></div>
+<div class="h6">h6. Python   <span class="small">20 February 1991</span></div>
+<hr>
+<h3 style="color:#d08315">Bootstrap Page Header</h3>
+<div class="page-header">
+<h1>Bootstrap <small>Responsive front-end framework</small></h1>
+</div>	
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Bootstrap Text Formatting -->
+<div id="tabs1-2">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="BootstrapTextFormatting.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div>
+<p><b>This is bold text</b></p>
+<p><big>This is big text</big></p>
+<p><code>This is computer code</code></p>
+<p><em>This is emphasized text</em></p>
+<p><i>This is italic text</i></p>
+<p><mark>This is highlighted text</mark></p>
+<p><small>This is small text</small></p>
+<p><strong>This is strongly emphasized text</strong></p>
+<p>This is <sub>subscript</sub> and <sup>superscript</sup></p>
+<p><ins>This text is inserted to the document</ins></p>
+<p><del>This text is deleted from the document</del></p>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>				
+
+<!-- Creating Bootstrap Text Alignment -->
+<div id="tabs1-3">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="BootstrapTextAlignment.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div>
+<p class="text-left">Left aligned text.</p>
+<p class="text-center">Center aligned text.</p>
+<p class="text-right">Right aligned text.</p>
+<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam.</p>
+<p class="text-nowrap">No wrap text.</p>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+	
+<!-- Creating Bootstrap Text Alignment -->
+<div id="tabs1-4">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="BootstrapTextEmphasis.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div>
+<p class="text-muted">Muted: This text is grayed out.</p>
+<p class="text-primary">Important: Please read the instructions carefully before proceeding.</p>
+<p class="text-success">Success: Your message has been sent successfully.</p>
+<p class="text-info">Note: You must agree with the terms and conditions to complete the sign up process.</p>
+<p class="text-warning">Warning: There was a problem with your network connection.</p>
+<p class="text-danger">Error: An error has been occurred while submitting your data.</p>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Creating Bootstrap Blockquotes -->
+<div id="tabs1-5">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="BootstrapBlockquotes.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<blockquote>
+<p>Tell me and I forget, teach me and I may remember, involve me and I learn</p>
+<small>by <cite>Benjamin Franklin</cite></small>
+</blockquote>
+<hr>
+<blockquote class="pull-right">
+<p>Three may keep a secret, if two of them are dead</p>
+<small>by <cite>Benjamin Franklin</cite></small>
+</blockquote>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+	
+</div>
+	
+</div>
+
+<!-- Section for Bootstrap Advanced -->
+<div class="codebox">
+<div class="codebox-title"><h4>Bootstrap Advanced</h4></div>
+
+<ul class="html-code"> 
+<div id="tabs2">
+<ul>
+<li><a href="#tabs2-1">Accordion</a></li>
+<li><a href="#tabs2-2">Alert</a></li>
+<li><a href="#tabs2-3">Buttons</a></li>
+<li><a href="#tabs2-5">Modals</a></li>
+<li><a href="#tabs2-6">Popover</a></li>
+<li><a href="#tabs2-7">Tooltip</a></li>
+<li><a href="#tabs2-8">Carousel</a></li>
+<li><a href="#tabs2-9">ScrollSpy</a></li>
+<li><a href="#tabs2-10">Typeahead</a></li>
+</ul>
+
+<!-- Accordion -->
+<div id="tabs2-1">
+<blockquote>
+<p>Accordion menus and widgets are widely used on the websites to manage the large amount of content and navigation lists.</p>
+</blockquote>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Accordion.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="main">
+<div class="panel-group" id="accordion">
+<div class="panel panel-info">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">1. What is Hadoop?</a>
+</h4>
+</div>
+<div id="collapseOne" class="panel-collapse collapse in">
+<div class="panel-body">
+<p>It provides a software framework for distributed storage and processing of big data using the MapReduce programming 
+model.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Alert -->
+<div id="tabs2-2">
+<blockquote>
+<p>Alert boxes are used quite often to stand out the information that requires immediate attention of the end users such as warning, error or confirmation messages.</p>
+</blockquote>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Alert.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="alert alert-warning">
+<a href="#" class="close" data-dismiss="alert">&times;</a>
+<strong>Warning!</strong> Your network connection is too slow. Pleae check your connection.
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>	
+</div>			
+
+<!-- Buttons -->
+<div id="tabs2-3">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Buttons.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="main">
+    <button type="button" class="btn btn-default" data-toggle="button">Default</button>
+    <button type="button" class="btn btn-primary" data-toggle="button">Primary</button>
+    <button type="button" class="btn btn-info" data-toggle="button">Info</button>
+    <button type="button" class="btn btn-success" data-toggle="button">Success</button>
+    <button type="button" class="btn btn-warning" data-toggle="button">Warning</button>
+    <button type="button" class="btn btn-danger" data-toggle="button">Danger</button>
+    <button type="button" class="btn btn-link" data-toggle="button">Link</button>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Modals -->
+<div id="tabs2-5">
+<blockquote>
+<p>Modals are widely used to warn users for situations like session time out or to receive their final confirmation before going to perform any critical actions such as saving or deleting important data.</p>
+</blockquote>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Modals.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div id="modal" class="modal fade">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<h4 class="modal-title">Confirmation</h4>
+</div>
+<div class="modal-body">
+<p>You have unsaved changes. Are you sure you want to leave this page?</p>
+<p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+<button type="button" class="btn btn-success">Yes</button>
+</div>
+</div>
+</div>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Popover -->
+<div id="tabs2-6">
+<blockquote>
+<p>Popover is a small overlay of content that is used to display secondary information of any element when it is clicked by a user, like those on the iPad.</p>
+</blockquote>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Popover.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="main">
+<button type="button" class="btn btn-primary" data-toggle="popover" title="Hadoop" data-content=" It provides a software
+ framework for distributed storage and processing of big data using the MapReduce programming model.">Hadoop</button>
+<button type="button" class="btn btn-success" data-toggle="popover" title="Blockchain" data-content="originally 
+block chain, is a growing list of records, called blocks, which are linked using cryptography.">Blockchain</button>
+<button type="button" class="btn btn-info" data-toggle="popover" title="PHP" data-content=" Hypertext Preprocessor is a 
+server-side scripting language designed for Web development.">PHP</button>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Tooltip -->
+<div id="tabs2-7">
+<blockquote>
+<p>A tooltip is a small pop?up that appears when user places the mouse pointer over an element such as link or buttons to provide hint or information about the element being hovered.</p>
+</blockquote>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Tooltip.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<label for="dob">Enter Date of Birth: </label>
+<input id="dob" data-toggle="tooltip" title="Please enter date of birth in this format dd/mm/yyyy"></p>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Carousel -->
+<div id="tabs2-8">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Carousel.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<!-- Carousel indicators -->
+<ol class="carousel-indicators">
+<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+<li data-target="#myCarousel" data-slide-to="1"></li>
+<li data-target="#myCarousel" data-slide-to="2"></li>
+</ol>   
+<!-- Wrapper for carousel items -->
+<div class="carousel-inner">
+<div class="item active">
+<img src="assets/images/4.jpg" alt="First Slide">
+</div>
+<div class="item">
+<img src="assets/images/6.jpg" alt="Second Slide">
+</div>
+<div class="item">
+<img src="assets/images/mercury.png" alt="Third Slide">
+</div>
+</div>
+<!-- Carousel controls -->
+<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left"></span>
+</a>
+<a class="carousel-control right" href="#myCarousel" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right"></span>
+</a>
+</div>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!--Creating Bootstrap scrollspy -->
+<div id="tabs2-9">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Scroollspy.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="container">
+<nav id="myNavbar" class="navbar navbar-default" role="navigation"> 
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse"> 
+<span class="sr-only">Toggle navigation</span> 
+<span class="glyphicon glyphicon-align-justify"></span> 
+<span class="glyphicon glyphicon-align-justify"></span> 
+<span class="glyphicon glyphicon-align-justify"></span> 
+</button>
+<!--a class="navbar-brand" href="#">Scrollspy</a-->
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="nav navbar-nav">
+<li class="active"><a href="#section-1">Section 1</a></li>
+<li><a href="#section-2">Section 2</a></li>
+<li><a href="#section-3">Section 3</a></li>
+<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Section 4<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="#section-4dot1">Section 4.1</a></li>
+<li><a href="#section-4dot2">Section 4.2</a></li>
+<li><a href="#section-4dot3">Section 4.3</a></li>
+</ul>
+</li>
+<li><a href="#section-5">Section 5</a></li>
+</ul>
+</div>
+</nav>
+<div class="scroll-area" data-spy="scroll" data-offset="0">
+<div class="section">
+<h3 id="section-1">Section 1 <small><a href="#" onclick="removeSection(this);">&times; Remove this section</a></small></h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor. Integer faucibus ligula.</p>
+<p>Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Ut tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio. Phasellus auctor velit at lacus blandit, commodo iaculis justo viverra. Etiam vitae est arcu. Mauris vel congue dolor. Aliquam eget mi mi. Fusce quam tortor, commodo ac dui quis, bibendum viverra erat. Maecenas mattis lectus enim, quis tincidunt dui molestie euismod. Curabitur et diam tristique, accumsan nunc eu, hendrerit tellus.</p>
+</div>
+<hr>
+<div class="section">
+<h3 id="section-2">Section 2 <small><a href="#" onclick="removeSection(this);">&times; Remove this section</a></small></h3>
+<p>Nullam hendrerit justo non leo aliquet imperdiet. Etiam in sagittis lectus. Suspendisse ultrices placerat accumsan. Mauris quis dapibus orci. In dapibus velit blandit pharetra tincidunt. Quisque non sapien nec lacus condimentum facilisis ut iaculis enim. Sed viverra interdum bibendum. Donec ac sollicitudin dolor. Sed fringilla vitae lacus at rutrum. Phasellus congue vestibulum ligula sed consequat.</p>
+<p>Vestibulum consectetur scelerisque lacus, ac fermentum lorem convallis sed. Nam odio tortor, dictum quis malesuada at, pellentesque vitae orci. Vivamus elementum, felis eu auctor lobortis, diam velit egestas lacus, quis fermentum metus ante quis urna. Sed at facilisis libero. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum bibendum blandit dolor. Nunc orci dolor, molestie nec nibh in, hendrerit tincidunt ante. Vivamus sem augue, hendrerit non sapien in, mollis ornare augue.</p>
+</div>
+<hr>
+<div class="section">
+<h3 id="section-3">Section 3 <small><a href="#" onclick="removeSection(this);">&times; Remove this section</a></small></h3>
+<p>Integer pulvinar leo id risus pellentesque vestibulum. Sed diam libero, sodales eget sapien vel, porttitor bibendum enim. Donec sed nibh vitae lorem porttitor blandit in nec ante. Pellentesque vitae metus ipsum. Phasellus sed nunc ac sem malesuada condimentum. Etiam in aliquam lectus. Nam vel sapien diam. Donec pharetra id arcu eget blandit. Proin imperdiet mattis augue in porttitor. Quisque tempus enim id lobortis feugiat. Suspendisse tincidunt risus quis dolor fringilla blandit. Ut sed sapien at purus lacinia porttitor. Nullam iaculis, felis a pretium ornare, dolor nisl semper tortor, vel sagittis lacus est consequat eros. Sed id pretium nisl. Curabitur dolor nisl, laoreet vitae aliquam id, tincidunt sit amet mauris.</p>
+<p>Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor eget ante rutrum adipiscing. Cras interdum ipsum mattis, tempus mauris vel, semper ipsum. Duis sed dolor ut enim lobortis pellentesque ultricies ac ligula. Pellentesque convallis elit nisi, id vulputate ipsum ullamcorper ut. Cras ac pulvinar purus, ac viverra est. Suspendisse potenti. Integer pellentesque neque et elementum tempus. Curabitur bibendum in ligula ut rhoncus.</p>
+<p>Quisque pharetra velit id velit iaculis pretium. Nullam a justo sed ligula porta semper eu quis enim. Pellentesque pellentesque, metus at facilisis hendrerit, lectus velit facilisis leo, quis volutpat turpis arcu quis enim. Nulla viverra lorem elementum interdum ultricies. Suspendisse accumsan quam nec ante mollis tempus. Morbi vel accumsan diam, eget convallis tellus. Suspendisse potenti.</p>
+</div>
+<hr>
+<h3>Section 4</h3>
+<p>Nam eget purus nec est consectetur vehicula. Nullam ultrices nisl risus, in viverra libero egestas sit amet. Etiam porttitor dolor non eros pulvinar malesuada. Vestibulum sit amet est mollis nulla tempus aliquet.</p>
+<div class="section">
+<h4 id="section-4dot1">Section 4.1 <small><a href="#" onclick="removeSection(this);">&times; Remove this section</a></small></h4>
+<p>In mauris nunc, convallis eget pretium eu, bibendum non leo. Proin suscipit purus adipiscing dolor gravida, in fermentum sapien blandit. Praesent pellentesque ligula dui, in gravida turpis vehicula ac. Pellentesque hendrerit nunc ut luctus hendrerit. Aliquam nec tincidunt urna. Ut interdum nec odio non interdum. Curabitur ligula justo, dapibus non ligula tristique, dapibus tristique nulla. Aliquam pulvinar dapibus eros, rutrum pretium urna iaculis ut. Nam est est, tempus id egestas et, viverra in dui. Aliquam gravida orci tortor, sed congue justo ornare vel. Cras in quam consectetur eros varius scelerisque. Ut vel fermentum purus. Nullam interdum blandit turpis, id pellentesque massa feugiat at. Ut sed lectus lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla rutrum, ante quis convallis ultricies, magna quam rhoncus erat, in lacinia libero magna a ipsum.</p>
+<p>Nam eget purus nec est consectetur vehicula. Nullam ultrices nisl risus, in viverra libero egestas sit amet. Etiam porttitor dolor non eros pulvinar malesuada. Vestibulum sit amet est mollis nulla tempus aliquet. Praesent luctus hendrerit arcu non laoreet. Morbi consequat placerat magna, ac ornare odio sagittis sed. Donec vitae ullamcorper purus. Vivamus non metus ac justo porta volutpat.</p>
+</div>
+<div class="section">
+<h4 id="section-4dot2">Section 4.2 <small><a href="#" onclick="removeSection(this);">&times; Remove this section</a></small></h4>
+<p>Pellentesque viverra, velit eu blandit viverra, justo nulla vestibulum nisl, at egestas ligula augue non ipsum. Aliquam non posuere metus, sed luctus erat. Vivamus malesuada libero quis sem elementum condimentum. Vestibulum interdum, turpis nec venenatis fringilla, odio elit hendrerit dui, a commodo metus tortor a eros. Suspendisse egestas neque vitae laoreet pellentesque. Donec accumsan, elit quis rhoncus fringilla, quam leo feugiat velit, nec hendrerit purus diam aliquet neque. Pellentesque imperdiet sed erat eu varius.</p>
+<p>Morbi sed fermentum ipsum. Morbi a orci vulputate tortor ornare blandit a quis orci. Donec aliquam sodales gravida. In ut ullamcorper nisi, ac pretium velit. Vestibulum vitae lectus volutpat, consequat lorem sit amet, pulvinar tellus. In tincidunt vel leo eget pulvinar. Curabitur a eros non lacus malesuada aliquam. Praesent et tempus odio. Integer a quam nunc. In hac habitasse platea dictumst. Aliquam porta nibh nulla, et mattis turpis placerat eget. Pellentesque dui diam, pellentesque vel gravida id, accumsan eu magna. Sed a semper arcu, ut dignissim leo.</p>
+</div>
+<div class="section">
+<h4 id="section-4dot3">Section 4.3 <small><a href="#" onclick="removeSection(this);">&times; Remove this section</a></small></h4>
+<p>Fusce enim arcu, interdum vel metus dignissim, venenatis feugiat purus. Nulla posuere orci ut leo sodales, sed cursus dolor ornare. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam sit amet quam orci. Nulla sollicitudin lectus eget posuere venenatis. Sed vestibulum elementum sagittis. Quisque tristique tortor quis feugiat sollicitudin. Ut pellentesque luctus vulputate. Ut at odio ac erat blandit vehicula ut eget urna. In hac habitasse platea dictumst. Nullam ut iaculis nibh, eget eleifend elit.</p>
+<p>Sed vitae lobortis diam, id molestie magna. Aliquam consequat ipsum quis est dictum ultrices. Aenean nibh velit, fringilla in diam id, blandit hendrerit lacus. Donec vehicula rutrum tellus eget fermentum. Pellentesque ac erat et arcu ornare tincidunt. Aliquam erat volutpat. Vivamus lobortis urna quis gravida semper. In condimentum, est a faucibus luctus, mi dolor cursus mi, id vehicula arcu risus a nibh. Pellentesque blandit sapien lacus, vel vehicula nunc feugiat sit amet.</p>
+</div>
+<hr>
+<div class="section">
+<h3 id="section-5">Section 5 <small><a href="#" onclick="removeSection(this);">&times; Remove this section</a></small></h3>
+<p>Nam eget purus nec est consectetur vehicula. Nullam ultrices nisl risus, in viverra libero egestas sit amet. Etiam porttitor dolor non eros pulvinar malesuada. Vestibulum sit amet est mollis nulla tempus aliquet. Praesent luctus hendrerit arcu non laoreet. Morbi consequat placerat magna, ac ornare odio sagittis sed. Donec vitae ullamcorper purus. Vivamus non metus ac justo porta volutpat.</p>
+<p>Vivamus mattis accumsan erat, vel convallis risus pretium nec. Integer nunc nulla, viverra ut sem non, scelerisque vehicula arcu. Fusce bibendum convallis augue sit amet lobortis. Cras porta urna turpis, sodales lobortis purus adipiscing id. Maecenas ullamcorper, turpis suscipit pellentesque fringilla, massa lacus pulvinar mi, nec dignissim velit arcu eget purus. Nam at dapibus tellus, eget euismod nisl. Ut eget venenatis sapien. Vivamus vulputate varius mauris, vel varius nisl facilisis ac. Nulla aliquet justo a nibh ornare, eu congue neque rutrum.</p>
+<p>Suspendisse a orci facilisis, dignissim tortor vitae, ultrices mi. Vestibulum a iaculis lacus. Phasellus vitae convallis ligula, nec volutpat tellus. Vivamus scelerisque mollis nisl, nec vehicula elit egestas a. Sed luctus metus id mi gravida, faucibus convallis neque pretium. Maecenas quis sapien ut leo fringilla tempor vitae sit amet leo. Donec imperdiet tempus placerat. Pellentesque pulvinar ultrices nunc sed ultrices. Morbi vel mi pretium, fermentum lacus et, viverra tellus. Phasellus sodales libero nec dui convallis, sit amet fermentum sapien auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed eu elementum nibh, quis varius libero.</p>
+<p>Morbi sed fermentum ipsum. Morbi a orci vulputate tortor ornare blandit a quis orci. Donec aliquam sodales gravida. In ut ullamcorper nisi, ac pretium velit. Vestibulum vitae lectus volutpat, consequat lorem sit amet, pulvinar tellus. In tincidunt vel leo eget pulvinar. Curabitur a eros non lacus malesuada aliquam. Praesent et tempus odio. Integer a quam nunc. In hac habitasse platea dictumst. Aliquam porta nibh nulla, et mattis turpis placerat eget. Pellentesque dui diam, pellentesque vel gravida id, accumsan eu magna. Sed a semper arcu, ut dignissim leo.</p>
+<p>Sed vitae lobortis diam, id molestie magna. Aliquam consequat ipsum quis est dictum ultrices. Aenean nibh velit, fringilla in diam id, blandit hendrerit lacus. Donec vehicula rutrum tellus eget fermentum. Pellentesque ac erat et arcu ornare tincidunt. Aliquam erat volutpat. Vivamus lobortis urna quis gravida semper. In condimentum, est a faucibus luctus, mi dolor cursus mi, id vehicula arcu risus a nibh. Pellentesque blandit sapien lacus, vel vehicula nunc feugiat sit amet.</p>
+</div>
+</div>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Creating Bootstrap Typeahead -->
+<div id="tabs2-10">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="TypeaHead.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div>
+<p style="margin-left: -101px;font-size:15px; margin-right:50px;">Enter your Favorite car name</p>
+<input type="text" style="height:65px;" class="typeahead tt-query" autocomplete="off" spellcheck="false">
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+			
+</div>
+</div>
+
+<!-- Section for Bootstrap Images -->
+<div class="codebox">
+<div class="codebox-title"><h4>Bootstrap Images</h4></div>
+
+<ul class="html-code"> 
+<div id="imagetabs">
+<ul>
+<li><a href="#formtabs-1">Styling Images with Bootstrap</a></li>
+<li><a href="#formtabs-2">Responsive Image</a></li>
+<li><a href="#formtabs-3">Bootstrap Thumbnails</a></li>
+</ul>
+
+<!-- Styling Images with Bootstrap -->
+<div id="formtabs-1">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="StylingImages.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class = "container">
+<label>Original Image: </label><img src="assets/images/mercury.jpg"  alt="Image"><br/><br/>
+<label>Rounded Image: </label><img src="assets/images/mercury.jpg" class="img-rounded" alt="Rounded Image"><br/><br/>
+<label>Circular Image: </label><img src="assets/images/mercury.jpg" class="img-circle" alt="Circular Image"><br/><br/>
+<label>Thumbnail Image: </label><img src="assets/images/mercury.jpg" class="img-thumbnail" alt="Thumbnail Image">
+</div>
+<button type="submit" class="btn btn-lg btn-info">Login</button>
+</form>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Responsive Image -->
+<div id="formtabs-2">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="ResponsiveImage.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="container">
+<h2>Responsive Image</h2>
+<img src="assets/images/mercury.jpg" class="img-responsive" alt="Mercury Image">
+</div>
+</xmp>
+</span>
+
+</div>
+</div>
+</div>				
+				
+</div>
+
+<!-- Bootstrap Thumbnails -->
+<div id="formtabs-3">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Thumbnails.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="container">
+<div class="row">
+<div class="col-xs-6">
+<div class="thumbnail">
+<img src="assets/images/HTML.jpg" alt="HTML Image">
+<div class="caption">
+<h3>HTML 5</h3>
+<p>HTML 5 is a software solution stack that defines the properties and behaviors of web page...</p>
+<p><a href="#" class="btn btn-primary">Read More</a></p>
+</div>
+</div>
+</div>
+<div class="col-xs-6">
+<div class="thumbnail">
+<img src="assets/images/PHP.jpg" alt="PHP Image">
+<div class="caption">
+<h3>PHP</h3>
+<p>Hypertext Preprocessor is a server-side scripting language designed for Web development...</p>
+<p><a href="#" class="btn btn-primary">Read More</a></p>
+</div>
+</div>
+</div>
+</div> 
+</div>
+</xmp>
+</span>
+
+</div>
+</div>
+</div>				
+				
+</div>
+</ul>
+</div>
+
+<!-- Section for Bootstrap Forms -->
+<div class="codebox">
+<div class="codebox-title"><h4>Bootstrap Forms</h4></div>
+
+<ul class="html-code"> 
+<div id="formtabs">
+<ul>
+<li><a href="#formtabs-1">Login Form</a></li>
+<li><a href="#formtabs-2">Registration Form</a></li>
+</ul>
+
+<!-- Login Form -->
+<div id="formtabs-1">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="LoginForm.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="container">
+<form>
+<div class="form-group">
+<label for="email">Email :</label>
+<input type="email" class="form-control" id="email" placeholder="Email" required>
+</div>
+<div class="form-group">
+<label for="password">Password :</label>
+<input type="password" class="form-control" id="password" placeholder="Password" required>
+</div>
+</div>
+<button type="submit" class="btn btn-lg btn-info">Login</button>
+</form>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Registration Form -->
+<div id="formtabs-2">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="RegistrationForm.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="container">
+<form>
+<div class="form-group">
+<label for="name">Name :</label>
+<input type="text" class="form-control" id="name" placeholder="Name" required>
+</div>
+<div class="form-group">
+<label for="inputEmail">Email :</label>
+<input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+</div>
+<div class="form-group">
+<label for="inputPassword">Password :</label>
+<input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+</div>
+<div class="form-group">
+<label for="mobile">Mobile :</label>
+<input type="text" class="form-control" id="mobile" placeholder="Mobile" required>
+</div>
+<button type="submit" class="btn btn-lg btn-success">Submit</button>
+</form>
+</div>
+</xmp>
+</span>
+
+</div>
+</div>
+</div>				
+				
+</div>
+</ul>
+</div>
+
+<div class="codebox">
+<div class="codebox-title"><h4>Bootstrap Navs</h4></div>
+
+<ul class="html-code"> 
+<div id="tabs3">
+<ul>
+<li><a href="#tabs3-1">Basic Tabs</a></li>
+<li><a href="#tabs3-2">Tabs with Icons</a></li>
+<li><a href="#tabs3-3">Basic Pills Nav</a></li>
+<li><a href="#tabs3-4">Pills Nav with Icons</a></li>
+<li><a href="#tabs3-5">Stacked Pills Nav</a></li>
+<li><a href="#tabs3-6">Tabs with Dropdown</a></li>
+<li><a href="#tabs3-7">Pills Nav with Dropdown</a></li>
+<li><a href="#tabs3-8">Disable link in Navs</li>
+</ul>
+
+<!-- Basic Tabs -->
+<div id="tabs3-1">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="BasicTabs.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="tabs">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">Settings</a></li>
+</ul>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!--Tabs with Icons -->
+<div id="tabs3-2">
+<P><b>Please Note: </b> Tabs with icons is introduced in Bootstrap version 3.4.0</P>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="TabswithIcons.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="tabs">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+<li><a href="#"><span class="glyphicon glyphicon-user"></span>About</a></li>
+<li><a href="#"><span class="glyphicon glyphicon-phone"></span>Contact</a></li>
+<li><a href="#"><span class="glyphicon glyphicon-cog"></span>Settings</a></li>
+</ul>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>	
+</div>			
+
+<!-- Basic Pills Nav -->
+<div id="tabs3-3">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="BasicPillsNav.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="nav">
+<ul class="nav nav-pills">
+<li class="active"><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">Settings</a></li>
+</ul>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Pills Nav with Icons -->
+<div id="tabs3-4">
+<P><b>Please Note: </b> Pills Nav with icons is introduced in Bootstrap version 3.4.0</P>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="PillsNavwithIcons.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="navs">
+<ul class="nav nav-pills">
+<li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+<li><a href="#"><span class="glyphicon glyphicon-user"></span>About</a></li>
+<li><a href="#"><span class="glyphicon glyphicon-phone"></span>Contact</a></li>
+<li><a href="#"><span class="glyphicon glyphicon-cog"></span>Settings</a></li>
+</ul>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Stacked Pills Nav -->
+<div id="tabs3-5">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="StackedPillsNav.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="navs">
+<ul class="nav nav-pills nav-stacked">
+<li class="active"><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">Settings</a></li>
+</ul>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Tabs with Dropdown -->
+<div id="tabs3-6">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="TabswithDropdown.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="navs">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li class="dropdown">
+<a href="#" data-toggle="dropdown" class="dropdown-toggle">Settings<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="#">Update</a></li>
+<li><a href="#">Change Icons</a></li>
+<li><a href="#">Themes</a></li>
+<li class="divider"></li>
+<li><a href="#">Trash</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Pills Nav with Dropdown -->
+<div id="tabs3-7">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="PillsNavwithDropdown.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="navs">
+<ul class="nav nav-pills">
+<li class="active"><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li class="dropdown">
+<a href="#" data-toggle="dropdown" class="dropdown-toggle">Settings<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="#">Update</a></li>
+<li><a href="#">Change Icons</a></li>
+<li><a href="#">Themes</a></li>
+<li class="divider"></li>
+<li><a href="#">Trash</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+	
+<!-- Disable links with cComponents -->
+<div id="tabs3-8">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="DisableLinkswithComponents.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="navs">
+<h4>Tabs with Disable Link:</h4>
+<ul class="nav nav-tabs">
+<li class="active"><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+<li class="disabled"><a href="#">Admin</a></li>
+</ul>
+<br>
+<h4>Pills with Disable Link:</h4>
+<ul class="nav nav-pills">
+<li class="active"><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+<li class="disabled"><a href="#">Admin</a></li>
+</ul>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+			
+</div>
+</div>
+
+<div class="codebox">
+<div class="codebox-title"><h4>Bootstrap Navbar</h4></div>
+<ul class="html-code"> 
+<div id="tabs4">
+<ul>
+<li><a href="#tabs4-1">Basic Navbar</a></li>
+<li><a href="#tabs4-2">Navbar Fixed to Top</a></li>
+<li><a href="#tabs4-3">Navbar Fixed to Bottom</a></li>
+<li><a href="#tabs4-4">Navbar Searchbox</a></li>
+<li><a href="#tabs4-5">Navbar Dropdown</a></li>
+<li><a href="#tabs4-6">Inverted Variation of Navbar</a></li>
+</ul>
+
+<!-- Basic Navbar -->
+<div id="tabs4-1">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="BasicNavbar.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="navs">
+<nav class="navbar navbar-default">
+<!-- Brand and toggle get grouped for better display -->
+<div class="navbar-header">
+<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="#" class="navbar-brand">Brand</a>
+</div>
+<!-- Collection of nav links and other content for toggling -->
+<div id="navbarCollapse" class="collapse navbar-collapse">
+<ul class="nav navbar-nav">
+<li class="active"><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</ul>
+</div>
+</nav>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!--Navbar Fixed to Top -->
+<div id="tabs4-2">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="NavbarFixedtoTop.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;"> 
+<nav class="navbar navbar-default navbar-fixed-top">
+<div class="container">
+<!-- Brand and toggle get grouped for better display -->
+<div class="navbar-header">
+<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="#" class="navbar-brand">Brand</a>
+</div>
+<!-- Collection of nav links and other content for toggling -->
+<div id="navbarCollapse" class="collapse navbar-collapse">
+<ul class="nav navbar-nav">
+<li class="active"><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+</xmp>
+</span>
+</div>
+</div>
+</div>	
+</div>			
+
+<!-- Navbarbar Fixed to Bottom -->
+<div id="tabs4-3">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="NavbarFixedtoBottom.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<nav class="navbar navbar-default navbar-fixed-bottom">
+<div class="container">
+<!-- Brand and toggle get grouped for better display -->
+<div class="navbar-header">
+<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="#" class="navbar-brand">Brand</a>
+</div>
+<!-- Collection of nav links and other content for toggling -->
+<div id="navbarCollapse" class="collapse navbar-collapse">
+<ul class="nav navbar-nav">
+<li class="active"><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Navbar Searchbox -->
+<div id="tabs4-4">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="NavbarSearchbox.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="navs">
+<nav class="navbar navbar-default">
+<div class="navbar-header">
+<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="#" class="navbar-brand">Brand</a>
+</div>
+<div id="navbarCollapse" class="collapse navbar-collapse">
+<form class="navbar-form navbar-left">
+<div class="form-group">
+<input type="text" placeholder="Search" class="form-control">
+</div>
+<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+</form>
+</div>
+</nav>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Navbar Dropdown -->
+<div id="tabs4-5">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="NavbarDropdown.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="navs">
+<nav class="navbar navbar-default">
+<!-- Brand and toggle get grouped for better display -->
+<div class="navbar-header">
+<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="#" class="navbar-brand">Brand</a>
+</div>
+<!-- Collection of nav links and other content for toggling -->
+<div id="navbarCollapse" class="collapse navbar-collapse">
+<ul class="nav navbar-nav">
+<li class="active"><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li class="dropdown">
+<a data-toggle="dropdown" class="dropdown-toggle" href="#">Settings<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="#">Update</a></li>
+<li><a href="#">Change Icons</a></li>
+<li><a href="#">Themes</a></li>
+<li class="divider"></li>
+<li><a href="#">Trash</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</div>
+</nav>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Inverted Variation Navbar -->
+<div id="tabs4-6">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="InvertedVariationNavbar.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="navs">
+<nav class="navbar navbar-inverse">
+<!-- Brand and toggle get grouped for better display -->
+<div class="navbar-header">
+<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="#" class="navbar-brand">Brand</a>
+</div>
+<!-- Collection of nav links and other content for toggling -->
+<div id="navbarCollapse" class="collapse navbar-collapse">
+<ul class="nav navbar-nav">
+<li class="active"><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li class="dropdown">
+<a data-toggle="dropdown" class="dropdown-toggle" href="#">Settings<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="#">Update</a></li>
+<li><a href="#">Change Icons</a></li>
+<li><a href="#">Themes</a></li>
+<li class="divider"></li>
+<li><a href="#">Trash</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</div>
+</nav>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+			
+</div>
+</div>
+
+<div class="codebox">
+<div class="codebox-title"><h4>Bootstrap Progressbar</h4></div>
+<ul class="html-code"> 
+<div id="tabs6">
+<ul>
+<li><a href="#tabs6-1">Basic Progressbar</a></li>
+<li><a href="#tabs6-2">Progressbar with Label and Striped</a></li>
+<li><a href="#tabs6-3">Change Progressbar value Dynamically</a></li>
+<li><a href="#tabs6-4">Stacked Progressbar</a></li>
+<li><a href="#tabs6-5">Striped Progressbar with Emphasis Classes</a></li>
+</ul>
+
+<!-- Basic Progressbar -->
+<div id="tabs6-1">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="BasicProgressbar.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="progressbar">
+<div class="progress">
+<div class="progress-bar" style="width: 60%;">
+<span class="sr-only">60% Complete</span>
+</div>
+</div>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!--Progressbar with Label and Striped-->
+<div id="tabs6-2">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="ProgressbarwithLabel&Striped.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="progressbar progress-striped">
+<div class="progress">
+<div class="progress-bar progress-bar-danger" style="width: 80%;">80%</div>
+</div>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>	
+</div>			
+
+<!--Change Progressbar value Dynamically-->
+<div id="tabs6-3">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="ProgressbarValueDynamically.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="progressbar">
+<!-- Progress bar HTML -->
+<div class="progress progress-striped active">
+<div class="progress-bar progress-bar-success"></div>
+</div>	
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Stacked Progressbar -->
+<div id="tabs6-4">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="StackedProgressbar.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="progressbar">
+<div class="progress">
+<div class="progress-bar progress-bar-success" style="width: 40%">40%</div>
+<div class="progress-bar progress-bar-info" style="width: 25%">25%</div>
+<div class="progress-bar progress-bar-primary" style="width: 15%">15%</div>
+</div>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Striped Progressbar with Emphasis Classes -->
+<div id="tabs6-5">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="StripedProgressbarswithEmphasisClasses.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="progressbar">
+<div class="progress progress-striped">
+<div class="progress-bar progress-bar-primary" style="width: 20%">20% Filled</div>
+</div>
+<div class="progress progress-striped">
+<div class="progress-bar progress-bar-info" style="width: 40%">60% Freespace</div>
+</div>
+<div class="progress progress-striped">
+<div class="progress-bar progress-bar-success" style="width: 80%">80% Disk Full</div>
+</div>
+<div class="progress progress-striped">
+<div class="progress-bar progress-bar-danger" style="width: 90%">90% Full No Enough to Store</div>
+</div>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+			
+</div>
+</div>
+
+<!--Section for Bootstrap Panel-->
+<div class="codebox">
+<div class="codebox-title"><h4>Bootstrap Panel</h4></div>
+<ul class="html-code"> 
+<div id="tabs5">
+<ul>
+<li><a href="#tabs5-1">Basic Panel</a></li>
+<li><a href="#tabs5-2">Panel with Header & Footer</a></li>
+<li><a href="#tabs5-3">Panel with Contextual States</a></li>
+<li><a href="#tabs5-4">Placing Table inside Panels</a></li>
+</ul>
+
+<!-- Basic Panel -->
+<div id="tabs5-1">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="BasicPanel.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="panel">
+<div class="panel panel-default">
+<div class="panel-body">Hello! This is a Panel</div>
+</div>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!--Panel with Header and Footer -->
+<div id="tabs5-2">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="PanelwithHeader&Footer.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="panel">
+<div class="panel panel-default">
+<div class="panel-heading">Header</div>
+<div class="panel-body">Panel with Header and Footer</div>
+<div class="panel-footer">
+<div class="pull-center"><a href="#" class="btn btn-primary">Footer</a>
+</div>
+</div>
+</div>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>	
+</div>			
+
+<!--Panels with Contextual States-->
+<div id="tabs5-3">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="PanelswithContextualStates.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="panel">
+<div class="panel panel-primary">
+<div class="panel-heading">
+<h3 class="panel-title">Button Primary</h3>
+</div>
+<div class="panel-body">Indicates blue texture color.</div>
+</div>
+<div class="panel panel-success">
+<div class="panel-heading">
+<h3 class="panel-title">Button Success</h3>
+</div>
+<div class="panel-body">Indicates lightgreen color.</div>
+</div>
+<div class="panel panel-info">
+<div class="panel-heading">
+<h3 class="panel-title">Button Info</h3>
+</div>
+<div class="panel-body">Indicates lightblue color.</div>
+</div>
+<div class="panel panel-warning">
+<div class="panel-heading">
+<h3 class="panel-title">Button Warning</h3>
+</div>
+<div class="panel-body">Indicates Lightyellow color.</div>
+</div>
+<div class="panel panel-danger">
+<div class="panel-heading">
+<h3 class="panel-title">Button Danger</h3>
+</div>
+<div class="panel-body">Indicated Lightred color.</div>
+</div>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Placing Table in Panels -->
+<div id="tabs5-4">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="PlacingTableinsidePanels.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="panel">
+<div class="panel panel-default">
+<!-- Default panel contents -->
+<div class="panel-heading">User Information</div>
+<div class="panel-body">
+<p>The following table contains users information.</p>
+</div>
+<!-- Table -->
+<table class="table">
+<thead>
+<tr>
+<th>S.NO</th>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Virat</td>
+<td>Kohli</td>
+<td>virat@mail.com</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ms</td>
+<td>Dhoni</td>
+<td>dhoni07@mail.com</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Virendra</td>
+<td>Sehwag</td>
+<td>viru@mail.com</td>
+</tr>
+</tbody> 
+</table>
+</div>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+			
+</div>
+</div>
+
+
+<!--Section for Bootstrap Pagination-->
+<div class="codebox">
+<div class="codebox-title"><h4>Bootstrap Pagination</h4></div>
+<ul class="html-code"> 
+<div id="tabs7">
+<ul>
+<li><a href="#tabs7-1">Basic Pagination</a></li>
+</ul>
+
+<!-- Basic Pagination -->
+<div id="tabs7-1">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Pagination.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="page">
+<ul class="pagination">
+<li class="disabled"><a href="#">&laquo;</a></li>
+<li class="active"><a href="#">1</a></li>
+<li><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#">5</a></li>
+<li><a href="#">&raquo;</a></li>
+</ul>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>					
+</div>
+</div>
+
+<div class="codebox">
+<div class="codebox-title"><h4>Bootstrap Tables</h4></div>
+
+<ul class="html-code"> 
+<div id="tabletabs">
+<ul>
+<li><a href="#tabletabs-1">Simple Table</a></li>
+<li><a href="#tabletabs-2">Striped Rows Table</a></li>
+<li><a href="#tabletabs-3">Table with Border</a></li>
+<li><a href="#tabletabs-4">Hover Table Rows</a></li>
+<li><a href="#tabletabs-5">Condensed Tables</a></li>
+<li><a href="#tabletabs-6">Responsive Table</a></li>
+</ul>
+
+<!-- Simple Table -->
+<div id="tabletabs-1">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="SimpleTable.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="container">
+<table class="table">
+<thead>
+<tr>
+<th>S.No</th>
+<th>Name</th>
+<th>Mobile</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Suresh</td>
+<td>8501005643</td>
+<td>Suresh@gmail.com</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Naresh</td>
+<td>9081005665</td>
+<td>Naresh@gmail.com</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Mahesh</td>
+<td>9781005453</td>
+<td>Mahesh@gmail.com</td>
+</tr>
+</tbody>
+</table>
+</div>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Striped Rows Table -->
+<div id="tabletabs-2">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="StripedRowsTable.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="container">
+<table class="table table-striped">
+<thead>
+<tr>
+<th>S.No</th>
+<th>Name</th>
+<th>Mobile</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Suresh</td>
+<td>8501005643</td>
+<td>Suresh@gmail.com</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Naresh</td>
+<td>9081005665</td>
+<td>Naresh@gmail.com</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Mahesh</td>
+<td>9781005453</td>
+<td>Mahesh@gmail.com</td>
+</tr>
+</tbody>
+</table>
+</div>
+</xmp>
+</span>
+
+</div>
+</div>
+</div>				
+				
+</div>
+
+<!-- Table with Border -->
+<div id="tabletabs-3">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="TablewithBorder.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="container">
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>S.No</th>
+<th>Name</th>
+<th>Mobile</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Suresh</td>
+<td>8501005643</td>
+<td>Suresh@gmail.com</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Naresh</td>
+<td>9081005665</td>
+<td>Naresh@gmail.com</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Mahesh</td>
+<td>9781005453</td>
+<td>Mahesh@gmail.com</td>
+</tr>
+</tbody>
+</table>
+</div>
+</xmp>
+</span>
+
+</div>
+</div>
+</div>				
+				
+</div>
+
+<!-- Hover Table Rows -->
+<div id="tabletabs-4">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="HoverTableRows.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="container">
+<table class="table table-hover">
+<thead>
+<tr>
+<th>S.No</th>
+<th>Name</th>
+<th>Mobile</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Suresh</td>
+<td>8501005643</td>
+<td>Suresh@gmail.com</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Naresh</td>
+<td>9081005665</td>
+<td>Naresh@gmail.com</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Mahesh</td>
+<td>9781005453</td>
+<td>Mahesh@gmail.com</td>
+</tr>
+</tbody>
+</table>
+</div>
+</xmp>
+</span>
+
+</div>
+</div>
+</div>				
+				
+</div>
+
+<!-- Condensed Tables -->
+<div id="tabletabs-5">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="CondensedTables.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="container">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th>S.No</th>
+<th>Name</th>
+<th>Mobile</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Suresh</td>
+<td>8501005643</td>
+<td>Suresh@gmail.com</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Naresh</td>
+<td>9081005665</td>
+<td>Naresh@gmail.com</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Mahesh</td>
+<td>9781005453</td>
+<td>Mahesh@gmail.com</td>
+</tr>
+</tbody>
+</table>
+</div>
+</xmp>
+</span>
+
+</div>
+</div>
+</div>				
+				
+</div>
+
+<!-- Responsive Table -->
+<div id="tabletabs-6">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="ResponsiveTable.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<div class="container">
+<div class="table-responsive">
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>S.No</th>
+<th>Name</th>
+<th>Mobile</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Suresh</td>
+<td>8501005643</td>
+<td>Suresh@gmail.com</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Naresh</td>
+<td>9081005665</td>
+<td>Naresh@gmail.com</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Mahesh</td>
+<td>9781005453</td>
+<td>Mahesh@gmail.com</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</xmp>
+</span>
+
+</div>
+</div>
+</div>				
+				
+</div>
+</ul>
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+</div>
+</body>
+
+		<!-- Footer Part -->
+		<iframe src="Footer.html" style="border: none;" scrolling="no" width="99.7%" height="50"></iframe>
+
+		</html>

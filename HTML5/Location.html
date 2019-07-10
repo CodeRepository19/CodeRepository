@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />	
+
+	<!-- CSS -->        
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.3.3.7.min.css">
+	<link rel="stylesheet" href="assets/css/Header.css">
+	
+	<!-- Javascript files -->
+	<script src="assets/js/jquery-1.8.2.min.js"></script>
+	
+	<!-- Favicon icon -->
+    <link rel="shortcut icon" href="assets/icon/favicon.ico">
+		
+	<!-- Fontawesome CDN -->				
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<title>Current Location Example</title>
+	
+	<!-- FONT FAMILY -->
+		<style>
+			body,xmp {
+			font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+			}	
+		</style>
+		
+	<script>
+	<!-- script for current locatiion -->	
+		function showPosition(){
+			if(navigator.geolocation){
+				navigator.geolocation.getCurrentPosition(function(position){
+					var positionInfo = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
+					document.getElementById("result").innerHTML = positionInfo;
+				});
+			} else{
+				alert("Sorry, your browser does not support HTML5 geolocation.");
+			}
+		}
+
+		<!-- script for copy code functinality -->
+			function divcopy() {
+			var copyobject=$("#srcdiv").clone();
+			var $temp = $("<input>");
+			$("body").append($temp);
+			var myJSON = copyobject.html();;
+			$temp.val(myJSON).select();
+			document.execCommand("copy");
+			$temp.remove();
+			var tooltip = document.getElementById("myTooltip");
+			tooltip.title = "Copied";
+			}
+			function outFunc() {
+			var tooltip = document.getElementById("myTooltip");
+			tooltip.title = "Copy to Clipboard";
+			}
+			
+			function outFunc() 
+{
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.title = "Copy to Clipboard";
+}
+
+	</script>
+	
+</head>
+<body>
+<!-- Header part -->
+			<div class="page-title container-fluid">
+				<div class="container">
+					<div class="row" style ="display:flex;">
+						<div class="span12">                        						
+							<h2>HTML5</h2>
+							<p>Source code & Example</p>
+							<a href = "index.html"><i class="fa fa-home fa-3x pull-right" style = "color: white;" aria-hidden="true"></i></a>						
+							</div>					
+					</div>
+				</div>
+			</div>
+	
+<div class = "container">
+<div class = "row">
+<h3><strong><xmp>Current Location Example:</xmp></strong></h3>
+<div class = "col-md-7">
+<h3><b>Source Code:</b></h3>
+<div style = "overflow:scroll;">
+<button type="button" onmouseout="outFunc()" class="pull-right btn btn-dark" id = "divtarget" onClick="divcopy()">
+<span id="myTooltip" title="Copy to Clipboard"  class="fa fa-copy" style="font-size:25px;"></span>
+</button>
+<xmp id = "srcdiv">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />	
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<script src="assets/js/jquery-1.8.2.min.js"></script>	
+<title>Current Location Example</title>
+<script>
+function showPosition(){
+if(navigator.geolocation){
+navigator.geolocation.getCurrentPosition(function(position){
+var positionInfo = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
+document.getElementById("result").innerHTML = positionInfo;
+});
+} else{
+alert("Sorry, your browser does not support HTML5 geolocation.");
+}
+}
+</script>
+</head>
+<body>
+<div id="result" class = "container">
+<!--Position information will be inserted here-->
+</div>
+<button type="button" class="btn btn-primary" onclick="showPosition();">Current Location</button>
+</body>
+</html>
+</xmp>
+</div>
+</div>
+<div class = "col-md-5">
+<h3><b>Output:</b></h3>
+<div id="result" class = "container">
+<!--Position information will be inserted here-->
+</div>
+<button type="button" class="btn btn-primary" onclick="showPosition();">Current Location</button>
+</div>
+</div>
+</div>
+
+<!-- Footer -->
+        <footer>
+            <div class="container-fluid">                               
+                <div class="row">
+                    <div class="copyright text-center">
+                        <p>Copyright 2019 - All rights reserved.</p>
+                    </div>                    
+                </div>
+            </div>
+        </footer>
+		
+</body>
+</html>

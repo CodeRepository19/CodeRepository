@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />	
+
+		<!-- Bootstrap library, font-awesome library, custom css references -->		
+		<link rel="stylesheet" href="assets/css/Header.css">
+		<link rel="stylesheet" href="assets/css/bootstrap.3.3.7.min.css">
+		<link rel="stylesheet" href="assets/css/Scrooltop.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			
+		<!-- Js files -->
+		<script src="assets/js/jquery-3.1.1.min.js"></script>
+		
+		<!-- Favicon icon -->
+		<link rel="shortcut icon" href="assets/icon/favicon.ico">
+		
+		<title>Set Inner Width & Height</title>
+		
+		<style>
+		#set{
+				width: 400px;
+				height: 500px;
+				padding: 25px;
+				text-align:justify;
+				background: lightblue;
+				margin: 15px;
+			}
+		body,xmp {
+			font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+			}	
+			</style>
+		<script type="text/javascript">
+		
+		<!-- Script for Scroll top event -->
+				$(document).ready(function() {
+				var btn = $('#button');
+				$(window).scroll(function() {
+				if ($(window).scrollTop() > 20 ) {
+				btn.addClass('show');
+				} else {
+				btn.removeClass('show');
+				}
+				});
+				btn.on('click', function(e) {
+				e.preventDefault();
+				$('html, body').animate({scrollTop:0}, '20');
+				});
+				});
+				
+		<!-- Script for Get Width and Height Dimensions:-->
+			$(document).ready(function(){
+				$("#a").click(function(){
+				$("#set").innerWidth(500).innerHeight(350);
+			});
+		});		
+		
+		<!--Script for Copy Code -->
+		function divcopy() {
+		var copyobject=$("#srcdiv").clone();
+		var $temp = $("<input>");
+		$("body").append($temp);
+		var myJSON = copyobject.html();;
+		$temp.val(myJSON).select();
+		document.execCommand("copy");
+		$temp.remove();
+		var tooltip = document.getElementById("myTooltip");
+		tooltip.title = "Copied";
+		}
+		function outFunc() {
+		var tooltip = document.getElementById("myTooltip");
+		tooltip.title = "Copy to Clipboard";
+		}
+
+		</script>		
+
+		</head>
+<body>
+
+<!-- Scroll top anchor tag -->
+		<a id="button"></a>
+		
+<!-- Page Header -->
+<div class="page-title container-fluid">
+<div class="container">
+<div class="row" style ="display:flex;">
+<div class="span12" style="margin-top:7px;">                        						
+<h2>jQuery</h2>
+<p>Source code & Example</p>
+<a href = "index.html"><i class="fa fa-home fa-3x pull-right" style = "color: white;" aria-hidden="true"></i></a>						
+</div>					
+</div>
+</div>
+</div> 
+
+<div class = "container" style="padding-bottom:5%;">
+<div class = "row">
+<h3><strong><xmp>Set Inner Width & Height Example:</xmp></strong></h3>
+<div class = "col-md-7">
+<h3><b>Source Code:</b></h3>
+<div  style = "overflow:scroll;">
+<button type="button" onmouseout="outFunc()" class="pull-right btn btn-dark" id = "divtarget" onClick="divcopy()">
+<span id="myTooltip" title="Copy to Clipboard"  class="fa fa-copy" style="font-size:25px;"></span>
+</button>
+<xmp id = "srcdiv">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Set Inner Width and Height of an Element</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("#a").click(function(){
+$("#set").innerWidth(500).innerHeight(350);
+});
+});
+</script>
+<style type="text/css">
+#set{
+width: 400px;
+height: 500px;
+padding: 25px;
+text-align:justify;
+background: lightblue;
+margin: 15px;
+}        
+</style>
+</head>
+<body>
+<div id="set">jQuery, at its core, is a Document Object Model (DOM) manipulation library. 
+The DOM is a tree-structure representation of all the elements of a Web page. 
+jQuery simplifies the syntax for finding, selecting, and manipulating these DOM elements. 
+For example, jQuery can be used for finding an element in the document with a certain property 
+changing one or more of its attributes or making it respond to an event.
+jQuery also provides a paradigm for event handling that goes beyond basic DOM element 
+selection and manipulation. The event assignment and the event callback function definition are done 
+in a single step in a single location in the code. jQuery also aims to incorporate other highly used 
+JavaScript functionality.changing one or more of its attributes or making it respond to an event.
+jQuery also provides a paradigm for event handling that goes beyond basic DOM element 
+selection and manipulation. The event assignment and the event callback function definition are done 
+in a single step in a single location in the code. jQuery also aims to incorporate other highly used 
+JavaScript functionality.
+</div>
+<button type="button" id="a">Set Width and Height</button>
+</body>
+</html>  
+</xmp>
+</div>
+</div>
+<div class = "col-md-5">
+<h3><b>Output:</b></h3>
+<div id="set">jQuery, at its core, is a Document Object Model (DOM) manipulation library. 
+The DOM is a tree-structure representation of all the elements of a Web page. 
+jQuery simplifies the syntax for finding, selecting, and manipulating these DOM elements. 
+For example, jQuery can be used for finding an element in the document with a certain property 
+changing one or more of its attributes or making it respond to an event.jQuery also aims to incorporate other highly used 
+JavaScript functionality.changing one or more of its attributes or making it respond to an event.
+jQuery also provides a paradigm for event handling that goes beyond basic DOM element 
+selection and manipulation. The event assignment and the event callback function definition are done 
+in a single step in a single location in the code. jQuery also aims to incorporate other highly used 
+JavaScript functionality.
+</div>
+<button type="button" id="a" class="btn btn-info">Set Inner Width and Height</button>
+</div>
+</div>
+</div>
+
+<!-- Footer -->
+        <footer>
+            <div class="container-fluid">                               
+                <div class="row">
+                    <div class="copyright text-center">
+                        <p>Copyright 2019 - All rights reserved.</p>
+                    </div>                    
+                </div>
+            </div>
+        </footer>
+		
+</body>
+</html>

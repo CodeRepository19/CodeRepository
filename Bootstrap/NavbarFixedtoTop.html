@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />	
+
+			<!-- Bootstrap library, font-awesome library, custom css references -->
+			<link rel="stylesheet" href="assets/css/Header.css">
+			<link rel="stylesheet" href="assets/css/bootstrap-3.3.7.min.css">
+			<link rel="stylesheet" href="assets/css/Scrooltop.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			
+			<!-- Js files -->
+			<script src="assets/js/jquery-3.1.1.min.js"></script
+			 <script src="assets/js/bootstrap-3.3.7.min.js"></script>
+		
+			<!-- Favicon icon -->
+			<link rel="shortcut icon" href="assets/icon/favicon.ico">
+
+			<title>Navbar Fixed to Top</title>
+
+			<!-- FONT FAMILY -->
+			<style>
+				body,xmp {
+				font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+				}	
+			</style>
+			
+			<script type="text/javascript">
+			
+			<!-- Script for Scroll top event -->
+				$(document).ready(function() {
+				var btn = $('#button');
+				$(window).scroll(function() {
+				if ($(window).scrollTop() > 20 ) {
+				btn.addClass('show');
+				} else {
+				btn.removeClass('show');
+				}
+				});
+				btn.on('click', function(e) {
+				e.preventDefault();
+				$('html, body').animate({scrollTop:0}, '20');
+				});
+				});
+				
+			<!--Script for Copy Code -->
+			function divcopy() {
+			var copyobject=$("#srcdiv").clone();
+			var $temp = $("<input>");
+			$("body").append($temp);
+			var myJSON = copyobject.html();;
+			$temp.val(myJSON).select();
+			document.execCommand("copy");
+			$temp.remove();
+			var tooltip = document.getElementById("myTooltip");
+			tooltip.title = "Copied";
+			}
+			function outFunc() {
+			var tooltip = document.getElementById("myTooltip");
+			tooltip.title = "Copy to Clipboard";
+			}
+			</script>
+
+			</head>
+<body>
+
+<!-- Scroll top anchor tag -->
+		<a id="button"></a>
+		
+<!-- Header part -->
+<div class="page-title container-fluid">
+<div class="container">
+<div class="row" style ="display:flex;">
+<div class="span12">                        						
+<h2>Bootstrap</h2>
+<p>Source code & Example</p>
+<a href = "index.html"><i class="fa fa-home fa-3x pull-right" style = "color: white;" aria-hidden="true"></i></a>						
+</div>					
+</div>
+</div>
+</div>
+
+<div class = "container" style="padding-bottom:5%;">
+<div class = "row">
+<h3><strong><xmp>Navbar Fixed to Top:</xmp></strong></h3>
+<div class = "col-md-7">
+<h3><b>Source Code:</b></h3>
+<div  style = "overflow:scroll;">
+<button type="button" onmouseout="outFunc()" class="pull-right btn btn-dark" id = "divtarget" onClick="divcopy()">
+<span id="myTooltip" title="Copy to Clipboard"  class="fa fa-copy" style="font-size:25px;"></span>
+</button>
+<xmp id = "srcdiv">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Navbar Fixed to Top</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+body{
+padding-top: 70px;
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+<div class="container">
+<!-- Brand and toggle get grouped for better display -->
+<div class="navbar-header">
+<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="#" class="navbar-brand">Brand</a>
+</div>
+<!-- Collection of nav links and other content for toggling -->
+<div id="navbarCollapse" class="collapse navbar-collapse">
+<ul class="nav navbar-nav">
+<li class="active"><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<div class="container">
+<p>Bootstrap is modular and consists of a series of Less (or Sass in version 4 and onward) stylesheets that implement the various components of the toolkit. These stylesheets are generally compiled into a bundle and included in web pages, but individual components can be included or removed. Bootstrap provides a number of configuration variables that control things such as color and padding of various components.Since Bootstrap 2, the Bootstrap documentation has included a customization wizard which generates a customized version of Bootstrap based on the requested components and various settings.</p>
+<p>As of Bootstrap 4, Sass is used instead of Less for the stylesheets.Each Bootstrap component consists of an HTML structure, CSS declarations, and in some cases accompanying JavaScript code.Grid system and responsive design comes standard with an 1170-pixel-wide grid layout. Alternatively, the developer can use a variable-width layout. For both cases, the toolkit has four variations to make use of different resolutions and types of devices: mobile phones, portrait and landscape, tablets and PCs with low and high resolution. Each variation adjusts the width of the columns.</p>
+<p>Bootstrap is modular and consists of a series of Less (or Sass in version 4 and onward) stylesheets that implement the various components of the toolkit. These stylesheets are generally compiled into a bundle and included in web pages, but individual components can be included or removed. Bootstrap provides a number of configuration variables that control things such as color and padding of various components.Since Bootstrap 2, the Bootstrap documentation has included a customization wizard which generates a customized version of Bootstrap based on the requested components and various settings.</p>
+<p>As of Bootstrap 4, Sass is used instead of Less for the stylesheets.Each Bootstrap component consists of an HTML structure, CSS declarations, and in some cases accompanying JavaScript code.Grid system and responsive design comes standard with an 1170-pixel-wide grid layout. Alternatively, the developer can use a variable-width layout. For both cases, the toolkit has four variations to make use of different resolutions and types of devices: mobile phones, portrait and landscape, tablets and PCs with low and high resolution. Each variation adjusts the width of the columns.</p>
+<p>Bootstrap is modular and consists of a series of Less (or Sass in version 4 and onward) stylesheets that implement the various components of the toolkit. These stylesheets are generally compiled into a bundle and included in web pages, but individual components can be included or removed. Bootstrap provides a number of configuration variables that control things such as color and padding of various components.Since Bootstrap 2, the Bootstrap documentation has included a customization wizard which generates a customized version of Bootstrap based on the requested components and various settings.</p>
+<p>As of Bootstrap 4, Sass is used instead of Less for the stylesheets.Each Bootstrap component consists of an HTML structure, CSS declarations, and in some cases accompanying JavaScript code.Grid system and responsive design comes standard with an 1170-pixel-wide grid layout. Alternatively, the developer can use a variable-width layout. For both cases, the toolkit has four variations to make use of different resolutions and types of devices: mobile phones, portrait and landscape, tablets and PCs with low and high resolution. Each variation adjusts the width of the columns.</p>
+<p>Bootstrap is modular and consists of a series of Less (or Sass in version 4 and onward) stylesheets that implement the various components of the toolkit. These stylesheets are generally compiled into a bundle and included in web pages, but individual components can be included or removed. Bootstrap provides a number of configuration variables that control things such as color and padding of various components.Since Bootstrap 2, the Bootstrap documentation has included a customization wizard which generates a customized version of Bootstrap based on the requested components and various settings.</p>
+<p>As of Bootstrap 4, Sass is used instead of Less for the stylesheets.Each Bootstrap component consists of an HTML structure, CSS declarations, and in some cases accompanying JavaScript code.Grid system and responsive design comes standard with an 1170-pixel-wide grid layout. Alternatively, the developer can use a variable-width layout. For both cases, the toolkit has four variations to make use of different resolutions and types of devices: mobile phones, portrait and landscape, tablets and PCs with low and high resolution. Each variation adjusts the width of the columns.</p>
+<p>Bootstrap is modular and consists of a series of Less (or Sass in version 4 and onward) stylesheets that implement the various components of the toolkit. These stylesheets are generally compiled into a bundle and included in web pages, but individual components can be included or removed. Bootstrap provides a number of configuration variables that control things such as color and padding of various components.Since Bootstrap 2, the Bootstrap documentation has included a customization wizard which generates a customized version of Bootstrap based on the requested components and various settings.</p>
+<p>As of Bootstrap 4, Sass is used instead of Less for the stylesheets.Each Bootstrap component consists of an HTML structure, CSS declarations, and in some cases accompanying JavaScript code.Grid system and responsive design comes standard with an 1170-pixel-wide grid layout. Alternatively, the developer can use a variable-width layout. For both cases, the toolkit has four variations to make use of different resolutions and types of devices: mobile phones, portrait and landscape, tablets and PCs with low and high resolution. Each variation adjusts the width of the columns.</p>
+</div>
+</div>
+</body>
+</html>                            
+</xmp>
+</div>
+</div>
+<div class = "col-md-5">
+<h3><b>Output:</b></h3>
+<div class="mainout">
+<nav class="navbar navbar-default navbar-fixed">
+<!-- Brand and toggle get grouped for better display -->
+<div class="navbar-header">
+<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="#" class="navbar-brand">Brand</a>
+</div>
+<!-- Collection of nav links and other content for toggling -->
+<div id="navbarCollapse" class="collapse navbar-collapse">
+<ul class="nav navbar-nav">
+<li class="active"><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+
+</div>
+
+<div>
+<p>Bootstrap is modular and consists of a series of Less (or Sass in version 4 and onward) stylesheets that implement the various components of the toolkit. These stylesheets are generally compiled into a bundle and included in web pages, but individual components can be included or removed. Bootstrap provides a number of configuration variables that control things such as color and padding of various components.Since Bootstrap 2, the Bootstrap documentation has included a customization wizard which generates a customized version of Bootstrap based on the requested components and various settings.As of Bootstrap 4, Sass is used instead of Less for the stylesheets.Each Bootstrap component consists of an HTML structure, CSS declarations, and in some cases accompanying JavaScript code.Grid system and responsive design comes standard with an 1170-pixel-wide grid layout. Alternatively, the developer can use a variable-width layout. For both cases, the toolkit has four variations to make use of different resolutions and types of devices: mobile phones, portrait and landscape, tablets and PCs with low and high resolution. Each variation adjusts the width of the columns. Bootstrap is modular and consists of a series of Less (or Sass in version 4 and onward) stylesheets that implement the various components of the toolkit. These stylesheets are generally compiled into a bundle and included in web pages, but individual components can be included or removed. Bootstrap provides a number of configuration variables that control things such as color and padding of various components.Since Bootstrap 2, the Bootstrap documentation has included a customization wizard which generates a customized version of Bootstrap based on the requested components and various settings.As of Bootstrap 4, Sass is used instead of Less for the stylesheets.Each Bootstrap component consists of an HTML structure, CSS declarations, and in some cases accompanying JavaScript code.Grid system and responsive design comes standard with an 1170-pixel-wide grid layout. Alternatively, the developer can use a variable-width layout. For both cases, the toolkit has four variations to make use of different resolutions and types of devices: mobile phones, portrait and landscape, tablets and PCs with low and high resolution. Each variation adjusts the width of the columns.Bootstrap is modular and consists of a series of Less (or Sass in version 4 and onward) stylesheets that implement the various components of the toolkit. These stylesheets are generally compiled into a bundle and included in web pages, but individual components can be included or removed. Bootstrap provides a number of configuration variables that control things such as color and padding of various components.Since Bootstrap 2, the Bootstrap documentation has included a customization wizard which generates a customized version of Bootstrap based on the requested components and various settings.As of Bootstrap 4, Sass is used instead of Less for the stylesheets.Each Bootstrap component consists of an HTML structure, CSS declarations, and in some cases accompanying JavaScript code.Grid system and responsive design comes standard with an 1170-pixel-wide grid layout. Alternatively, the developer can use a variable-width layout. For both cases, the toolkit has four variations to make use of different resolutions and types of devices: mobile phones, portrait and landscape, tablets and PCs with low and high resolution. Each variation adjusts the width of the columns.
+Bootstrap is modular and consists of a series of Less (or Sass in version 4 and onward) stylesheets that implement the various components of the toolkit. These stylesheets are generally compiled into a bundle and included in web pages, but individual components can be included or removed. Bootstrap provides a number of configuration variables that control things such as color and padding of various components.Since Bootstrap 2, the Bootstrap documentation has included a customization wizard which generates a customized version of Bootstrap based on the requested components and various settings. As of Bootstrap 4, Sass is used instead of Less for the stylesheets.Each Bootstrap component consists of an HTML structure, CSS declarations, and in some cases accompanying JavaScript code.Grid system and responsive design comes standard with an 1170-pixel-wide grid layout. Alternatively, the developer can use a variable-width layout. For both cases, the toolkit has four variations to make use of different resolutions and types of devices: mobile phones, portrait and landscape, tablets and PCs with low and high resolution. Each variation adjusts the width of the columns.
+</div>
+</nav>
+</div>
+
+
+</div>
+</div>
+
+<!-- Footer -->
+        <footer>
+            <div class="container-fluid">                               
+                <div class="row">
+                    <div class="copyright text-center">
+                        <p>Copyright 2019 - All rights reserved.</p>
+                    </div>                    
+                </div>
+            </div>
+        </footer>
+		
+</body>
+</html>

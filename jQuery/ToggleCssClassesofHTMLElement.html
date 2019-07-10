@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />	
+			
+			<!-- Bootstrap library, font-awesome library, custom css references -->			
+			<link rel="stylesheet" href="assets/css/Header.css">
+			<link rel="stylesheet" href="assets/css/bootstrap.3.3.7.min.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+			<!-- Js files -->
+			<script src="assets/js/jquery-3.1.1.min.js"></script>
+			
+			<!-- Favicon icon -->
+			<link rel="shortcut icon" href="assets/icon/favicon.ico">
+			
+			<title>jQuery Toggle CSS Classes of Html Element</title>
+			
+			<style type="text/css">
+			.header
+			{
+			color: orange;
+			text-transform: uppercase;
+			}
+			body,xmp {
+			font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+			}	
+			</style>
+			
+			<script type="text/javascript">
+			
+			<!-- Script for Toggle CSS Classes of Html Element-->
+			$(document).ready(function(){
+			$("button").click(function(){
+			$("h5").toggleClass("header");
+			});
+			});
+						
+			<!--Script for Copy Code -->
+			function divcopy() {
+			var copyobject=$("#srcdiv").clone();
+			var $temp = $("<input>");
+			$("body").append($temp);
+			var myJSON = copyobject.html();;
+			$temp.val(myJSON).select();
+			document.execCommand("copy");
+			$temp.remove();
+			var tooltip = document.getElementById("myTooltip");
+			tooltip.title = "Copied";
+			}
+			function outFunc() {
+			var tooltip = document.getElementById("myTooltip");
+			tooltip.title = "Copy to Clipboard";
+			}
+
+			</script>
+</head>
+<body>
+
+<!-- Page Header -->
+<div class="page-title container-fluid">
+<div class="container">
+<div class="row" style ="display:flex;">
+<div class="span12" style="margin-top:7px;">                        						
+<h2>jQuery</h2>
+<p>Source code & Example</p>
+<a href = "index.html"><i class="fa fa-home fa-3x pull-right" style = "color: white;" aria-hidden="true"></i></a>						
+</div>					
+</div>
+</div>
+</div>
+
+<div class = "container">
+<div class = "row">
+<h3><strong><xmp>jQuery Toggle CSS Classes of Html Element:</xmp></strong></h3>
+<div class = "col-md-7">
+<h3><b>Source Code:</b></h3>
+<div  style = "overflow:scroll;">
+<button type="button" onmouseout="outFunc()" class="pull-right btn btn-dark" id = "divtarget" onClick="divcopy()">
+<span id="myTooltip" title="Copy to Clipboard"  class="fa fa-copy" style="font-size:25px;"></span>
+</button>
+<xmp id = "srcdiv">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />	
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" >  </script>
+<title>jQuery Toggle CSS Classes of Html Element</title>
+<style>
+.header{color: orange;text-transform: uppercase;}
+</style>
+<!-- Script for Toggle CSS Classes of Html Element-->
+<script type="text/javascript">
+$(document).ready(function(){
+$("button").click(function(){
+$("h5").toggleClass("header");
+});
+});
+</script>
+</head>
+<body>
+<h5 class="header">JQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.</h5>
+<button type="button" class="btn btn-info">Add / Remove</button>
+</body>
+</html>
+</xmp>
+</div>
+</div>
+<div class = "col-md-5">
+<h3><b>Output:</b></h3>
+<h5 class="header">JQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.</h5>
+<button type="button" class="btn btn-info">Add / Remove</button>
+</div>
+</div>
+</div>
+
+<!-- Footer -->
+        <footer>
+            <div class="container-fluid">                               
+                <div class="row">
+                    <div class="copyright text-center">
+                        <p>Copyright 2019 - All rights reserved.</p>
+                    </div>                    
+                </div>
+            </div>
+        </footer>
+		
+</body>
+</html>

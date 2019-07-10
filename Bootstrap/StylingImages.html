@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />	
+
+			<!-- Bootstrap library, font-awesome library, custom css references -->			
+			<link rel="stylesheet" href="assets/css/Header.css">
+			<link rel="stylesheet" href="assets/css/bootstrap-3.3.7.min.css">
+			<link rel="stylesheet" href="assets/css/Scrooltop.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+			<!-- Js files -->
+			<script src="assets/js/jquery-1.12.4.min.js"></script>
+			<script src="assets/js/bootstrap-3.3.7.min.js"></script>
+			
+			<!-- Favicon icon -->
+			<link rel="shortcut icon" href="assets/icon/favicon.ico">
+			
+			<title>Styling Images with Bootstrap</title>
+			
+			<!-- FONT FAMILY -->
+		<style>
+			body,xmp {
+			font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+			}	
+		</style>
+		
+			<script>
+			
+			<!-- Script for Scroll top event -->
+				$(document).ready(function() {
+				var btn = $('#button');
+				$(window).scroll(function() {
+				if ($(window).scrollTop() > 20 ) {
+				btn.addClass('show');
+				} else {
+				btn.removeClass('show');
+				}
+				});
+				btn.on('click', function(e) {
+				e.preventDefault();
+				$('html, body').animate({scrollTop:0}, '20');
+				});
+				});
+				
+			<!--Script for Copy Code -->
+			function divcopy() {
+			var copyobject=$("#srcdiv").clone();
+			var $temp = $("<input>");
+			$("body").append($temp);
+			var myJSON = copyobject.html();;
+			$temp.val(myJSON).select();
+			document.execCommand("copy");
+			$temp.remove();
+			var tooltip = document.getElementById("myTooltip");
+			tooltip.title = "Copied";
+			}
+			function outFunc() {
+			var tooltip = document.getElementById("myTooltip");
+			tooltip.title = "Copy to Clipboard";
+			}
+			</script>
+			<style>
+			img{
+			width:250px;
+			Height:250px;
+			}
+			</style>
+			
+</head>
+<body>
+
+<!-- Scroll top anchor tag -->
+		<a id="button"></a>
+		
+<!-- Header part -->
+<div class="page-title container-fluid">
+<div class="container">
+<div class="row" style ="display:flex;">
+<div class="span12">                        						
+<h2>Bootstrap</h2>
+<p>Source code & Example</p>
+<a href = "index.html"><i class="fa fa-home fa-3x pull-right" style = "color: white;" aria-hidden="true"></i></a>						
+</div>					
+</div>
+</div>
+</div>
+<!-- Body Content -->
+<div class = "container" style="padding-bottom:5%;">
+<div class = "row">
+<h3><strong><xmp>Styling Images with Bootstrap Example:</xmp></strong></h3>
+<div class = "col-md-7">
+<h3><b>Source Code:</b></h3>
+<div  style = "overflow:scroll;">
+<button type="button" onmouseout="outFunc()" class="pull-right btn btn-dark" id = "divtarget" onClick="divcopy()">
+<span id="myTooltip" title="Copy to Clipboard"  class="fa fa-copy" style="font-size:25px;"></span>
+</button>
+<xmp id = "srcdiv">
+<!DOCTYPE html>
+<html>
+<head>
+<title>Styling Images with Bootstrap</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />	
+<!-- Bootstrap library -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- Js files -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class = "container">
+<label>Original Image: </label><br/><img src="assets/images/bulb.jpg"  alt="Image"><br/><br/>
+<label>Rounded Image: </label><br/><img src="assets/images/bulb.jpg" class="img-rounded" alt="Rounded Image"><br/><br/>
+<label>Circular Image: </label><br/><img src="assets/images/bulb.jpg" class="img-circle" alt="Circular Image"><br/><br/>
+<label>Thumbnail Image: </label><br/><img src="assets/images/bulb.jpg" class="img-thumbnail" alt="Thumbnail Image">
+</div>
+</body>
+</html>
+</xmp>
+</div>
+</div>
+<div class = "col-md-5">
+<h3><b>Output:</b></h3>
+    <label>Original Image: </label><br/><img src="assets/images/bulb.jpg"  alt="Image"><br/><br/>
+    <label>Rounded Image: </label><br/><img src="assets/images/bulb.jpg" class="img-rounded" alt="Rounded Image"><br/><br/>
+    <label>Circular Image: </label><br/><img src="assets/images/bulb.jpg" class="img-circle" alt="Circular Image"><br/><br/>
+    <label>Thumbnail Image: </label><br/><img src="assets/images/bulb.jpg" class="img-thumbnail" alt="Thumbnail Image">
+</div>
+</div>
+</div>
+
+<!-- Footer -->
+        <footer>
+            <div class="container-fluid">                               
+                <div class="row">
+                    <div class="copyright text-center">
+                        <p>Copyright 2019 - All rights reserved.</p>
+                    </div>                    
+                </div>
+            </div>
+        </footer>
+		
+</body>
+</html>

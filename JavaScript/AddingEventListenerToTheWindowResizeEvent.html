@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />	
+
+			<!-- Bootstrap library, font-awesome library, custom css references -->			
+			<link rel="stylesheet" href="assets/css/Header.css">
+			<link rel="stylesheet" href="assets/css/bootstrap.3.3.7.min.css">
+			<link rel="stylesheet" href="assets/css/Scrooltop.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			
+			<!-- Js files -->
+			<script src="assets/js/jquery-3.1.1.min.js"></script>
+			
+			<!-- Favicon icon -->
+			<link rel="shortcut icon" href="assets/icon/favicon.ico">
+
+			<title>Adding Event Listener To The Window Resize Event</title>
+			
+			<!-- FONT FAMILY -->
+			<style>
+				body,xmp {
+				font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+				}	
+			</style>
+		
+			<script type="text/javascript">	
+
+				<!-- Script for Scroll top event -->
+				$(document).ready(function() {
+				var btn = $('#button');
+				$(window).scroll(function() {
+				if ($(window).scrollTop() > 20 ) {
+				btn.addClass('show');
+				} else {
+				btn.removeClass('show');
+				}
+				});
+				btn.on('click', function(e) {
+				e.preventDefault();
+				$('html, body').animate({scrollTop:0}, '20');
+				});
+				});
+				
+			<!--Script for Copy Code -->
+			function divcopy() {
+			var copyobject=$("#srcdiv").clone();
+			var $temp = $("<input>");
+			$("body").append($temp);
+			var myJSON = copyobject.html();;
+			$temp.val(myJSON).select();
+			document.execCommand("copy");
+			$temp.remove();
+			var tooltip = document.getElementById("myTooltip");
+			tooltip.title = "Copied";
+			}
+			function outFunc() {
+			var tooltip = document.getElementById("myTooltip");
+			tooltip.title = "Copy to Clipboard";
+			}
+			</script>
+
+			</head>
+<body>
+
+<!-- Scroll top anchor tag -->
+		<a id="button"></a>
+		
+<!-- Page Header -->
+		<div class="page-title container-fluid">
+				<div class="container">
+					<div class="row">
+						<div class="span12" style="margin-top:7px;">                        						
+							<h2>JavaScript</h2>
+							<p>Source code & Example</p>
+							<a href = "index.html"><i class="fa fa-home fa-3x pull-right" style = "color: white;" aria-hidden="true"></i></a>						
+							</div>					
+					</div>
+				</div>
+			</div>
+
+<div class = "container" style="padding-bottom:5%;">
+<div class = "row">
+<h3><strong><xmp>Adding Event Listener To The Window Resize Event:</xmp></strong></h3>
+<div class = "col-md-7">
+<h3><b>Source Code:</b></h3>
+<div  style = "overflow:scroll;">
+<button type="button" onmouseout="outFunc()" class="pull-right btn btn-dark" id = "divtarget" onClick="divcopy()">
+<span id="myTooltip" title="Copy to Clipboard"  class="fa fa-copy" style="font-size:25px;"></span>
+</button>
+<xmp id = "srcdiv">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>	
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<title>Adding Event Listener To The Window Resize Event</title>
+</head>
+<body>
+<strong><span id="result" style="color:#008b10b0"></span></strong>
+<p><strong>Note:</strong> Please resize the browser window to see how it works.</p>
+<script type="text/javascript">
+function displayWindowSize() {
+var w = window.innerWidth;
+var h = window.innerHeight;
+var size = "Width: " + w + ", " + "Height: " + h;
+document.getElementById("result").innerHTML = size;
+}
+window.addEventListener("resize", displayWindowSize);
+</script>
+</body>
+</html>
+</xmp>
+</div>
+</div>
+<div class = "col-md-5">
+<h3><b>Output:</b></h3>
+<strong><span id="result" style="color:#008b10b0"></span></strong>
+<p><strong>Note:</strong> Please resize the browser window to see how it works.</p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+        <footer>
+            <div class="container-fluid">                               
+                <div class="row">
+                    <div class="copyright text-center">
+                        <p>Copyright 2019 - All rights reserved.</p>
+                    </div>                    
+                </div>
+            </div>
+        </footer>
+<script>
+// Defining event listener function
+function displayWindowSize() {
+var w = window.innerWidth;
+var h = window.innerHeight;
+var size = "Width: " + w + ", " + "Height: " + h;
+document.getElementById("result").innerHTML = size;
+}
+
+// Attaching the event listener function to window's resize event
+window.addEventListener("resize", displayWindowSize);
+</script>
+</script>
+</body>
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+		<meta charset="utf-8">
+        <title>HTML5 Repository</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+		
+		<!-- Fontawesome CDN -->				
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">	
+						
+		<!-- CSS files -->
+		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="assets/css/HTML5.css">
+		<link rel="stylesheet" href="assets/css/Scrooltop.css">
+
+        <!-- Favicon icon -->
+        <link rel="shortcut icon" href="assets/icon/favicon.ico">
+
+		<!-- Javascript files -->
+        <script src="assets/js/jquery-1.8.2.min.js"></script>
+		<script src="assets/js/jquery-3.1.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script> 		
+        
+		<!-- FONT FAMILY -->
+		<style>
+			body,xmp {
+			font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+			}	
+		</style>
+		
+		<script>
+
+		<!-- Script for Scroll top event -->
+				$(document).ready(function() {
+				var btn = $('#button');
+				$(window).scroll(function() {
+				if ($(window).scrollTop() > 500 ) {
+				btn.addClass('show');
+				} else {
+				btn.removeClass('show');
+				}
+				});
+				btn.on('click', function(e) {
+				e.preventDefault();
+				$('html, body').animate({scrollTop:0}, '500');
+				});
+				});
+
+		<!-- Script for Tab to hide & show Code -->
+					
+				$(document).ready(function()
+				{
+				$(".html-code").hide();
+				$(".codebox-title").on('click', function(event)
+				{
+				$(this).siblings(".html-code").fadeToggle(300);
+				});
+				});
+		</script>
+			
+    </head>
+
+    <body>
+		
+		<!-- Scroll top anchor tag -->
+		<a id="button"></a>
+        
+		<!-- Header part -->
+			<div class="page-title container-fluid">
+				<div class="container">
+					<div class="row" style ="display:flex;">
+					<div style="width:12%;">         						
+<strong><p style="font-size:35px;">SpSoft</p></strong><br>
+<!-- <p style="font-size:10px;">Code Repository</p> -->
+</div>
+<div style="border-left: 2px solid white;margin-top:7px;margin-bottom:7px;"></div>
+				<div class="span12" style="margin-left:8px;margin-top:3px;">                        						
+							<h2>HTML5</h2>
+							<p>Here are the Examples and Reference Links</p>
+							<a href = "..\index.html"><i class="fa fa-home fa-3x pull-right" style = "color: white;" aria-hidden="true"></i></a>						
+							</div>					
+					</div>
+				</div>
+			</div>	
+	<p class = "pull-left Refp">Last Updated : 29-Jan-2019</p>			
+	<a class = "pull-right Refa" target="_blank" href = "References.html">Reference Url's</a>	
+	<br>
+
+	<div class="container tagcontainer">	
+	
+		<div class="example">
+                    <div class="codebox">
+                        <div class="codebox-title"><xmp>HTML <abbr> Tag</xmp><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Abbrtag.html">Try this code <span>»</span></a></div>                        
+						<ul class="html-code">
+						<li><code><span class="tag">The &lt;abbr&gt; title="World Wide Fund"&gt;WWF&lt;/abbr&gt; for Nature is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</span></code></li>
+                        </ul>		
+                    </div>
+        </div>
+			 
+		<div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><xmp>HTML <area> Tag</xmp><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Areatag.html">Try this code <span>»</span></a></div>                        
+					<ul class="html-code">
+					<li><code><span class="tag">&lt;img src ="assets/Images/areaimage.jpg" width="225" height="151" border="0" alt=" Area Image" usemap ="#muellermap" /&gt;</span></code></li>
+					<li><code><span class="tag">&lt;map id ="muellermap" name="muellermap"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;area shape ="rect" coords ="90,80,120,151" href ="javascript:alert('Hi..');" alt="Me" /&gt;</span></code></li>
+					<li><code><span class="tag">&lt;area shape ="poly" coords ="55,55,120,80,90,80,90,100,70,100,20,80,55,55" href ="assets/Images/Mount.jpg" target="_blank" alt="Mount Cook" /&gt;</span></code></li>
+					<li><code><span class="tag">&lt;area shape ="poly" coords ="145,80,145,100,215,90,215,80,180,60,145,80" href ="assets/Images/house.jpg" target="_blank" alt="Mueller Hut"/&gt;</span></code></li>
+					<li><code><span class="tag">&lt;/map&gt;</span></code></li>
+					</ul>		
+				</div>
+		</div>
+	           	 			
+		 <div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><xmp>HTML <audio> Tag</xmp><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Audiotag.html">Try this code <span>»</span></a></div>
+					<ul class="html-code">
+						<li><code><span class="tag">&lt;audio <span class="attribute">controls</span>="<span class="attribute-value">controls</span>"&gt;</span></code></li>
+						<li><code><span class="tag">&lt;source <span class="attribute">src</span>="<span class="attribute-value">assets/mp3/samplemusic.mp3</span>" <span class="attribute">type</span>="<span class="attribute-value">audio/mpeg</span>"&gt;</span></code></li>
+						<li><code><span class="tag">&lt;source <span class="attribute">src</span>="<span class="attribute-value">assets/mp3/samplemusic.mp3</span>" <span class="attribute">type</span>="<span class="attribute-value">audio/x-ms-wma</span>"&gt;</span></code></li>
+						<li class="alt"><code>&ltp&gt;Your browser does not support the HTML5 Audio element.&lt/p&gt;</code></li>
+						<li><code><span class="tag">&lt;/audio&gt;</span></code></li>
+					</ul>
+				</div>
+		 </div>
+					 
+		 <div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><xmp>HTML <bdo> Tag</xmp><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Bdotag.html">Try this code <span>»</span></a></div>                        
+					<ul class="html-code">
+					<li><code><span class="tag">&lt;p&gt;This paragraph will go right-to-left.&lt/p&gt;</span></code></li>						
+					<li><code><span class="tag">&lt;bdo dir="rtl"&gt;This paragraph will go right-to-left.&lt/bdo&gt;</span></code></li>
+					</ul>		
+				</div>
+		 </div>
+		 
+		 <div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><xmp>HTML <code> Tag</xmp><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Codetag.html">Try this code <span>»</span></a></div>                        
+					<ul class="html-code">
+					<li><code><span class="tag">To create a new array, type the following: &lt;code&gt; var arr = new Array(3)&lt;/code&gt;</span></code></li>
+					</ul>		
+				</div>
+		 </div>
+		 			 
+		<div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><xmp>HTML <datalist> Tag</xmp><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Datalisttag.html">Try this code <span>»</span></a></div>                        
+					<ul class="html-code">
+					<li><code><span class="tag">&lt;form&gt;</span></code></li>
+					<li><code><span class="tag">&lt;input list="browsers" name="browser"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;datalist id="browsers"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;option value="Internet Explorer"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;option value="Firefox"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;option value="Chrome"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;option value="Opera"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;option value="Safari"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;/datalist&gt;</span></code></li>
+					<li><code><span class="tag">&lt;input type="submit"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;/form&gt;</span></code></li>
+					</ul>		
+				</div>
+		 </div>
+		 
+		 <div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><xmp>HTML <del> & <ins> Tags</xmp><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\DelandInstag.html">Try this code <span>»</span></a></div>                        
+					<ul class="html-code">												
+					<li><code><span class="tag">&lt;p&gt;I am &lt;del&gt;very&lt;/del&gt; happy to do these examples.&lt;/p&gt;</span></code></li>
+					<li><code><span class="tag">&lt;p&gt;I am &lt;ins&gt;very&lt;/ins&gt; happy to do these examples.&lt;/p&gt;</span></code></li>
+					</ul>		
+				</div>
+		 </div>
+
+		 <div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><xmp>HTML <dialog> Tag</xmp><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Dialogtag.html">Try this code <span>»</span></a></div>                        
+					<ul class="html-code">
+					<li><code><span class="tag">&lt;div class="site-content cf&gt;</span></code></li>
+					<li><code><span class="tag">&lt;div class="boxed-group dangerzone"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;h4&gt;Account&lt;/h4&gt;</span></code></li>
+					<li><code><span class="tag">&lt;div class="boxed-group-inner"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;section&gt;</span></code></li>
+					<li><code><span class="tag">&lt;h4&gt;Delete this account&lt;/h4&gt;</span></code></li>						
+					<li><code><span class="tag">&lt;button href="#" class="btn btn-danger boxed-action" id="delete-account"&gt;Delete Account&lt;/button&gt;</span></code></li>
+					<li><code><span class="tag">&lt;p&gt;This action is permanent, think twice before proceeding!&lt;/p&gt;</span></code></li>						
+					<li><code><span class="tag">&lt;dialog id="confirm-delete" class="site-dialog"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;header class="dialog-header"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;h1&gt;Please Confirm&lt;/h1&gt;</span></code></li>						
+					<li><code><span class="tag">&lt;/header&gt;</span></code></li>
+					<li><code><span class="tag">&lt;div class="dialog-content"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;p&gt;You are about to close your account. This action is irreversible. It will permanently delete your account along with its associated data. Are you sure you want to continue?&lt;/p&gt;</span></code></li>
+					<li><code><span class="tag">&lt;/div&gt;</span></code></li>
+					<li><code><span class="tag">&lt;div class="btn-group cf"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;button id="delete"&gt;Delete&lt;/button&gt;</span></code></li>
+					<li><code><span class="tag">&lt;button id="cancel"&gt;Cancel&lt;/button&gt;</span></code></li>
+					<li><code><span class="tag">&lt;/div&gt;</span></code></li>
+					<li><code><span class="tag">&lt;/dialog&gt;</span></code></li>
+					<li><code><span class="tag">&lt;/section&gt;</span></code></li>
+					<li><code><span class="tag">&lt;/div&gt;</span></code></li>
+					<li><code><span class="tag">&lt;/div&gt;</span></code></li>
+					<li><code><span class="tag">&lt;/div&gt;</span></code></li>
+					</ul>		
+				</div>
+		 </div>
+		 
+		  <div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><xmp>HTML <figure> Tag</xmp><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Figuretag.html">Try this code <span>»</span></a></div>                        
+					<ul class="html-code">
+					<li><code><span class="tag">&lt;figure&gt;</span></code></li>
+					 <li><code><span class="tag">&lt;img src="assets/Images/venus.jpg" alt="venus"&gt;</span></code></li>
+					 <li><code><span class="tag">&lt;figcaption&gt;Fig.1 - venus.&lt;/figcaption&gt;</span></code></li>
+					<li><code><span class="tag">&lt;/figure&gt;</span></code></li>
+					</ul>		
+				</div>
+		 </div>
+			 
+		 <div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><xmp>HTML <kbd> Tag</xmp><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Kbdtag.html">Try this code <span>»</span></a></div>                        
+					<ul class="html-code">						
+					<li><code><span class="tag">&lt;p&gt;Please press &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Shift&lt;/kbd&gt; + &lt;kbd&gt;R&lt;/kbd&gt; to re-render an output page.&lt;/p&gt;</span></code></li>
+					</ul>		
+				</div>
+		 </div>
+			 
+		  <div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><xmp>HTML <mark> Tag</xmp><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Marktag.html">Try this code <span>»</span></a></div>                        
+					<ul class="html-code">												
+					<li><code><span class="tag">&lt;p&gt;Despite the stockmarket crash in 2008, the value of my share portfolio &lt;mark&gt;increased by 100 percent&lt;/mark&gt;. I must be doing something right.&lt;/p&gt;</span></code></li>							
+					</ul>		
+				</div>
+		 </div>
+		 
+		 <div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><xmp>HTML <meter> Tag</xmp><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Metertag.html">Try this code <span>»</span></a></div>                        
+					<ul class="html-code">
+					<li><code><span class="tag">&lt;dl&gt;</span></code></li>
+					<li><code><span class="tag">&lt;dd&gt;&lt;meter min="0" max="100" value="25">25%&lt;/meter&gt;&lt;/dd&gt;</span></code></li>
+					<li><code><span class="tag">&lt;dd&gt;&lt;meter min="100" max="200" value="150">50%&lt;/meter&gt;&lt;/dd&gt;</span></code></li>
+					<li><code><span class="tag">&lt;dd&gt;&lt;meter min="0" max="100" value="75">75%&lt;/meter&gt;&lt;/dd&gt;</span></code></li>
+					<li><code><span class="tag">&lt;dd&gt;&lt;meter min="0" max="800" value="400">50%&lt;/meter&gt;&lt;/dd&gt;</span></code></li>
+					<li><code><span class="tag">&lt;/dl&gt;</span></code></li>
+					</ul>		
+				</div>
+		 </div>
+			 
+	  <div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><xmp>HTML <optgroup> Tag</xmp><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Optgroup.html">Try this code <span>»</span></a></div>                        
+					<ul class="html-code">
+					<li><code><span class="tag">&lt;select&gt;</span></code></li>
+					<li><code><span class="tag">&lt;optgroup label="Australia"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;option value ="sydney">Sydney&lt;/option&gt;</span></code></li>
+					<li><code><span class="tag">&lt;option value ="melbourne">Melbourne&lt;/option&gt;</span></code></li>
+					<li><code><span class="tag">&lt;/optgroup&gt;</span></code></li>
+					<li><code><span class="tag">&lt;optgroup label="New Zealand"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;option value ="cromwell">Cromwell&lt;/option&gt;</span></code></li>
+					<li><code><span class="tag">&lt;option value ="queenstown">Queenstown&lt;/option&gt;</span></code></li>
+					<li><code><span class="tag">&lt;/optgroup&gt;</span></code></li>
+					<li><code><span class="tag">&lt;/select&gt;</span></code></li>
+					</ul>		
+				</div>
+		 </div>
+			 
+		<div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><xmp>HTML <output> Tag</xmp><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Output.html">Try this code <span>»</span></a></div>                        
+					<ul class="html-code">
+					<li><code><span class="tag">&lt;form onsubmit="return false" oninput="amount.value = (principal.valueAsNumber * rate.valueAsNumber) / 100"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;fieldset&gt;</span></code></li>
+					<li><code><span class="tag">&lt;legend style="font-weight:bold;"&gt;Interest Calculator&lt;/legend&gt;</span></code></li>
+					<li><code><span class="tag">&lt;label for="principal">Amount to invest: $&lt;/label&gt;</span></code></li>
+					<li><code><span class="tag">&lt;input type="number" min="0" id="principal" name="principal" value="1000"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;p&gt;&lt;label for="rate"&gt;Interest Rate:&lt;/label&gt;</span></code></li>
+					<li><code><span class="tag">&lt;input type="range" min="0" max="20" id="rate" name="rate" value="0" oninput="thisRate.value = rate.value"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;output name="thisRate" for="rate">0&lt;/output&gt;&lt;span&gt;%&lt;/span&gt;&lt;/p&gt;</span></code></li>
+					<li><code><span class="tag">&lt;p&gt;Interest Received: &lt;strong&gt;$&lt;output name="amount" for="principal rate"&gt;0&lt;/output&gt;&lt;/strong&gt;&lt;/p&gt;</span></code></li>
+					<li><code><span class="tag">&lt;/fieldset&gt;</span></code></li>
+					<li><code><span class="tag">&lt;/form&gt;</span></code></li>
+					</ul>		
+				</div>
+		</div>
+		
+		<div class="example">
+			<div class="codebox">
+				<div class="codebox-title"><xmp>HTML <pre> Tag</xmp><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Pretag.html">Try this code <span>»</span></a></div>                        
+				<ul class="html-code">
+				<li><code><span class="tag">&lt;pre&gt;</span></code></li>
+				<li><code><span class="tag">Despite the stockmarket crash in 2008</span></code></li>
+				<li><code><span class="tag">the value of my share portfolio</span></code></li>
+				<li><code><span class="tag">increased by 100 percent</span></code></li>
+				<li><code><span class="tag">I must be doing something right.</span></code></li>
+				<li><code><span class="tag">&lt;/pre&gt;</span></code></li>
+				</ul>		
+			</div>
+        </div>
+				
+		 <div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><xmp>HTML <progress> Tag</xmp><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Progresstag.html">Try this code <span>»</span></a></div>                        
+					<ul class="html-code">
+					<li><code><span class="tag">Downloading progress: &lt;progress value="22" max="100"&gt;&lt;/progress&gt;</span></code></li>
+					</ul>		
+				</div>
+		 </div>		 
+			 
+		 <div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><xmp>HTML <sub> & <sup> Tag</xmp><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\SubandSuptags.html">Try this code <span>»</span></a></div>                        
+					<ul class="html-code">
+					<li><code><span class="tag">&lt;p&gt;This text contains &lt;sub&gt;subscript&lt;/sub&gt; text.&lt;/p&gt;</span></code></li>
+					<li><code><span class="tag">&lt;p&gt;This text contains &lt;sup&gt;superscript&lt;/sup&gt; text.&lt;/p&gt;</span></code></li>
+					</ul>		
+				</div>
+		 </div>
+			 
+		 <div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><xmp>HTML <summary> Tag</xmp><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Summarytag.html">Try this code <span>»</span></a></div>                        
+					<ul class="html-code">
+					<li><code><span class="tag">&lt;details&gt;</span></code></li>
+					<li><code><span class="tag">&lt;summary&gt;Courses&lt;/summary&gt;</span></code></li>
+					<li><code><span class="tag">&lt;p&gt;HTML5&lt;/p&gt;</span></code></li>
+					<li><code><span class="tag">&lt;p&gt;Javascript&lt;/p&gt;</span></code></li>
+					<li><code><span class="tag">&lt;p&gt;Bootstrap&lt;/p&gt;</span></code></li>
+					<li><code><span class="tag">&lt;p&gt;jQuery&lt;/p&gt;</span></code></li>
+					<li><code><span class="tag">&lt;p&gt;Angular&lt;/p&gt;</span></code></li>
+					<li><code><span class="tag">&lt;p&gt;PHP&lt;/p&gt;</span></code></li>						
+					<li><code><span class="tag">&lt;/details&gt;</span></code></li>
+					</ul>		
+				</div>
+		 </div>	
+			 
+		<div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><xmp>HTML <video> Tag</xmp><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\VideoTag.html">Try this code <span>»</span></a></div>
+					<ul class="html-code">
+						<li><code><span class="tag">&lt;video width="400" type="video/mp4"&gt;</span></code></li>
+						<li><code><span class="tag">&lt;source src="assets/videos/sample.mp4" type="video/mp4"&gt; </span></code></li>
+						<li><code><span class="tag">&lt;source src="assets/videos/sample.ogg" type="video/ogg"&gt; </span></code></li>	  
+						<li><code><span class="tag">&lt;/video&gt;</span></code></li>						
+					</ul>
+				</div>
+		 </div>			 			 			             			
+			 			 			  		
+		<div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><xmp>HTML <table> Tag</xmp><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Tabletag.html">Try this code <span>»</span></a></div>                        
+					<ul class="html-code">
+					<li><code><span class="tag">&lt;table&gt; </span></code></li>
+					<li><code><span class="tag">&lt;caption&gt;Invoice Form&lt;/caption&gt; </span></code></li>
+					<li><code><span class="tag">&lt;thead&gt; &lt;tr&gt; &lt;th colspan="3"&gt;Invoice #123456789&lt;/th&gt; &lt;th&gt;14 January 2029 &lt;/tr&gt; &lt;tr&gt; &lt;td colspan="2"&gt; &lt;strong&gt;Pay to:&lt;/strong&gt;&lt;br&gt; Acme Billing Co.&lt;br&gt; 123 Main St.&lt;br&gt; Cityville, NA 12345 &lt;/td&gt; &lt;td colspan="2"&gt; &lt;strong&gt;Customer:&lt;/strong&gt;&lt;br&gt; John Smith&lt;br&gt; 321 Willow Way&lt;br&gt; Southeast Northwestershire, MA 54321 &lt;/td&gt; &lt;/tr&gt; &lt;/thead&gt;</span></code></li>
+					<li><code><span class="tag">&lt;tbody&gt; &lt;tr&gt; &lt;th&gt;Name / Description&lt;/th&gt; &lt;th&gt;Qty.&lt;/th&gt; &lt;th&gt;@&lt;/th&gt; &lt;th&gt;Cost&lt;/th&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Paperclips&lt;/td&gt; &lt;td&gt;1000&lt;/td&gt; &lt;td&gt;0.01&lt;/td&gt; &lt;td&gt;10.00&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Staples (box)&lt;/td&gt; &lt;td&gt;100&lt;/td&gt; &lt;td&gt;1.00&lt;/td&gt; &lt;td&gt;100.00&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; </span></code></li>
+					<li><code><span class="tag">&lt;tfoot&gt; &lt;tr&gt; &lt;th colspan="3"&gt;Subtotal&lt;/th&gt; &lt;td&gt; 110.00&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;th colspan="2"&gt;Tax&lt;/th&gt; &lt;td&gt; 8% &lt;/td&gt; &lt;td&gt;8.80&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;th colspan="3"&gt;Grand Total&lt;/th&gt; &lt;td&gt;$ 118.80&lt;/td&gt; &lt;/tr&gt;&lt;/tfoot&gt;</span></code></li>
+					<li><code><span class="tag">&lt;/table&gt;</span></code></li>
+					</ul>		
+				</div>
+		 </div>
+		
+		<div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><xmp><p contenteditable="true"></xmp><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Contenteditable.html">Try this code <span>»</span></a></div>                        
+					<ul class="html-code">
+					<li><code><span class="tag">&lt;p contenteditable="true">We are Training on Bootstrap, HTML 5, CSS3, JavaScript and Angular.&lt;/p&gt;</span></code></li>						
+					</ul>		
+				</div>
+		 </div>
+		 
+		<div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><xmp><input type="color"></xmp><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Colorpicker.html">Try this code <span>»</span></a></div>                        
+					<ul class="html-code">
+					<li><code><span class="tag">&lt;form&gt;</span></code></li>
+					<li><code><span class="tag">Select your favorite color:</span></code></li>
+					<li><code><span class="tag">&lt;input type="color" name="favcolor" value="#ff0000" id="color"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;input type="submit" value="Submit" onclick = "getValue();"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;/form&gt;</span></code></li>
+					</ul>		
+				</div>
+		 </div>		 	 	
+			 
+		<div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><xmp><input type="date"></xmp><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Datepicker.html">Try this code <span>»</span></a></div>                        
+					<ul class="html-code">
+					<li><code><span class="tag">&lt;label for="meeting"&gt;Current Date : &lt;/label&gt;</span></code></li>
+					<li><code><span class="tag">&lt;input id="meeting" type="date" value="2019-01-04"/&gt;</span></code></li>
+					<li><code><span class="tag">&lt;label for="meeting"&gt;Current Week : &lt;/label&gt;</span></code></li>
+					<li><code><span class="tag">&lt;input type="week" name="week" id="camp-week" value="2019-W01" required&gt;</span></code></li>
+					<li><code><span class="tag">&lt;label for="meeting"&gt;Current Month : &lt;/label&gt;</span></code></li>
+					<li><code><span class="tag">&lt;input type="month" id="start" name="start" value="2019-01"&gt;</span></code></li>
+					</ul>		
+				</div>
+		 </div>
+		 
+		 <div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><h4>Custom Font Example</h4><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Customfont.html">Try this code <span>»</span></a></div>                        
+					<ul class="html-code">
+					<li><code><span class="tag">&lt;div&gt;This content is displayed using custom font named GreatVibes.&lt;/div&gt;</span></code></li>
+					</ul>		
+				</div>
+		 </div>
+			 
+		<div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><h4>Jump link Example</h4><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Jumplink.html">Try this code <span>»</span></a></div>                        
+					<ul class="html-code">
+					<li><code><span class="tag">&lt;p style="margin-bottom: 1200px;">&lt;a href="#notes"&gt;Jump Link&lt;/a&gt;&lt;/p&gt;</span></code></li>
+					<li><code><span class="tag">&lt;p id="notes">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt;</span></code></li>
+					</ul>		
+				</div>
+		 </div>
+		 
+		<div class="example">
+					<div class="codebox">
+						<div class="codebox-title"><h4>Location Example</h4><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Location.html">Try this code <span>»</span></a></div>                        
+						<ul class="html-code">
+						<li><code><span class="tag">&lt;div id="result"&gt;&lt;/div&gt;</span></code></li>
+						<li><code><span class="tag">&lt;button class="btn btn-primary" type="button" onclick="showPosition();">Current Location&lt;/button&gt;</span></code></li>				
+						</ul>		
+					</div>
+		 </div>
+			 
+		<div class="example">
+				<div class="codebox">
+					<div class="codebox-title"><h4>QR Code Example</h4><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\Qrcode.html">Try this code <span>»</span></a></div>                        
+					<ul class="html-code">
+					<li><code><span class="tag">&lt;input type="button" id="btn_submit" value="View Source Code" class="btn btn-info pull-right"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;form name="QRform" id="QRform"&gt;</span></code></li>
+					<li><code><span class="tag">&lt;textarea name="textField" rows="3" cols="30" onkeyup='updateQRCode(this.value)' onclick="this.focus();this.select();"&gt;https://www.infosys.com/&gt;/textarea&gt;</span></code></li>
+					<li><code><span class="tag">&lt;/form&gt;</span></code></li>
+					<li><code><span class="tag">&lt;div id="qrcode">&lt;/div&gt;</span></code></li>
+					</ul>		
+				</div>
+		 </div>
+		 
+		<div class="example">
+				<div class="codebox">
+				<div class="codebox-title"><h4>Webstorage Example</h4><a title="Try this code" class="try-btn" target="_blank" href="..\HTML5\webstorage.html">Try this code <span>»</span></a></div>                        
+				<ul class="html-code">
+				<li><code><span class="tag">&lt;form&gt;</span></code></li>	
+				<li><code><span class="tag">&lt;label&gt;First Name: &lt;input type="text" id="firstName">&lt;/label&gt;</span></code></li>
+				<li><code><span class="tag">&lt;button type="button" class="btn btn-info"&gt;Save Name&lt;/button&gt; </span></code></li>
+				<li><code><span class="tag">&lt;button type="button" class="btn btn-warn"&gt;Get Name&lt;/button&gt;</span></code></li>					
+				<li><code><span class="tag">&lt;/form&gt;</span></code></li>												
+				</ul>			
+				</div>
+		 </div>
+		 
+	</div>
+	
+			<!-- Footer Part -->
+			<iframe src="Footer.html" style="border: none;" scrolling="no" width="99.7%" height="50"></iframe>
+        
+    </body>
+</html>

@@ -1,0 +1,91 @@
+/* ----- Page title ----- */
+.cuspre
+{
+	display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 20px;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre;
+    white-space: pre-wrap;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.page-title {
+	 background-color: #3F51B5;       
+    -moz-box-shadow:
+        0 5px 15px 0 rgba(0,0,0,.05) inset,
+        0 -5px 15px 0 rgba(0,0,0,.05) inset;
+    -webkit-box-shadow:
+        0 5px 15px 0 rgba(0,0,0,.05) inset,
+        0 -5px 15px 0 rgba(0,0,0,.05) inset;
+    box-shadow:
+        0 5px 15px 0 rgba(0,0,0,.05) inset,
+        0 -5px 15px 0 rgba(0,0,0,.05) inset;    
+		height:50px;
+}
+
+.page-title h2 {
+    display: inline;
+    margin-left: 10px;
+    font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 35px;
+    color: #ffffff;
+  /*   text-shadow: 0 1px 0 rgba(255, 255, 255, .7); */
+    vertical-align: middle;
+}
+
+.page-title p {
+	 color: #ffffff;
+    display: inline;
+    margin-left: 5px;
+    font-size: 13px;
+    font-style: italic;
+    vertical-align: middle;
+}
+
+.page-title-icon {
+    margin-left: 20px;
+    font-size: 46px;
+    color: #ccc;
+    vertical-align: middle;
+}
+
+/* ----- Footer ----- */
+
+footer {
+	width:100%;
+	position: fixed;
+	bottom: 0;      
+    background: #f8f8f8 url(../Images/pattern.jpg) left top repeat;
+    -moz-box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset;
+    -webkit-box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset;
+}
+
+footer .widget {
+    margin-top: 20px;
+    text-align: left;
+}
+
+footer .widget p {
+    line-height: 24px;
+}
+
+footer .footer-border {
+    margin-top: 30px;
+    border-top: 1px dashed #ddd;
+}
+
+footer .copyright {
+    margin-top: 15px;    
+	color:grey	;
+font-weight:200;
+font-size:13px;
+}

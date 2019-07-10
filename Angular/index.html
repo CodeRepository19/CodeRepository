@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        
+		<meta charset="utf-8">
+        <title>Angular Repository</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+		
+		<!-- Fontawesome CDN -->				
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">	
+						
+		<!-- CSS files -->
+		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap-3.3.7.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="assets/css/HTML5.css">
+		<link rel="stylesheet" href="assets/css/Scrooltop.css">
+
+        <!-- Favicon icon -->
+        <link rel="shortcut icon" href="assets/icon/favicon.ico">
+
+		<!-- Javascript files -->
+ 		<script src="assets/js/jquery-3.1.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script> 		
+        
+		<!-- only for carousel -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<style>
+			body {
+			font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+			}	
+		</style>
+		
+		<script>
+
+		<!-- Script for Scroll top event -->
+				$(document).ready(function() {
+				var btn = $('#button');
+				$(window).scroll(function() {
+				if ($(window).scrollTop() > 20 ) {
+				btn.addClass('show');
+				} else {
+				btn.removeClass('show');
+				}
+				});
+				btn.on('click', function(e) {
+				e.preventDefault();
+				$('html, body').animate({scrollTop:0}, '20');
+				});
+				});
+
+		<!-- Script for Tab to hide & show Code -->
+					
+				$(document).ready(function()
+				{
+				$(".html-code").hide();
+				$(".codebox-title").on('click', function(event)
+				{
+				$(this).siblings(".html-code").fadeToggle(300);
+				});
+				});
+				
+				<!--Scroll event for Theory-->
+		
+				$(document).ready(function(){
+				$( "a.AngularIntroduction,.DifferencesbetweenAngularandAngularJS,.BuildingBlocksofAngular,.AngularEnvironmentSetuporPrerequisites,.CreatingOlderVersionsofAngularApplications,.SampleProject,.CreatesimpleRESTAPIwithexpressJS,.CloningaRepository,.CreatingaRepository,.AngularArchitecture,.AngularInternalFlow,.UpdatingaRepository" ).click(function( event ) {
+					event.preventDefault();
+				$("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 500);
+				});
+				});
+				
+		</script>
+			
+			<style>
+			h1,h3,h5,h6{
+				font-weight:100;
+			}
+			h4{
+				font-size:5;
+			}
+		</style>
+    </head>
+
+    <body>
+		
+		<!-- Scroll top anchor tag -->
+		<a id="button"></a>
+        
+<!-- Header part -->					
+<div class="page-title container-fluid">
+
+	<div class="container">
+		<div class="row" style ="display:flex;">
+		
+				<!-- first col -->
+				<div style="width:12%;">         						
+				<strong><p style="font-size:35px;">SpSoft</p></strong><br>
+				</div>
+				
+				<!-- second col -->
+				<div style="border-left: 2px solid white;margin-top:7px;margin-bottom:7px;"></div>
+				
+				<!-- third col -->
+				<div class="span12" style="margin-left:8px;margin-top:8px;">                        						
+				<h2>Angular</h2>
+				<p>Here are the Examples and Reference Links</p>				
+				</div>
+				<div style="padding-left:48%;margin-top:5px;">
+				<a href = "..\index.html"><i class="fa fa-home fa-3x" style = "color: white;" aria-hidden="true"></i></a>						
+				</div>				
+				
+		</div>
+	</div>
+
+</div>
+			
+	<p class = "pull-left Refp">Last Updated : 25-Jan-2019</p>			
+	<a class = "pull-right Refa" target="_blank" href = "References.html">Reference Url's</a>
+		
+
+<div class="container tagcontainer" style="padding-bottom:5%;">	
+	
+<!-- Section for Angular introduction -->
+<div class="introclass">
+	
+<div style="font-size:16px;">	
+<!-- Navigations for particular div's -->
+<a href="#AngularIntroduction" class="AngularIntroduction">Angular Introduction</a><br>
+<a href="#DifferencesbetweenAngularandAngularJS" class="DifferencesbetweenAngularandAngularJS">Differences between Angular and AngularJS</a><br>
+<a href="#AngularArchitecture" class="AngularArchitecture">Angular Architecture</a><br>
+<a href="#BuildingBlocksofAngular" class="BuildingBlocksofAngular">Building Blocks of Angular</a><br>
+<a href="#AngularInternalFlow" class="AngularInternalFlow">Angular Internal Flow</a><br>			
+<a href="#AngularEnvironmentSetuporPrerequisites" class="AngularEnvironmentSetuporPrerequisites">Angular Environment Setup or Prerequisites</a><br>
+<a href="#CreatingOlderVersionsofAngularApplications" class="CreatingOlderVersionsofAngularApplications">Creating Older Versions of Angular Applications</a><br>
+<a href="#SampleProject" class="SampleProject">Sample Project</a><br>
+<a href="#CreatesimpleRESTAPIwithexpressJS" class="CreatesimpleRESTAPIwithexpressJS">Create simple REST API with expressJS</a><br>
+<a href="#CreatingaRepository" class="CreatingaRepository">Creating a Repository</a><br>
+<a href="#CloningaRepository" class="CloningaRepository">Cloning a Repository</a><br>
+<a href="#UpdatingaRepository" class="UpdatingaRepository">Updating a Repository</a>	
+
+</div>
+	<p id="AngularIntroduction">
+<h2>Angular Introduction</h2>
+<blockquote>
+		<ul style="padding-left: 0%;">
+				<li style="list-style: none">
+					<p><strong>Angular</strong> is a client-side JavaScript framework that was specifically designed to help developers build SPAs (Single Page Applications) in accordance with best practices for web development. By providing a structured environment for building SPAs, the risk of producing “spaghetti code” is highly reduced.<strong> Single Page Applications (SPA)</strong> are applications that are accessed via a web browser like other websites but offer more dynamic interactions resembling native mobile and desktop apps. The most notable difference between a regular website and SPA is the reduced amount of page refreshes. SPAs have a heavier usage of <strong>AJAX</strong> a way to communicate with back-end servers without doing a full page refresh to get data loaded into our application. As a result, the process of rendering pages happens mostly on the client-side.</p>
+				
+			<aside>
+				<p><strong>Angular</strong> is a <strong>TypeScript</strong>-based open-source front-end web application platform led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS. But <strong>Angular is completely different from AngularJS</strong>.
+			</aside>
+			</li>
+			</ul>
+</blockquote>
+</p>
+
+<p id="DifferencesbetweenAngularandAngularJS">
+<h2>Differences between Angular and AngularJS</h2>
+<blockquote>
+<ul style="list-style: none;padding-left: 0%;">
+<li><p>The Architecture of an Angular application is different from AngularJS. The main building blocks for Angular are modules, components, templates, metadata, data binding, directives, services and dependency injection.</p></li>
+<li><p>Angular does not have a concept of “scope” or "controllers" instead, it uses a hierarchy of components as its main architectural concept.</p></li>
+<li><p>Angular has a simpler expression syntax, focusing on “[ ]” for property binding, and “( )” for event binding.</p></li>
+<li><p><strong>Modularity</strong>: Angular follows modularity. Similar functionalities are kept together in same modules. This gives Angular a lighter & faster core.</p></li>
+<li><p>Angular uses of Microsoft’s <strong>TypeScript</strong> language, which introduces features like Class-based Object Oriented Programming and Static Typing (Please Note: Static Typing means declaring variable with data type unlike javascript).</p></li>
+<ul>
+</blockquote>
+</p>
+
+<p id="AngularArchitecture">
+<div class="container">
+<h2>Angular Architecture</h2>
+<div class="container">
+	<div class="row">
+	<div class="col-md-2"></div>
+	<div class="col-md-8">	
+	<img src="assets/Images/Project_Architecture.jpg" alt="Angular Architecture" class="img-responsive">
+	</div>	
+	<div class="col-md-2"></div>
+	</div>	
+	</div>
+</div>
+</p>
+
+<p id="BuildingBlocksofAngular">
+<h2>Building Blocks of Angular</h2>
+<blockquote>
+<ul style="list-style: none;padding-left:0%;">
+<li><p><strong>Modules: </strong> Angular apps are modular and to maintain modularity, we have Angular modules or you can say NgModules. Every Angular app contains at least one Angular module, i.e. the root module. Generally, it is named as AppModule. The root module can be the only module in a small application. While most of the apps have multiple modules. You can say, a module is a cohesive block of code with a related set of capabilities which have a specific application domain or a workflow. Any angular module is a class with @NgModule decorator.</p></li> <br/>
+<li><p><strong>Components:</strong> A component controls one or more section on the screen called a view. For example, if you are building a shopping cart application, you can have components like App Component (the bootstrapped component), Productlist Component, Product Description Component etc. Inside the component, you define a component’s application logic i.e. how does it support the view inside a class. The class interacts with the view through an API of properties and methods. Every app has a main component which is bootstrapped inside the main module, i.e AppComponent.</p>
+
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-2%;margin-bottom:-0.4%; font-size:14px;">
+import { Component } from '@angular/core';
+
+@Component({
+selector:'app-root',
+templateUrl:'./app.component.html',
+styleUrls: ['./app.component.css']
+})
+
+export class AppComponent{
+title = 'app works!';
+}
+</xmp>
+</span>
+</div>
+<p>So, after taking a look at the bootstrapped component. Now let us take a look at one more component, i.e. Products Component as to give you more idea about the component.</p>
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-2%;margin-bottom:-0.4%; font-size:14px;">
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+selector: 'app-products',
+templateUrl: './products.component.html',
+styleUrls: ['./products.component.css']
+})
+
+export class ProductComponent implements OnInit {
+  products: any[];
+  ngOnInit() {
+    getProducts()({
+    this.products = products;
+    })
+  }
+}
+</xmp>
+</span>
+</div>
+<p>Here, first we import the components and dependencies that we require in our component using import keyword. Then, we attach the metadata of the component using @Component decorator. The first property is the selector, which targets the keyword and dumps the data within a selected tag. You can attach the view using two ways: either you can attach template property and specify the template here, or you can use templateUrl and provide the path of the file which contains the template.The third property is styleUrls which gives the path of the css style sheet. Then after the metadata, We specify the logic of the component which resides inside the class. We specify the constructor and inside it, We specify the variables and method, Which needs to be initialized when the class is created. Then we also have <strong>ngOnInit</strong> method that is called when a component is instantiated.
+Moving to next building block in our Angular tutorial, i.e. Templates.</p>
+</li> <br/>
+<li><p><strong>Templates: </strong> You associate a component’s view with its companion template. A template is nothing but a form of HTML tags that tells Angular about how to render the component. A template looks like regular HTML, except for a few differences. Here is a template for our root component, i.e. App Component.</p>
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-2%;margin-bottom:-0.4%; font-size:14px;">
+<app-header></app-header>
+<div class ="container">
+<router-outlet></router-outlet>
+</div>
+<app-footer></app-footer>
+</xmp>
+</span>
+</div>
+&nbsp;
+
+</li>
+<li><p><strong>Metadata: </strong> Metadata tells Angular how to process a class. To tell Angular that ProductList Component is a component, metadata is attached to the class. In TypeScript, you attach metadata by using a decorator. In the below code, you can see metadata attached to the Product Component:</p>
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-2%;margin-bottom:-0.4%; font-size:14px;">
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+selector: 'app-products',
+templateUrl: './products.component.html',
+styleUrls: ['./products.component.css']
+})
+</xmp>
+</span>
+</div>
+&nbsp;
+<p>Here is the <strong>@Component</strong> decorator, which identifies the class immediately below it as a component class. The @Component decorator takes the required configuration object which Angular needs to create and present the component and its view.</p>
+<p>The most important configurations of @Component decorator are:</p>
+
+<ul style="list-style: none;">
+<li><p><strong>Selector: </strong>Selector tells Angular to create and insert an instance of this component where it finds <app-movies> tag. For example, if an app’s HTML contains <app-movies></app-movies>, then Angular inserts an instance of the ProductListComponent view between those tags.</p></li>
+<li><p><strong>TemplateUrl: </strong>It contains the path of this component’s HTML template.</p></li>
+<li><p><strong>StyleUrls: </strong>It contains the path of this component’s style file.</p></li>
+<li><p><strong>Providers: </strong>An array of dependency injection providers for services that the component requires. This is one way to tell Angular that the component’s constructor requires a ProductService to get the list of products to display.</p></li>
+</ul>
+</li>
+<p>The metadata in the @Component tells Angular where to get the major building blocks you specify for the component.</p>
+
+<li><p><strong>Data binding: </strong>If you are not using a framework, you have to push data values into the HTML controls and turn user responses into some actions and value updates. Writing such push/pull logic is tedious, error-prone and a nightmare to read. Angular supports data binding, a mechanism for coordinating parts of a template with parts of a component. You should add binding markup to the template HTML to tell Angular how to connect both sides. Each form has a direction — to the DOM, from the DOM, or in both directions.</p></li>
+
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-2%;margin-bottom:-0.4%; font-size:14px;">
+<li> {{product.name}}</li>
+<product-detail [product]="selectedProduct"></product-detail>
+<li (click)="selectProduct(product)"></li>
+</xmp>
+</span>
+</div>
+<ul style="list-style: none">
+<li ><p>The <strong>{{product.name}}</strong> <em> interpolation</em> displays the component’s name property value within the &lt;li&gt; element.</p></li>
+<li ><p>The <strong>[product]</strong><em> property binding</em> passes the value of selectedProduct from the parent ProductList Component to the product property of the child ProductDetail Component.</p></li>
+<li ><p>The <strong>(click)</strong> <em>event binding</em> calls the component’s selectProduct method when the user clicks a product’s name.</p></li></ul>
+<br>
+<p><strong>Two-way Data binding: </strong> It is an important part as it combines property and event binding in a single notation, using the <strong>ngModel</strong> directive. </p>
+<p>Here’s an example from the ProductDetailComponent template:</p>
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-2%;margin-bottom:-0.4%; font-size:14px;">
+<input [(ngModel)]="product.name">
+</xmp>
+</span>
+</div>
+<p>In two-way binding, a data property value flows to the input box from the component as with property binding.</P><p> The user’s changes also flow back to the component, resetting the property to the latest value, as with event binding.</p><p> Angular processes all data bindings once per JavaScript event cycle, from the root of the application component tree through all child components.</p>
+<p>Data binding plays an important role in communication between a template and its component. Data binding is also important for communication between parent and child components.</p>
+<br/>
+<li><p><strong>Directives: </strong> Angular templates are dynamic. When Angular renders them, it transforms the DOM according to the instructions given by directives. A directive is a class with a @Directive decorator. A component is a directive-with-a-template; a @Component decorator is actually a @Directive decorator extended with template-oriented features.</p>
+<p>While a component is technically a directive, components are so distinctive and central to Angular applications that this architectural overview separates components from directives.</p>
+<p>Two other kinds of directives exist: <strong>structural</strong> and <strong>attribute</strong> directives. Directive tends to appear within an element tag as attributes do, sometimes by name but more often as the target of an assignment or a binding. </P>
+<p><strong>Structural</strong> directives alter the layout by adding, removing, and replacing elements in the DOM. For example, below template uses two built-in structural directives:</p>
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-2%;margin-bottom:-0.4%; font-size:14px;">
+<li *ngFor="let product of products"></li>
+<product-detail *ngIf="selectedProduct"></product-detail>
+</xmp>
+</span>
+
+</div>
+<ul class="innerlist" style="text-align: justify;list-style: none">
+<strong>Please Note:</strong>
+<li><p><strong>*ngFor</strong> tells Angular to retrieve one &lt;li&gt; per product in the products.</p></li>
+<li><p><strong>*ngIf</strong> includes the ProductDetail component only if a selected product exists.</p></li></ul> &nbsp;
+<p><strong>Attribute</strong> directives alter the appearance or behavior of an existing element. In templates, they look like regular HTML attributes. The ngModel directive, which implements two-way data binding, is an example of an attribute directive. ngModel modifies the behavior of an existing element by setting its display value property and responding to change events.</p>
+</li>
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-2%;margin-bottom:-0.4%; font-size:14px;">
+<input [(ngModel)]="product.name">
+</xmp>
+</span>
+
+</div>
+<p>Angular has a few more directives that either alter the layout structure (for example, <strong>ngSwitch</strong>) or modify aspects of DOM elements and components (for example, <strong>ngStyle</strong> and <strong>ngClass</strong>).
+You can also write your own directives, i.e. Custom Directive. </p>
+<br/>
+<li><p><strong>Services :</strong> Service is a broad category encompassing any value, function, or feature that your application needs. A service is typically a class with a well-defined purpose. Anything can be a service. Examples include: logging service, data service, application configuration service etc.</p>
+<p>Angular has no definition of a service. There is no service base class, and no place to register a service. Yet services are fundamental to any Angular application. Components are the consumers of services. </p>
+<p>Here’s an example of a service class where we are using Google’s Firebase as database and importing the product-list:</p>
+</li>
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-2%;margin-bottom:-0.4%; font-size:14px;">
+import { Injectable } from '@angular/core';
+import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
+import { Product } from '../interfaces/product'
+
+@Injectable()
+
+export class FirebaseService {
+products: FirebaseListObservable<any[]>;
+product: FirebaseObjectObservable<any>;
+titles: FirebaseListObservable<any[]>;
+term: string = 'Incep';
+constructor(privateaf: AngularFire) { }
+getProducts()
+{
+    this.product = this.af.database.list('/products') asFirebaseListObservable<Product[]>;
+    returnthis.products;
+}
+getProductDetails(id)
+{
+    this.product = this.af.database.object('/products/'+id) asFirebaseObjectObservable<Product>;
+    return this.product;
+}
+searchProducts()
+{
+    this.products = this.af.database.list('/products',{
+    query: {
+        orderByChild:'title',
+        startAt:this.term,
+        endAt:this.term + "\uf8ff",
+        value:'once'
+}
+} ) as FirebaseListObservable<Product[]>;
+return this.products;
+}
+}
+</xmp>
+</span>
+
+</div>
+<p>Services are everywhere. Component classes don’t fetch data from the server, validate user input, or log directly to the console. They delegate such tasks to services.</p>
+<p>A component’s job is to enable the user experience and nothing more. It mediates between the view (rendered by the template) and the application logic. A good component presents properties and methods for data binding. Angular does help you follow these principles by making it easy to factor your application logic into services and make those services available to components through dependency injection.</p>
+<br/>
+<li><p><strong>Dependency injection : </strong> Dependency injection is the ability to add the functionality of components at runtime. Angular uses dependency injection to provide new components with the services they need. Angular can tell which services a component needs by looking at the types of its constructor parameters.</p></li>
+</blockquote>
+</p>
+
+
+<!--Angular Internal Flow-->
+	<p id="AngularInternalFlow">
+	<h2>Angular Internal Flow</h2>
+	<div class="container">
+	<div class="row">
+	<div class="col-md-2"></div>
+	<div class="col-md-8">
+	<img src="assets/Images/Angular_InternalFlow.jpg" alt="Angular Internal Flow" class="img-responsive">
+	</div>	
+	<div class="col-md-2"></div>
+	</div>	
+	</div>
+	</p>
+<!--Angular Environment Setup or Prerequisites-->
+	<p id="AngularEnvironmentSetuporPrerequisites">
+	
+<h2>Angular Environment Setup or Prerequisites</h2>
+<blockquote>
+<ul style="list-style: none;padding-left:0%;"><li>
+<p>To setup Angular first we need to install the <strong>Node.js</strong> because angular requires Node.js version 8.x or 10.x.node since it provides some tools that we need to build angular projects. We can download node from the link <a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></P>
+<p>After completion of installation of Node.js, open command prompt to make sure that it is installed by typing commands</P>
+<strong>node -v</strong> and <strong>npm -v</strong>. <p>NPM basically used to install 3rd party libraries like we do with a Package Manager Console in .Net Environment.</p>
+<p>Now we’ll install  <strong>Angular CLI</strong> through npm. Angular CLI is a command line tool that we used to create a new angular project or generate some boilerplate code (scaffolding) as well as deploy the packages on the server. So let’s install angular cli. The command pattern to install anything in the system with npm is.</p>
+<pre class="custpre">
+npm install -g PackageName
+</pre>
+<p><strong>'-g'</strong> means to globally install and if you don’t put –g here, Angular CLI will be installed only in the current folder and it will not be accessibly anywhere else. In our case the packageName is angularcli so our command will be as follows.</p>
+<pre class="custpre">
+npm install @angular/cli  or  npm i @angular/cli
+</pre>
+<p>The above command will install the latest version of Angular cli, After completion of angular cli we will get the screen similar  as shown below.</p>
+<pre class="custpre">
++ @angular/cli@7.2.3
+added 2 packages from 1 contributor and updated 17 packages in 95.724s
+</pre>
+<p><strong>Please Note:</strong> At the time building the repository this is the latest version.</p>
+<p> Similarly, we can remove the Angular CLI by using the following command.</p>
+<pre class="custpre">
+ npm remove -g @angular/cli
+</pre>
+<p>
+ Now we need an editor for our angular application, <strong>Visual Studio Code</strong> from Microsoft is the best open source IDE for angular application development. We can download the latest version of Visual Studio Code from this link <a href="https://code.visualstudio.com/download"> https://code.visualstudio.com/download</a></p> 
+</li></ul>
+ </blockquote>
+</p>
+
+<!--CreatingOlderVersionsofAngularApplications-->
+<p id="CreatingOlderVersionsofAngularApplications">
+<h2>Creating Older Versions of Angular applications</h2>
+<blockquote><ul style="list-style: none;padding-left:0%;"><li>
+Suppose we need to create an <strong>angular4</strong> application the easiest way to create an Angular 4 project using Angular CLI is install an older version of the @angular/cli (1.4.10) below  are the commands  we need to execute in command prompt.
+<pre class="custpre">
+> npm remove -g @angular/cli // Removes the @angular/cli globally
+> npm install -g @angular/cli@1.4.10 // install the @angular/cli@1.4.10 globally
+> ng --version // To check for the angular version
+  @angular/cli: 1.4.10
+> ng new myangular4 // To create a new project
+</pre>
+</li></ul>
+</blockquote>
+</p>
+
+<!--Angular Sample Project-->
+<p id="SampleProject">
+<h2>Sample Project</h2>
+<blockquote>
+<ul style="list-style: none;padding-left:0%;"><li>
+<p><strong>Project Name: </strong> Sample project with Token Based Authentication and CRUD Operations.</p>
+<p><strong>Versoin Used: </strong> Angular 6</p>
+<p><strong>GitHub Url :</strong> <a href="https://github.com/CodeRepository19/Angular-Project.git">https://github.com/CodeRepository19/Angular-Project.git</a></p>
+
+<p> Suppose we wanted to create our sample project in <strong>D:</strong> drive within the folder named <strong>AngularSample</strong> we need to execute the following commands in command prompt or visual studio code terminal.</p>
+
+<pre class="custpre">
+> D: // Go to D: drive
+> cd AngularSample // Go to project folder
+> ng new sampleproject  // Creating a new project
+> ng serve -open	// To run the project in browser
+</pre>
+
+
+<div>
+<kbd>ng new</kbd>
+<p>The Angular CLI makes it easy to create an application that already works, right out of the box. It already follows our best practices!</p>
+</div>
+<div>
+<kbd>ng generate</kbd>
+<p>Generate components, routes, services and pipes with a simple command. The CLI will also create simple test shells for all of these.</p>
+</div>
+<div>
+<kbd>ng serve</kbd>
+<p>Easily test your app locally while developing. Navigate to <a href="http://localhost:4200/">http://localhost:4200/</a>. The app will automatically reload if you change any of the source files.</p>
+</div>
+<div>
+<kbd>ng generate component [componentname]</kbd>
+<p>For creating a new Components using cli.</p>
+</div>
+<div>
+<kbd>ng generate service [servicename]</kbd>
+<p>For creating a new service using cli.</p>
+</div>
+<div>
+<kbd>ng generate directive [directivename]</kbd>
+<p>For creating a new directive using cli.</p>
+</div>
+<div>
+<kbd>ng generate module  [modulename]</kbd>
+<p>For creating a new module using cli.</p>
+</div>
+	
+	<div class="row">
+	<div class="col-md-4">
+	<p style="text-align: left;">Here's the Basic project structure:</p>	
+	<img src ="assets/Images/BasicProjectStructure1.png" height="280px" width="100%" alt=" Project Structure"/>
+	</div>
+	<div class="col-md-4">
+	<p style="text-align: left;">Here's the src floder structure:</p>	
+	<img src ="assets/Images/SRC1.png" width="100%" height="280px" alt=" Project Structure"/>
+	</div>
+	<div class="col-md-4">
+	<kbd> Routing Module : </kbd>
+	<img src ="assets/Images/Routing1.png" width="100%" style="padding-bottom:1px;" alt=" Project Structure"/>
+	<kbd> Services : </kbd>
+	<img src ="assets/Images/Services1.png" width="100%" style="padding-bottom:1px;" alt=" Project Structure"/>
+	<img src ="assets/Images/Header1.png" style="padding-bottom:1px;" width="100%" alt=" Project Structure"/>
+	<img src ="assets/Images/Footer1.png" width="100%" alt=" Project Structure"/>
+	</div>
+	</div>
+	<br>
+	<div class="row">
+	<div class="col-md-4">
+	<img src ="assets/Images/Home1.png" style="padding-bottom:1px;height:113px;" width="100%" alt=" Project Structure"/>
+	<img src ="assets/Images/PageNotFound1.png" width="100%" style="height:113px;" alt=" Project Structure"/>
+	</div>
+	<div class="col-md-4">
+	<img src ="assets/Images/Login1.png" style="padding-bottom:1px;height:113px;" width="100%" alt=" Project Structure"/>
+	<img src ="assets/Images/Registration1.png" width="100%" style="height:113px;" alt=" Project Structure"/>
+	</div>
+	<div class="col-md-4">
+	<img src ="assets/Images/DataGrids1.png" width="100%" style="padding-bottom:1px;" alt=" Project Structure"/>
+	<img src ="assets/Images/Assets1.png" width="100%" alt=" Project Structure"/>
+	</div>
+	</div>	
+
+	</li></ul>
+	</blockquote>
+	</p>
+	
+	<!--Create Simple REST API with expressJS-->
+	<p id="CreatesimpleRESTAPIwithexpressJS">
+	<h2>Create simple REST API with expressJS</h2>
+	<blockquote><ul style="list-style: none;padding-left:0%;"><li>
+	<span>Before we proceed, we must ensure that we have installed <strong>node.js</strong> in our computer. </span><br>	
+	<span>To check if you have Node.js installed, run this command in your terminal: <code style="color:#c7254e;">node -v</code></span><br>
+	<span>To confirm that you have npm installed, you can run this command in your terminal: <code style="color:#c7254e;">npm -v</code></span><br>
+	<p> Suppose we wanted to create our project directory in <strong>D:</strong> drive within the folder named <strong>simpleapi</strong> we need to run this command in your visual studio code terminal.
+
+<pre class="custpre">
+> D: // Go to D: drive
+> mkdir simpleapi // create a folder
+> cd simpleapi // Go to folder
+> npm init // Initiate a new NPM project 
+> npm install express --save // use ExpressJs nodeJs framework to create our API
+> npm install body-parser --save //Parses incoming request bodies
+</pre>
+
+<span>Now we need to create our API entry point <code>app.js</code>, and also our route file <code>routes.js</code></span><br>
+<img src ="assets/Images/API.png" height="189px" alt=" Project Structure"/>
+	<h3>app.js</h3>
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-2%;margin-bottom:-0.4%; font-size:14px;">
+var express = require("express"); 	// calling our installed modules and assigning them to variable express
+var bodyParser = require("body-parser");	// calling our installed modules and assigning them to variable bodyParser
+var routes = require("./routes/routes.js");
+var app = express();
+
+app.use(bodyParser.json());	// express to accept JSON values
+app.use(bodyParser.urlencoded({ extended: true }));	// express to accept url encoded values
+
+routes(app);
+
+var server = app.listen(3000, function () { // define port where our server should be running on
+    console.log("app running on port.", server.address().port);
+});
+</xmp>
+</span>
+</div>
+
+	<h3>routes.js</h3>
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-2%;margin-bottom:-0.4%; font-size:14px;">
+var appRouter = function (app) {
+  app.get("/", function(req, res) {	// Get request
+    res.status(200).send("Welcome to our restful API");
+  });
+}
+
+module.exports = appRouter;
+</xmp>
+</span>
+</div>
+<span>
+Now we can run our API by typing node app.js in the terminal, you should get something like this printed on your terminal app running on port. 3000. Now type visit <a href="http://localhost:3000">http://localhost:3000</a> and see it print the welcome message
+</span>
+</li></ul>
+</blockquote>
+</p>
+<h2>Sample Project ScreenShots</h2>
+<div>
+<div id="myCarousel" class="carousel slide" data-interval="2000" data-ride="carousel">
+<!-- Carousel indicators -->
+<ol class="carousel-indicators">
+<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+<li data-target="#myCarousel" data-slide-to="1"></li>
+<li data-target="#myCarousel" data-slide-to="2"></li>
+<li data-target="#myCarousel" data-slide-to="3"></li>
+</ol>   
+<!-- Wrapper for carousel items -->
+<div class="carousel-inner">
+<div class="active item">
+<img src="assets/Images/Project_Home.png" alt="First Slide">
+<div class="carousel-caption">
+<p style="text-align:center">Home Page</p>
+</div>
+</div>
+<div class="item">
+<img src="assets/Images/Project_Login.png" alt="Second Slide">
+<div class="carousel-caption">
+<p style="text-align:center">Login Page</p>
+</div>
+</div>
+<div class="item">
+<img src="assets/Images/Project_Registration.png" alt="Third Slide">
+<div class="carousel-caption">
+<p style="text-align:center">Registration Page</p>
+</div>
+</div>
+<div class="item">
+<img src="assets/Images/Project_DataGrids.jpg" alt="Third Slide">
+<div class="carousel-caption">
+<p style="text-align:center">Data Grids</p>
+</div>
+</div>
+</div>
+<!-- Carousel controls -->
+<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left"></span>
+</a>
+<a class="carousel-control right" href="#myCarousel" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right"></span>
+</a>
+</div>
+</div>
+
+<p id="CreatingaRepository">
+
+	<h2>Creating a Repository</h2>
+	<blockquote>
+		<ul style="list-style:none;padding-left:0%;">
+			<li>
+				<p><strong>Step 1:</strong> In the upper-right corner of GitHub home page, click <strong style="font-size:28px;">+</strong> , and then click <strong>New repository</strong>.</p>
+				<p style="margin-left:60px;"><img src="assets/Images/NewRepo.png" alt="Dropdown with option to create a new repository"></p>
+
+				<p><strong>Step 2:</strong> In the Owner drop-down, select the account you wish to create the repository on and  Type a name for your repository, and an optional description.</p>
+				<p style="margin-left:60px;"><img style="width:50%" src="assets/Images/NameRepo.png" alt="Dropdown with option to create a new repository"></p>
+
+				<p><strong>Step 3:</strong> Choose to make the repository either public or private. Public repositories are  visible to the public, while private repositories are only accessible to you, and people  you share  them  with.</p>
+				<p style="margin-left:60px;"><img style="width:50%" src="assets/Images/Repo3.png" alt="Dropdown with option to create a new repository"></p>
+
+				<p><strong>Step 4:</strong> You can create a README, which is a document describing about your project.</p>
+				<p style="margin-left:60px;"><img style="width:60%" src="assets/Images/Repo4.png" alt="Dropdown with option to create a new repository"></p>
+		
+				<p><strong>Step 5:</strong> When you're finished, click Create repository.</p>
+			</li>
+		</ul>
+	</blockquote>
+</p>
+
+<p id="CloningaRepository">
+
+	<h2>Cloning a Repository</h2>
+	<blockquote>
+		<ul style="list-style:none;padding-left:0%;">
+			<li>
+				<p><strong>Step 1:</strong> On GitHub, navigate to the main page of the repository.</p>
+					
+				<p><strong>Step 2:</strong> Under the repository name, click Clone or download.</p>
+				<p style="margin-left:60px;"><img  src="assets/Images/Clone.png" alt="git clone"></p>
+
+				<p><strong>Step 3:</strong> In the Clone with HTTPs section, click  to copy the clone URL for the repository.</p>
+				<p style="margin-left:60px;"><img src="assets/Images/Clone1.png" alt="git clone"></p>
+
+				<p><strong>Step 4:</strong> Open Git Bash or Visual Studio code.</p>
+				
+				<p><strong>Step 5:</strong> Change the current working directory to the location where you want the cloned directory to be made.</p>
+
+				<p><strong>Step 6:</strong> Type <code>git clone</code> , and then paste the URL you copied in Step 2.</p>	
+				<p style="margin-left:60px;"><kbd>git clone https://github.com/GuptaCh/AngularSampleProject</kbd></p>
+					
+				<p><strong>Step 7:</strong> Press <strong>Enter</strong>. Your local clone will be created.</p>
+				
+				<h3>Running the Application:</h3>
+					<p><strong>Step 1:</strong> Run npm install</p>
+					<p><strong>Step 2:</strong> Run ng serve</p>
+					<p><strong>Step 3:</strong> Go to <a href="http://localhost:4200/">http://localhost:4200/</a> in your browser</p>
+			</li>
+		</ul>
+	</blockquote>
+</p>
+
+<p id="UpdatingaRepository">
+
+	<h2>Updating a Repository</h2>
+	<blockquote>
+		<ul style="list-style:none;padding-left:0%;">
+			<li>
+				<p><strong>Step 1:</strong> Made the necessary changes to the cloned project or local repository.</p>
+				
+				<p><strong>Step 2:</strong> Enter the below command in git bash to update the local repository.</p>
+				<p style="margin-left:60px;"><kbd>git add .</kbd></p>	
+
+				<p><strong>Step 3:</strong> Enter the below command to Commit the files that you've updated in your local repository.</p>
+				<p style="margin-left:60px;"><kbd>git commit -m "First commit"</kbd></p>	
+				
+				<p><strong>Step 4:</strong> Push the changes in your local repository to GitHub.</p>
+				<p style="margin-left:60px;"><kbd>git push</kbd></p>
+				
+			</li>
+		</ul>
+	</blockquote>
+</p>
+
+	</div>	 
+	</div>
+	
+<!-- Footer -->
+       <!-- Footer Part -->
+		<iframe src="Footer.html" style="border: none;" scrolling="no" width="99.7%" height="50"></iframe>
+        
+    </body>
+</html>

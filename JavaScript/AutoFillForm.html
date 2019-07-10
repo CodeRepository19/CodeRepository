@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+			<meta charset="utf-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1"/>	
+
+			<!-- Bootstrap library, font-awesome library, custom css references -->			
+			<link rel="stylesheet" href="assets/css/Header.css">
+			<link rel="stylesheet" href="assets/css/bootstrap.3.3.7.min.css">
+			<link rel="stylesheet" href="assets/css/Scrooltop.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+			<!-- Js files -->
+			<script src="assets/js/jquery-3.1.1.min.js"></script>
+			
+			<!-- Favicon icon -->
+			<link rel="shortcut icon" href="assets/icon/favicon.ico">
+
+			<title>Auto Fill Form</title>
+			
+			<!-- FONT FAMILY -->
+			<style>
+				body,xmp {
+				font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+				}	
+			</style>
+			
+			<script type="text/javascript">
+			
+			<!-- Script for Scroll top event -->
+				$(document).ready(function() {
+				var btn = $('#button');
+				$(window).scroll(function() {
+				if ($(window).scrollTop() > 20 ) {
+				btn.addClass('show');
+				} else {
+				btn.removeClass('show');
+				}
+				});
+				btn.on('click', function(e) {
+				e.preventDefault();
+				$('html, body').animate({scrollTop:0}, '20');
+				});
+				});
+				
+				<!-- Script for Auto Fill Form-->
+			function sameaddress() 
+			{ 
+			if (document.getElementById('same').checked) 
+			{ 
+			document.getElementById('secondaryaddress').value=document. 
+			getElementById('primaryaddress').value; 
+			document.getElementById('secondaryzip').value=document. 
+			getElementById('primaryzip').value ;
+			document.getElementById('secondaryname').value=document. 
+			getElementById('name').value ;
+			} 
+
+			else
+			{ 
+			document.getElementById('secondaryaddress').value=""; 
+			document.getElementById('secondaryzip').value="";
+			document.getElementById('secondaryname').value="";	
+			} 
+			}
+
+			<!--Script for Copy Code -->
+			function divcopy() {
+			var copyobject=$("#srcdiv").clone();
+			var $temp = $("<input>");
+			$("body").append($temp);
+			var myJSON = copyobject.html();;
+			$temp.val(myJSON).select();
+			document.execCommand("copy");
+			$temp.remove();
+			var tooltip = document.getElementById("myTooltip");
+			tooltip.title = "Copied";
+			}
+			function outFunc() {
+			var tooltip = document.getElementById("myTooltip");
+			tooltip.title = "Copy to Clipboard";
+			}
+			</script>
+
+			</head>
+<body>
+
+<!-- Scroll top anchor tag -->
+		<a id="button"></a>
+
+<!-- Page Header -->
+<div class="page-title container-fluid">
+				<div class="container">
+					<div class="row">
+						<div class="span12" style="margin-top:7px;">                        						
+							<h2>JavaScript</h2>
+							<p>Source code & Example</p>
+							<a href = "index.html"><i class="fa fa-home fa-3x pull-right" style = "color: white;" aria-hidden="true"></i></a>						
+							</div>					
+					</div>
+				</div>
+			</div>
+
+<div class = "container" style="padding-bottom:5%;">
+<div class = "row">
+<h3><strong><xmp>Auto Fill Form Example:</xmp></strong></h3>
+<div class = "col-md-7">
+<h3><b>Source Code:</b></h3>
+<div  style = "overflow:scroll;">
+<button type="button" onmouseout="outFunc()" class="pull-right btn btn-dark" id = "divtarget" onClick="divcopy()">
+<span id="myTooltip" title="Copy to Clipboard"  class="fa fa-copy" style="font-size:25px;"></span>
+</button>
+<xmp id = "srcdiv">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>	
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<title>Auto Fill Form</title>
+
+<!-- Script for Auto Fill Form-->
+<script type="text/javascript">
+function sameaddress() 
+{ 
+if (document.getElementById('same').checked) 
+{ 
+document.getElementById('secondaryaddress').value=document. 
+getElementById('primaryaddress').value; 
+document.getElementById('secondaryzip').value=document. 
+getElementById('primaryzip').value ;
+document.getElementById('secondaryname').value=document. 
+getElementById('name').value ;
+} 
+
+else
+{ 
+document.getElementById('secondaryaddress').value=""; 
+document.getElementById('secondaryzip').value="";
+document.getElementById('secondaryname').value="";	
+} 
+} 
+</script>
+</head>
+<body>
+<div class="container">
+<strong>Present Address :</strong>	 
+<form>
+<div class="form-group">
+<label for="name">Name :</label>
+<input type="text"name = "Name"  class="form-control" id="name"  required>
+</div>
+<div class="form-group">
+<label for ="primaryaddress">Address :</label>
+<input type = "text" name = "Address" class="form-control" id = "primaryaddress" required>
+</div>
+<div class="form-group">
+<label for = "primaryzip">Zip code:</label>	 
+<input type = "text" name = "Zip code" class="form-control" id = "primaryzip" pattern = "[0-9]{6}" required><br/> 
+</div>
+
+<div class="form-group">
+<input type="checkbox" id="same" name="same"  onchange= "sameaddress()"/>			 
+<label for = "same">Is Permanent address same as Present Address ?</label> 
+</div>
+
+<strong>Permanent Address :</strong>
+<div class="form-group">
+<label for="secondaryname">Name :</label>
+<input type="text"name = "Name"  class="form-control" id="secondaryname" required>
+</div>
+<div class="form-group">
+<label for ="secondaryaddress">Address :</label>
+<input type = "text" name = "Address" class="form-control" id = "secondaryaddress" required>
+</div>
+<div class="form-group">
+<label for = "secondaryzip">Zip code:</label>	 
+<input type = "text" name = "Zip code" class="form-control" id = "secondaryzip" pattern = "[0-9]{6}" required><br/> 
+</div>
+<button type="submit" class="btn btn-lg btn-success">Submit</button>
+</form>
+</div>
+</body>
+</html>
+</xmp>
+</div>
+</div>
+<div class = "col-md-5">
+<h3><b>Output:</b></h3>
+<strong>Present Address :</strong>	 
+<form>
+<div class="form-group">
+<label for="name">Name :</label>
+<input type="text"name = "Name"  class="form-control" id="name"  required>
+</div>
+<div class="form-group">
+<label for ="primaryaddress">Address :</label>
+<input type = "text" name = "Address" class="form-control" id = "primaryaddress" required>
+</div>
+<div class="form-group">
+<label for = "primaryzip">Zip code:</label>	 
+<input type = "text" name = "Zip code" class="form-control" id = "primaryzip" pattern = "[0-9]{6}" required><br/> 
+</div>
+
+<div class="form-group">
+<input type="checkbox" id="same" name="same"  onchange= "sameaddress()"/>			 
+<label for = "same">Is Permanent address same as Present Address ?</label> 
+</div>
+
+<strong>Permanent Address :</strong>
+<div class="form-group">
+<label for="secondaryname">Name :</label>
+<input type="text"name = "Name"  class="form-control" id="secondaryname" required>
+</div>
+<div class="form-group">
+<label for ="secondaryaddress">Address :</label>
+<input type = "text" name = "Address" class="form-control" id = "secondaryaddress" required>
+</div>
+<div class="form-group">
+<label for = "secondaryzip">Zip code:</label>	 
+<input type = "text" name = "Zip code" class="form-control" id = "secondaryzip" pattern = "[0-9]{6}" required><br/> 
+</div>
+<button type="submit" class="btn btn-lg btn-success">Submit</button>
+</form>
+</div>
+</div>
+</div>
+
+<!-- Footer -->
+        <footer>
+            <div class="container-fluid">                               
+                <div class="row">
+                    <div class="copyright text-center">
+                        <p>Copyright 2019 - All rights reserved.</p>
+                    </div>                    
+                </div>
+            </div>
+        </footer>
+
+</body>
+</html>

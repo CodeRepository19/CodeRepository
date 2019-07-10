@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />	
+
+			<!-- Bootstrap library, font-awesome library, custom css references -->			
+			<link rel="stylesheet" href="assets/css/Header.css">
+			<link rel="stylesheet" href="assets/css/bootstrap.3.3.7.min.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+			<!-- Js files -->
+			<script src="assets/js/jquery-3.1.1.min.js"></script>
+			
+			<!-- Favicon icon -->
+			<link rel="shortcut icon" href="assets/icon/favicon.ico">
+			
+			<title>JavaScript Drag & Drop Example</title>
+			<style>
+			#div1 {
+			width: 320px;
+			height: 170px;
+			padding: 10px;
+			border: 1px solid #aaaaaa;
+			}
+			body,xmp {
+				font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+				}
+			</style>
+			
+			<script>
+			
+			<!--Script for Copy Code -->
+			function divcopy() {
+			var copyobject=$("#srcdiv").clone();
+			var $temp = $("<input>");
+			$("body").append($temp);
+			var myJSON = copyobject.html();;
+			$temp.val(myJSON).select();
+			document.execCommand("copy");
+			$temp.remove();
+			var tooltip = document.getElementById("myTooltip");
+			tooltip.title = "Copied";
+			}
+			function outFunc() {
+			var tooltip = document.getElementById("myTooltip");
+			tooltip.title = "Copy to Clipboard";
+			}
+			
+			<!-- Script for Drag&Drop -->
+			function allowDrop(ev) {
+			ev.preventDefault();
+			}
+			function drag(ev) {
+			ev.dataTransfer.setData("text", ev.target.id);
+			}
+			function drop(ev) {
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("text");
+			ev.target.appendChild(document.getElementById(data));
+			}
+
+			</script>
+
+			</head>
+<body>
+
+<!-- Page Header -->
+	<div class="page-title container-fluid">
+				<div class="container">
+					<div class="row">
+						<div class="span12" style="margin-top:7px;">                        						
+							<h2>JavaScript</h2>
+							<p>Source code & Example</p>
+							<a href = "index.html"><i class="fa fa-home fa-3x pull-right" style = "color: white;" aria-hidden="true"></i></a>						
+							</div>					
+					</div>
+				</div>
+			</div>	
+
+<div class = "container">
+<div class = "row">
+<h3><strong><xmp>JavaScript Drag&Drop Example:</xmp></strong></h3>
+<div class = "col-md-7">
+<h3>Source Code</h3>
+<div  style = "overflow:scroll;">
+<button type="button" onmouseout="outFunc()" class="pull-right btn btn-dark" id = "divtarget" onClick="divcopy()">
+<span id="myTooltip" title="Copy to Clipboard"  class="fa fa-copy" style="font-size:25px;"></span>
+</button>
+<xmp id = "srcdiv">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />	
+<link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">	
+<title>Drag & Drop Example</title>
+<style>
+#div1 {
+width: 320px;
+height: 170px;
+padding: 10px;
+border: 1px solid #aaaaaa;
+}
+</style>
+<script>
+function allowDrop(ev) {
+ev.preventDefault();
+}
+function drag(ev) {
+ev.dataTransfer.setData("text", ev.target.id);
+}
+function drop(ev) {
+ev.preventDefault();
+var data = ev.dataTransfer.getData("text");
+ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div><br>	
+<img id="drag1" src="assets/images/bulb.jpg" draggable="true" ondragstart="drag(event)" width="300" height="140">
+</body>
+</html>
+</xmp>
+</div>
+</div>
+<div class = "col-md-5">
+<h3>Output</h3>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div><br>	
+<img id="drag1" src="assets/images/bulb.jpg" draggable="true" ondragstart="drag(event)" width="300" height="140">
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,2426 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+        <meta charset="utf-8">
+		<title>JavScript Code Repository</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Bootstrap library, font-awesome library, custom css references -->		
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">   
+		<link rel="stylesheet" href="assets/css/style.css"> 
+		<link rel="stylesheet" href="assets/css/Scrooltop.css">		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- jQuery UI and Custom CSS files -->
+		<link rel="stylesheet" href="assets/css/jQuery_Custom.css">
+		<link rel="stylesheet" href="assets/css/jquery-ui.css">
+
+		<!-- jQuery UI and jQuery library files -->
+		<script src="assets/js/jquery.js"></script>
+		<script src="assets/js/jquery-ui.js"></script>
+
+		<!-- Favicon and touch icons -->
+		<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+        
+		<!-- FONT FAMILY -->
+		<style>
+			body,xmp {
+			font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+			}	
+		</style>
+		
+		<script>
+		
+		<!-- Script for Scroll top event -->
+				$(document).ready(function() {
+				var btn = $('#button');
+				$(window).scroll(function() {
+				if ($(window).scrollTop() > 20 ) {
+				btn.addClass('show');
+				} else {
+				btn.removeClass('show');
+				}
+				});
+				btn.on('click', function(e) {
+				e.preventDefault();
+				$('html, body	').animate({scrollTop:0}, '20');
+				});
+				});
+				
+		$(function(){
+		$('#DatatypeTabs,#EventTabs,#EventListenerTabs,#FormsTabs,#StringTabs,#ArrayMethodsTabs,#DateTabs,#ExamplesTabs,#Conditionaltabs,#Operatortabs').tabs({
+		collapsible:true,
+		show:'slide',
+		});
+		});
+				
+		$(document).ready(function()
+		{
+		$(".html-code").hide();
+		$(".codebox-title").on('click', function(event)
+		{
+		$(this).siblings(".html-code").fadeToggle(300);
+		});
+		});
+		</script>
+		
+</head>
+
+    <body>
+	
+		<!-- Scroll top anchor tag -->
+		<a id="button"></a>
+		
+        <!-- Page Title -->
+		
+		<div class="page-title container-fluid">
+<div class="container">
+<div class="row" style ="display:flex;">
+<div style="width:12%;">         						
+<strong><p style="font-size:35px;">SpSoft</p></strong><br>
+<!-- <p style="font-size:10px;">Code Repository</p> -->
+</div>
+<div style="border-left: 2px solid white;margin-top:7px;margin-bottom:7px;"></div>
+
+<div class="span12" style="margin-left:8px;margin-top:3px;">                         						
+<h2>JavaScript</h2>
+<p>Here are the Examples and Reference Links</p>
+<a href = "..\index.html"><i class="fa fa-home fa-3x pull-right" style = "color: white;" aria-hidden="true"></i></a>						
+</div>					
+</div>
+</div>
+</div>
+<p class = "pull-left Refp">Last Updated : 24-Jan-2019</p>			
+<a class = "pull-right Refa" target="_blank" href = "References.html">Reference Url's</a>	
+		
+		<div class="container tagcontainer">	
+		<!-- Section for JavaScript introduction -->
+		<div class="introclass">
+		<h2>javascript Introduction </h2>
+		<blockquote>
+		<p>JavaScript is an open source & most popular client side scripting language supported by all browsers. JavaScript is used mainly for enhancing the interaction of a user with the webpage.</p>		
+		</blockquote>
+		
+		<h2>Tools You Need</h2>
+		<blockquote>
+		<p>To start with, you need a text editor to write your code and a browser to display the web pages you develop. You can use a text editor of your choice including Notepad++, Visual Studio Code etc.</p>
+		</blockquote>
+		</div>
+		
+		<!-- Section for JavaScript Topics -->
+		<div class="example">
+		
+<!-- Section for javascript datatypes -->
+<div class="codebox">
+<div class="codebox-title"><h4>JavaScript Data Types</h4></div>
+<ul class="html-code">  
+<p>JavaScript includes data types similar to other programming languages like Java or C#. Data type indicates characteristics of data. It tells the compiler whether the data value is numeric, alphabetic, date etc., so that it can perform the appropriate operation.JavaScript includes primitive and non-primitive data types as per latest ECMAScript 5.1.</p>  
+<p><b>primitive data types</b> include String, Number, Boolean, Null, Undefined</p>
+<p><b>Non-primitive data types</b> include Object, Date, Array</p>
+<div id="DatatypeTabs">
+<ul>
+<li><a href="#tab-1">String</a></li>
+<li><a href="#tab-2">Number</a></li>
+<li><a href="#tab-3">Boolean</a></li>
+<li><a href="#tab-4">Null</a></li>
+<li><a href="#tab-5">Undefined</a></li>
+<li><a href="#tab-6">Object</a></li>
+<li><a href="#tab-7">Date</a></li>
+<li><a href="#tab-8">Array</a></li>
+</ul>
+
+<!-- string data type -->
+<div id="tab-1">
+<p>String is a primitive data type in JavaScript. A string is textual content. It must be enclosed in single or double quotation marks.<p>
+<div class="example">	
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Jsstring.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>	
+				
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>
+var str1 = "Javascript string";
+var str2 = 'Javascript string';
+document.getElementById("p1").innerHTML = str1;
+document.getElementById("p2").innerHTML = str2;
+</script>
+</xmp>
+</span>
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- Number Data Type -->
+<div id="tab-2">
+<p>The Number is a primitive data type in JavaScript. Number type represents integer, float, hexadecimal, octal or exponential value. First character in a Number type must be an integer value and it must not be enclosed in quotation marks.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="JsNumber.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+var int = 100;
+var float = 100.5;
+var hex = 0xfff;
+var exponential = 2.56e3;
+var octal = 030;
+}
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Boolean Data Type -->
+<div id="tab-3">
+<p>Boolean is a primitive data type in JavaScript. Boolean can have only two values, true or false. It is useful in controlling program flow using conditional statements like if..else, switch, while, do..while.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="JsBoolean.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>
+var bool1 = new Boolean("");
+document.getElementById("p1").innerHTML = bool1;
+var bool2 = new Boolean(0);
+document.getElementById("p2").innerHTML = bool2;
+var bool3 = new Boolean(undefined);
+document.getElementById("p3").innerHTML = bool3;
+var bool4 = new Boolean(null);
+document.getElementById("p4").innerHTML = bool4;
+var bool5 = new Boolean(NaN); 
+document.getElementById("p5").innerHTML = bool5;
+var bool6 = new Boolean("some text");
+document.getElementById("p6").innerHTML = bool6;
+var bool7 = new Boolean(1);
+document.getElementById("p7").innerHTML = bool7;
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- null Data Type  -->
+<div id="tab-4">
+<p>You can assign null to a variable to denote that currently that variable does not have any value but it will have later on. A null means absence of a value.</P>
+<p><b>Note:</b> null is of object type e.g. typeof null will return "object"</P>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: null</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>
+var myVar = null;
+alert(myVar); // null 
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+<p>In the above example, null is assigned to a variable myVar. It means we have defined a variable but have not assigned any value yet, so value is absence. If you try to find DOM element using document.getElelementByID for example, and if element is found then it will return null. So it is recommended to check for null before doing something with that element.</P>
+<p>A null value evaluates to false in conditional expression. So you don't have to use comparison operators like === or !== to check for null values.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: null in conditional expression</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>
+var myVar = null;
+
+if (myVar)
+    alert("myVar is not null');
+else
+    alert("myVar is null" );
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Undefined Data Type  -->
+<div id="tab-5">
+<p>Undefined is also a primitive value in JavaScript. A variable or an object has an undefined value when no value is assigned before using it. So you can say that undefined means lack of value or unknown value.</P>
+<p><b>Note:</b> undefined is a token. typeof undefined will return undefined not an object.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: undefined</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+var myVar;
+alert(myVar); // undefined 
+</script>  
+</xmp>
+</span>
+</div>
+</div>
+</div>
+<p>In the above example, we have not assigned any value to a variable named 'myVar'. A variable 'myVar' lacks a value. So it is undefined. You will get undefined value when you call a non-existent property or method of an object.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: undefined</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+function Sum(val1, val2)
+{
+   var result = val1 + val2;
+}
+var result = Sum(5, 5);
+alert(result);// undefined 
+</script>  
+</xmp>
+</span>
+</div>
+</div>
+</div>
+<p>In the above example, a function Sum does not return any result but still we try to assign its resulted value to a variable. So in this case, result will be undefined.</p>
+</div>	
+
+<!-- object dat type  -->
+<div id="tab-6">
+<p>Object is a non-primitive data type in JavaScript. It is like any other variable, the only difference is that an object holds multiple values in terms of properties and methods. Properties can hold values of primitive data types and methods are functions.In JavaScript, an object is a standalone entity because there is no class in JavaScript. However, you can achieve class like functionality using functions.</p>
+<p><b>Note:</b> JavaScript objects and JSON objects are different.</p>
+<p>In JavaScript, an object can be created in two ways:</p>
+<ol>
+<li>Object literal 
+</li>
+<li>Object constructor 
+</li>
+</ol>
+
+<div class="example">
+<div class="exhead">
+<h4>Object Literal</h4>
+<p>The object literal is a simple way of creating an object using { } brackets. You can include key-value pair in { }, where key would be property or method name and value will be value of property of any data type or a function. Use comma (,) to separate multiple key-value pairs. You must specify key-value pair in object for properties or methods. Only property or method name without value is not valid.</p>
+</div>
+	
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Create Object using Object Literal Syntax</h4></div>
+					
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+var emptyObject = {}; // object with no properties or methods
+var person = { firstName: "John" }; // object with single property
+// object with single method
+var message = { 
+showMessage: function (val) { 
+alert(val); 
+} 
+}; 
+// object with properties & method
+var person = { 
+firstName: "James", 
+lastName: "Bond", 
+age: 15, 
+getFullName: function () { 
+return this.firstName + ' ' + this.lastName 
+}
+}; 
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+
+<div class="exhead">
+<h4>Object Constructor</h4>
+<p>The second way to create an object is with Object Constructor using new keyword. You can attach properties and methods using dot notation. Optionally, you can also create properties using [ ] brackets and specifying property name as string.</p>
+</div>
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Object Constructor</h4></div>
+					
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>
+var person = new Object()
+// Attach properties and methods to person object     
+person.firstName = "James";
+person["lastName"] = "Bond"; 
+person.age = 25;
+person.getFullName = function () {
+return this.firstName + ' ' + this.lastName;
+};
+// access properties & methods 
+document.getElementById("p1").innerHTML = person.firstName; 
+document.getElementById("p2").innerHTML = person.lastName; 
+document.getElementById("p3").innerHTML = person["firstName"];
+document.getElementById("p4").innerHTML = person["lastName"];
+document.getElementById("p5").innerHTML = person.getFullName();
+</script>
+</xmp>
+</span>
+</div>
+</div>
+
+<div class="exhead">
+<h4>Access JavaScript Object Properties & Methods</h4>
+<p>You can get or set values of an object's properties using dot notation or bracket. However, you can call an object's method only using dot notation.</p>
+</div>
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4><a href="JsObject.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+					
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>
+var person = { 
+firstName: "Mani", 
+lastName: "Kumar", 
+age: 28, 
+getFullName: function () { 
+return this.firstName + ' ' + this.lastName 
+} 
+};
+document.getElementById("p1").innerHTML = person.firstName; 
+document.getElementById("p2").innerHTML = person.lastName; 
+document.getElementById("p3").innerHTML = person["firstName"];
+document.getElementById("p4").innerHTML = person["lastName"];
+document.getElementById("p5").innerHTML = person.getFullName();
+</script>
+</xmp>
+</span>
+</div>
+</div>
+
+</div>
+</div>	
+
+<!-- Date -->
+<div id="tab-7">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4><a href="Date.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+var dt = new Date();
+var dt = new Date(milliseconds);
+var dt = new Date('date string');
+var dt = new Date(year, month[, date, hour, minute, second, millisecond]); 
+</script> 	
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Array -->
+<div id="tab-8">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4><a href="Array.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+var arrayName = new Array();
+var arrayName = new Array(Number length);
+var arrayName = new Array(element1, element2, element3,... elementN);
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+</ul>
+</div>	
+		
+<!-- Section for JavaScript Events -->
+<div class="codebox">
+<div class="codebox-title"><h4>JavaScript Events</h4></div>
+<ul class="html-code">    
+<div id="EventTabs">
+<ul>
+<li><a href="#tab-1">Blur Event</a></li>
+<li><a href="#tab-2">Click Event</a></li>
+<li><a href="#tab-3">Context Menu Event</a></li>
+<li><a href="#tab-4">Change Event</a></li>
+<li><a href="#tab-5">Focus Event</a></li>
+<li><a href="#tab-6">Keydown Event</a></li>
+<li><a href="#tab-7">Keypress Event</a></li>
+<li><a href="#tab-8">Keyup Event</a></li>
+<li><a href="#tab-9">Load Event</a></li>
+<li><a href="#tab-10">Mouseout Event</a></li>
+<li><a href="#tab-11">Mouseover Event</a></li>
+</ul>
+
+<!-- blur Event -->
+<div id="tab-1">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="BlurEvent.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<label>Name : </label> 
+<input type="text" onblur="alert('Blur Event Works.')"> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Click Event -->
+<div id="tab-2">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="ClickEvent.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+function clickme(){
+alert('Click Event Works.');
+}
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Contextmenu Event -->
+<div id="tab-3">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="ContextmenuEvent.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+function clickme(){
+alert('Contextmenu Event Works.');
+}
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Change Event -->
+<div id="tab-4">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="ChangeEvent.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<select onchange="alert('Change Event Works.');">
+<option>Choose Technologies</option>
+<option>Java</option>
+<option>PHP</option>
+<option>Bootstrap</option>
+</select>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Focus Event -->
+<div id="tab-5">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="FocusEvent.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+function focus(){
+alert('Focus Event Works.');
+}
+</script>  
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- KeyDown Event -->
+<div id="tab-6">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="KeydownEvent.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+function Keydown(){
+alert('Keydown Event Works.');
+}
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- KeyPress Event -->
+<div id="tab-7">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="KeypressEvent.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+function keypress(){
+alert('Keypress Event Works.');
+}	 
+</script> 	
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Keyup Event -->
+<div id="tab-8">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="KeyupEvent.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+function Keyup(){
+alert('Keyup Event Works.');
+}
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+	
+<!-- Load Event -->
+<div id="tab-9">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="LoadEvent.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+function load(){
+alert('Load Event Works.');
+}
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Mouseout Event -->
+<div id="tab-10">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="MouseoutEvent.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+function clickme(){
+alert('Mouseout Event Works.');
+}
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Mouseover Event -->
+<div id="tab-11">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="MouseoverEvent.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+function mouseover(){
+alert('Mouseover Event Works.');
+}
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</ul>
+</div>
+	
+<!-- Section for JavaScript Event Listeners -->
+<div class="codebox">
+<div class="codebox-title"><h4>JavaScript Event Listeners</h4></div>
+<ul class="html-code">    
+<div id="EventListenerTabs">
+<ul>
+<li><a href="#tab-1">Multiple Event Handlers on a Single Event</a></li>
+<li><a href="#tab-2">Multiple Event Listeners on a Single Event</a></li>
+<li><a href="#tab-3">Different Event Handlers on a different Event</a></li>
+<li><a href="#tab-4">Adding Event Listener to the Window Resize</a></li>
+<li><a href="#tab-5">Removing an Event Listener</a></li>
+</ul>
+
+<!-- Multiple Event Handlers on a Single Event -->
+<div id="tab-1">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="MultipleEventHandlers.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+// Defining custom functions
+function functionone() {
+alert("Function one executed!");
+}
+
+function functionTwo() {
+alert("Function two executed!");
+}
+// Selecting button element
+var btn = document.getElementById("btn1");
+// Assigning event handlers to the button
+btn.onclick = functionone;
+btn.onclick = functionTwo;  // This one overwrite the functionone
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Multiple Event Listeners on a Single Event -->
+<div id="tab-2">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="MultipleEventListeners.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+// Defining custom functions
+function functionone() {
+alert("Function one executed!");
+}
+
+function functionTwo() {
+alert("Function two executed!");
+}
+
+// Selecting button element
+var btn = document.getElementById("btn1");
+
+// Assigning event listeners to the button
+btn.addEventListener("click", functionone);
+btn.addEventListener("click", functionTwo);
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Different Event Handlers on a different Event -->
+<div id="tab-3">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="DifferentEventListenersToDifferentEventTypes.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>
+// Selecting button element
+var btn = document.getElementById("btn1");
+
+// Defining custom functions
+function sayHello() {
+alert("Event Listener one");
+}
+
+function setHoverColor() {
+btn.style.background = "gray";
+}
+
+function setNormalColor() {
+btn.style.background = "";
+}
+
+// Assigning event listeners to the button
+btn.addEventListener("click", sayHello);
+btn.addEventListener("mouseover", setHoverColor);
+btn.addEventListener("mouseout", setNormalColor);
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+<!-- Adding Event Listener to the Window Resize -->
+<div id="tab-4">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="AddingEventListenerToTheWindowResizeEvent.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>
+<!-- Script for Multiple Event Handlers-->
+// Defining event listener function
+function displayWindowSize() {
+var w = window.innerWidth;
+var h = window.innerHeight;
+var size = "Width: " + w + ", " + "Height: " + h;
+document.getElementById("result").innerHTML = size;
+}
+// Attaching the event listener function to window's resize event
+window.addEventListener("resize", displayWindowSize);
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Removing an Event Listener -->
+<div id="tab-5">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="RemovingAnEventListener.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>
+// Defining function
+function Hello() {
+alert("Hello!");
+}
+
+// Selecting button element
+var btn = document.getElementById("btn1");
+
+// Attaching event listener
+btn.addEventListener("click", Hello);
+
+// Removing event listener
+btn.removeEventListener("click", Hello);
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</ul>
+</div>
+
+<!--Javascript Imagepath with Coordinates Example-->
+<div class="codebox">
+<div class="codebox-title"><h4>JavaScript Imagepath using Coordinates</h4></div>
+<ul class="html-code">    
+<div id="tabs">
+<p>The coordinate attribute specifies the coordinates of an area in an image and is used together with the shape attribute to specify the size, shape, and placement of an area.</p>
+<div id="Imagepath">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Imagepath.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+function showTutorial(name) {
+document.myform.stage.value = name
+}
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</ul>
+</div>
+
+<!-- Section for JavaScript Forms -->
+<div class="codebox">
+<div class="codebox-title"><h4>JavaScript Forms</h4></div>
+<ul class="html-code">    
+<div id="FormsTabs">
+<ul>
+<li><a href="#tab-1">Form Validation</a></li>
+<li><a href="#tab-2">Auto Fill Form</a></li>
+</ul>
+
+<!-- Registration Form-->
+<div id="tab-1">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="FormValidation.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+<script>
+function printError(elemId, hintMsg) {
+document.getElementById(elemId).innerHTML = hintMsg;
+}
+</script>
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Auto Fill Form -->
+<div id="tab-2">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="AutoFillForm.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+function sameaddress() 
+{ 
+if (document.getElementById('same').checked) { 
+document.getElementById('secondaryaddress').value=document. 
+getElementById('primaryaddress').value; 
+document.getElementById('secondaryzip').value=document. 
+getElementById('primaryzip').value ;
+document.getElementById('secondaryname').value=document. 
+getElementById('name').value ;
+} 
+else{ 
+document.getElementById('secondaryaddress').value=""; 
+document.getElementById('secondaryzip').value="";
+document.getElementById('secondaryname').value="";	
+} 
+} 
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</ul>
+</div>
+
+<!-- Section for JavaScript String Methods -->
+<div class="codebox">
+<div class="codebox-title"><h4>JavaScript String Methods</h4></div>
+<ul class="html-code">    
+<div id="StringTabs">
+<ul>
+<li><a href="#tab-1">charAt()</a></li>
+<li><a href="#tab-2">charCodeAt()</a></li>
+<li><a href="#tab-3">concat()</a></li>
+<li><a href="#tab-4">indexOf()</a></li>
+<li><a href="#tab-5">lastIndexOf()</a></li>
+<li><a href="#tab-6">localeCompare()</a></li>
+<li><a href="#tab-7">match()</a></li>
+<li><a href="#tab-8">replace()</a></li>
+<li><a href="#tab-9">search()</a></li>
+<li><a href="#tab-10">slice()</a></li>
+<li><a href="#tab-11">split()</a></li>
+<li><a href="#tab-12">substr()</a></li>
+<li><a href="#tab-13">substring()</a></li>
+<li><a href="#tab-14">toLocaleLowerCase()</a></li>
+<li><a href="#tab-15">toLocaleUpperCase()</a></li>
+<li><a href="#tab-16">toLowerCase()</a></li>
+<li><a href="#tab-17">toString()</a></li>
+<li><a href="#tab-18">toUpperCase()</a></li>
+<li><a href="#tab-19">valueOf()</a></li>
+<li><a href="#tab-20">Example</a></li>
+</ul>
+
+<!-- charAt(position)-->
+<div id="tab-1">
+<span><strong>charAt(position) </strong> method returns the character at the specified position (in Number).</span>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type = "text/javascript">
+var msg = new String( "Hello World" );
+msg.charAt(5)
+(or)
+document.writeln("msg.charAt(5) is:" + msg.charAt(5)); 
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- charCodeAt(position) -->
+<div id="tab-2">
+<span><strong>charCodeAt(position) </strong> method returns a number indicating the Unicode value of the character at the given position (in Number).</span>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type = "text/javascript">
+var msg = new String( "Hello World" );
+msg.charCodeAt(5)
+(or)
+document.writeln("msg.charCodeAt(5) is:" + str.charCodeAt(5)); 
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- concat([string,,]) -->
+<div id="tab-3">
+<span><strong>concat([string,,]) </strong> method joins specified string literal values (specify multiple strings separated by comma) and returns a new string.</span>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type = "text/javascript">
+var str1 = "Hello ";
+var str2 = "world!";
+var result = str1.concat(str2); 
+document.writeln("str1.concat(str2) is:" + result); 
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- indexOf(SearchString, Position) -->
+<div id="tab-4">
+<span><strong>indexOf(SearchString, Position) </strong> method returns the index of first occurrence of specified String starting from specified number index. Returns -1 if not found.</span>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type = "text/javascript">
+var str = "Hello, Here we done JavaScript String Method examples.";
+var result = str.indexOf("JavaScript");
+document.writeln("str.indexOf("JavaScript") is:" + result); 
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- lastIndexOf(SearchString, Position) -->
+<div id="tab-5">
+<span><strong>lastIndexOf(SearchString, Position) </strong> method returns the last occurrence index of specified SearchString, starting from specified position. Returns -1 if not found.</span>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type = "text/javascript">
+var str = "Hello, Here we done JavaScript String Method examples.";
+var result = str.lastIndexOf("JavaScript");
+document.writeln("str.lastIndexOf("JavaScript") is:" + result); 
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- localeCompare(string,position) -->
+<div id="tab-6">
+<span><strong>localeCompare(string,position) </strong> method returns a number indicating whether a reference string comes before or after or is the same as the given string in sorted order.</span>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type = "text/javascript">
+var str1 = new String( "These are String Methods examples" );
+var result = str1.localeCompare( "JavScript" );
+document.write("str1.localeCompare('JavScript') is :" + result );           
+var index = str1.localeCompare( "Position ?" );
+document.write("str1.localeCompare('Position ?') is :" + result ); 
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- localeCompare(string,position) -->
+<div id="tab-7">
+<span><strong>match(RegExp) </strong> method search a string for a match using specified regular expression. Returns a matching array.</span>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type = "text/javascript">
+var str = "These are the String Methods Examples.";
+var result = str.match(/the/g); 
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- replace(searchValue, replaceValue) -->
+<div id="tab-8">
+<span><strong>replace(searchValue, replaceValue) </strong> method search specified string value and replace with specified replace Value string and return new string. Regular expression can also be used as searchValue.</span>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type = "text/javascript">
+var str = "Visit Code Repository for jQuery!";
+var res = str.replace("jQuery", "JavaScript");
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- search(RegExp) -->
+<div id="tab-9">
+<span><strong>search(RegExp) </strong> method search for a match based on specified regular expression.</span>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type = "text/javascript">
+var str = "Visit Code Repository for JavaScript";
+var result = str.search(/JavaScript/i);
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- slice(startNumber, endNumber) -->
+<div id="tab-10">
+<span><strong>slice(startNumber, endNumber) </strong> method extracts a section of a string based on specified starting and ending index and returns a new string.</span>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type = "text/javascript">
+var str = "Hello world!"; 
+var result = str.slice(0, 5);
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- split(separatorString, limitNumber) -->
+<div id="tab-11">
+<span><strong>split(separatorString, limitNumber) </strong> method splits a String into an array of strings by separating the string into substrings based on specified separator. Regular expression can also be used as separator.</span>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type = "text/javascript">
+var str = "Here are the code repository for String Methods.";
+var result = str.split(" ");
+var result1 = str.split(" ","2");
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- substr(start, length) -->
+<div id="tab-12">
+<span><strong>substr(start, length) </strong> method returns the characters in a string from specified starting position through the specified number of characters (length).</span>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type = "text/javascript">
+var str = "Code Repository for String Methods.";
+var result = str.substr(0, 3);
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- substring(start, end) -->
+<div id="tab-13">
+<span><strong>substring(start, end) </strong> method returns the characters in a string between start and end indexes.</span>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type = "text/javascript">
+var str = 'JavaScript';
+var result = str.substring(1, 3);
+var result1 = str.substring(3);
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- toLocaleLowerCase() -->
+<div id="tab-14">
+<span><strong>toLocaleLowerCase() </strong> method Converts a string to lower case according to current locale..</span>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type = "text/javascript">
+var str = "Code Repository for Javascript";
+var result = str.toLocaleLowerCase();
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- toLocaleUpperCase() -->
+<div id="tab-15">
+<span><strong>toLocaleUpperCase() </strong> method Converts a sting to upper case according to current locale.</span>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type = "text/javascript">
+var str = "Code Repository for Javascript";
+var res = str.toLocaleUpperCase();
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- toLowerCase() -->
+<div id="tab-16">
+<span><strong>toLowerCase() </strong> method returns lower case string value.</span>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type = "text/javascript">
+var str = "Code Repository for Javascript";
+var res = str.toLowerCase();
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- toString() -->
+<div id="tab-17">
+<span><strong>toString() </strong> method returns the value of String object.</span>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type = "text/javascript">
+var number = 15;
+var result = number.toString();
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- toString() -->
+<div id="tab-18">
+<span><strong>toUpperCase() </strong> method returns upper case string value.</span>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type = "text/javascript">
+var str = "Hello JavaScript";
+var result = str.toUpperCase();
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- toString() -->
+<div id="tab-19">
+<span><strong>valueOf() </strong> method returns the primitive value of the specified string object.</span>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type = "text/javascript">
+var str = "Hello JavaScript";
+var num = 15;
+var result = str.valueOf();
+var result1 = num.valueOf();
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- toString() -->
+<div id="tab-20">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4><a href="StringMethods.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type = "text/javascript">
+
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+</ul>
+</div>
+
+<!-- Section for JavaScript Array Methods -->
+<div class="codebox">
+<div class="codebox-title"><h4>JavaScript Array Methods</h4></div>
+<ul class="html-code">    
+<div id="ArrayMethodsTabs">
+<ul>
+<li><a href="#tab-1">concat()</a></li>
+<li><a href="#tab-2">every()</a></li>
+<li><a href="#tab-3">filter()</a></li>
+<li><a href="#tab-4">forEach()</a></li>
+<li><a href="#tab-5">indexOf()</a></li>
+<li><a href="#tab-6">join()</a></li>
+<li><a href="#tab-7">lastIndexOf()</a></li>
+<li><a href="#tab-8">map()</a></li>
+<li><a href="#tab-9">pop()</a></li>
+<li><a href="#tab-10">push()</a></li>
+<li><a href="#tab-11">reverse()</a></li>
+<li><a href="#tab-12">shift()</a></li>
+<li><a href="#tab-13">slice()</a></li>
+<li><a href="#tab-14">sort()</a></li>
+<li><a href="#tab-15">splice()</a></li>
+<li><a href="#tab-16">unshift()</a></li>
+<li><a href="#tab-17">Example</a></li>
+</ul>
+
+<!-- Concat Method-->
+<div id="tab-1">
+<p><strong>concat()</strong> method returns new array by combining values of an array that is specified as parameter with existing array values.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>  
+var concat1=["PHP","DotNet","Python"];  
+var concat2=["Java","TypeScript","JavaScript"];  
+var result=arr1.concat(arr2);  
+document.writeln(result);  
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Every Method-->
+<div id="tab-2">
+<p><strong>every()</strong> method returns true or false if every element in the specified array satisfies a condition specified in the callback function. Returns false even if single element does not satisfy the condition.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>  
+var marks=[70,55,32,33,2];  
+function verify(value){  
+return value>10;
+}   
+document.writeln(marks.every(verify));  
+</script>  
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- filter Method-->
+<div id="tab-3">
+<p><strong>filter()</strong> method returns a new array with all the elements that satisfy a condition specified in the callback function.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>  
+var marks=[70,55,32,33,2];  
+function verify(value){  
+return value>30;    
+}  
+document.writeln(marks.filter(verify));  
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- forEach Method-->
+<div id="tab-4">
+<p><strong>forEach()</strong> method method executes a callback function for each elements of an array.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>  
+var course = ["Java", "C++", "PHP"];  
+course.forEach(function(fetch) {  
+document.writeln(fetch);  
+});  
+</script> 
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- indexOf Method-->
+<div id="tab-5">
+<p><strong>indexOf()</strong> method returns the index of the first occurrence of the specified element in the array, or -1 if it is not found.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>  
+var course=["C","C++","Python","C++","Java"];  
+var result= course.indexOf("C++");  
+document.writeln(result);  
+</script>  
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- join Method-->
+<div id="tab-6">
+<p><strong>join()</strong> method returns string of all the elements separated by the specified separator.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>  
+var course=["AngularJs","Node.js","JQuery"]  
+var result=course.join('-')  
+document.write(result);  
+</script>  
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- lastIndexOf Method-->
+<div id="tab-7">
+<p><strong>lastIndexOf()</strong> method returns the index of the last occurrence of the specified element in the array, or -1 if it is not found.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>  
+var course=["C","C++","Python","C++","Java"];  
+var result= course.lastIndexOf("C++");  
+document.writeln(result);  
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- map Method-->
+<div id="tab-8">
+<p><strong>map()</strong> method creates a new array with the results of calling a provided function on every element in this array.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>  
+var numbers=[6.3,7.5,8.3];  
+var result=numbers.map(Math.round);  
+document.writeln(result);  
+</script>  
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- pop Method-->
+<div id="tab-9">
+<p><strong>pop()</strong> method removes the last element from an array and returns that element.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>  
+var course=["AngularJS","Node.js","JQuery"];  
+document.writeln("Orginal array: "+course+"<br>");  
+document.writeln("Extracted element: "+course.pop()+"<br>");  
+document.writeln("Remaining elements: "+ course);  
+</script>  
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- push Method-->
+<div id="tab-10">
+<p><strong>push()</strong> method adds one or more elements at the end of an array and returns the new length of the array.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>  
+var course=["AngularJS","Node.js"];  
+course.push("JQuery");  
+document.writeln(course);  
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- reverse Method-->
+<div id="tab-11">
+<p><strong>reverse()</strong> method reverses the elements of an array. Element at last index will be first and element at 0 index will be last.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>  
+var course=["AngulaJS","Node.js","JQuery"];  
+var rev=course.reverse();  
+document.writeln(rev);  
+</script>  
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- shift Method-->
+<div id="tab-12">
+<p><strong>shift()</strong> method removes the first element from an array and returns that element.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>  
+var course=["AngularJS","Node.js","JQuery"];  
+var result=course.shift();  
+document.writeln(result);  
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- slice Method-->
+<div id="tab-13">
+<p><strong>slice()</strong> method returns a new array with specified start to end elements.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>  
+var course=["AngularJS","Node.js","JQuery","Bootstrap"]  
+var result=course.slice(1,2);  
+document.writeln(result);  
+</script>  
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- sort Method-->
+<div id="tab-14">
+<p><strong>sort()</strong> method sorts the elements of an array.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>  
+var course=["AngularJS","Node.js","JQuery","Bootstrap"]  
+var result=course.sort();  
+document.writeln(result);  
+</script>  
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- splice Method-->
+<div id="tab-15">
+<p><strong>splice()</strong> method adds and/or removes elements from an array.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>  
+var days=["Monday","Tuesday","Thursday","Friday"];  
+var result=days.splice(2,0,"Wednesday")  
+document.writeln(days);  
+</script>  
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- unshift Method-->
+<div id="tab-16">
+<p><strong>unshift()</strong> method adds one or more elements to the front of an array and returns the new length of the array.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>  
+var course=["AngularJS","Node.js"];  
+var result=course.unshift("JQuery");  
+document.writeln(course);   
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Example-->
+<div id="tab-17">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4><a href="ArrayMethods.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>												
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+document.writeln("Concat Method: "); 
+var concat1=["PHP","DotNet","Python"];  
+var concat2=["Java","TypeScript","JavaScript"];  
+var result=concat1.concat(concat2);  
+document.writeln(result + "<br>" + "<br>"); 
+
+document.writeln("Every Method: "); 
+var marks=[70,55,32,33,2];  
+function verify(value){  
+return value>10;
+}   
+document.writeln(marks.every(verify) + "<br>" + "<br>");  
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</ul>
+</div>
+
+<!-- Section for Date Formates -->
+<div class="codebox">
+<div class="codebox-title"><h4>JavaScript Date Formats</h4></div>
+<ul class="html-code">    
+<div id="DateTabs">
+<ul>
+<li><a href="#tab-1">Default Dateformat</a></li>
+<li><a href="#tab-2">Locale Date </a></li>
+<li><a href="#tab-3">GMT Date</a></li>
+<li><a href="#tab-4">ISO Date</a></li>
+<li><a href="#tab-5">UTC date </a></li>
+<li><a href="#tab-6">Locale Date with Time</a></li>
+<li><a href="#tab-7">Locale Time</a></li>
+<li><a href="#tab-8">Example</a></li>
+</ul>
+
+<!-- Default Dateformat-->
+<div id="tab-1">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+var date = new Date();
+document.getElementById("p1").innerHTML = 'Default Dateformat is:' + date;
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Local Date format-->
+<div id="tab-2">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4></div>
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+var date = new Date();
+document.getElementById("p2").innerHTML = 'Locale Date is : ' + date.toLocaleDateString();
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- GMT Dateformat-->
+<div id="tab-3">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4></div>
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+var date = new Date();
+document.getElementById("p3").innerHTML = 'GMT Date is : ' + date.toGMTString();
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ISO Dateformat-->
+<div id="tab-4">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4></div>
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+var date = new Date();
+document.getElementById("p4").innerHTML = 'ISO Date is : ' + date.toISOString();
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Locale   UTC date format-->
+<div id="tab-5">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4></div>
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+var date = new Date();
+document.getElementById("p5").innerHTML = 'UTC Date is : ' + date.toUTCString();
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Locale  Date &Time format-->
+<div id="tab-6">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4></div>
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+var date = new Date();
+document.getElementById("p6").innerHTML = 'Locale Date &Time is : ' + date.toLocaleTimeString();
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Locale Time format-->
+<div id="tab-7">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4></div>
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+var date = new Date();
+document.getElementById("p7").innerHTML = 'Locale Time is : ' + date.toTimeString();
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Example Date &Time format-->
+<div id="tab-8">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="DateExamples.html" target="_blank" class="try-btn" title="Try this code">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+var date = new Date();
+document.getElementById("p1").innerHTML = 'Default Dateformat is:' + date;
+document.getElementById("p2").innerHTML = 'Locale Date is : ' + date.toLocaleDateString();
+document.getElementById("p3").innerHTML = 'GMT Date is : ' + date.toGMTString();
+document.getElementById("p4").innerHTML = 'ISO Date is : ' + date.toISOString();
+document.getElementById("p5").innerHTML = 'UTC date is : ' + date.toUTCString();
+document.getElementById("p6").innerHTML = 'Locale Time is : ' + date.toLocaleTimeString();
+document.getElementById("p7").innerHTML = 'Today Date is : ' + date.toString('YYYY-MM-dd');
+document.getElementById("p8").innerHTML = 'Today Time is : ' + date.toTimeString();
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</ul>
+</div>
+
+<!--Javascript Operators-->
+<div class="codebox">
+<div class="codebox-title"><h4>JavaScript Operators</h4></div>
+<ul class="html-code">    
+<div id="Operatortabs">
+
+
+
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="JavascriptOperators.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>
+var x = 17;
+var y = 4;
+document.write(x + y); 
+document.write("<br>");    
+document.write(x - y); 
+document.write("<br>");    
+document.write(x * y); 
+document.write("<br>");
+document.write(x / y); 
+document.write("<br>");   
+document.write(x % y);
+
+<!--Assignment Operators-->
+var x; 
+var y;
+x = 50; y=20;
+document.write("Assign(=): x = ");
+document.write(x + "<br>");    
+x += y;
+document.write("Add and assign operartor (x=x+y) : ");
+document.write(x + "<br>");     
+x = 50;
+x -= y;
+document.write("Sub and assign operartor (x=x-y) : ");
+document.write(x + "<br>");     
+x = 50;
+x *= y;
+document.write("Multiply and assign operartor (x=x*y) : ");
+document.write(x + "<br>");      
+x = 50;
+x /= y;
+document.write("Divide and assign quotient operartor  (x=x/y) : ");
+document.write(x + "<br>");     
+x = 50; y=20;
+x %= y;
+document.write("Divide and assign modulus operartor (x=x%y) : ");
+document.write(x);
+
+<!--string Operators-->
+var str1 = "Good";
+var str2 = " Vibes!";  
+document.write("Concatenation (str1+str2) : ");
+document.write(str1 + str2 + "<br>"); !   
+document.write("Concatenation assignment (str1+=str2) : ");
+str1 += str2;
+document.write(str1); 
+
+<!--Incrementing and Decrementing Operators-->
+var x; 
+x = 10;
+document.write("Pre-increment (++x) : ");
+document.write(++x + "<br>"); 
+x = 10;
+document.write("Post-increment (x++) : ");
+document.write(x++ + "<br>");      
+x = 10;
+document.write("Pre-decrement (--x) : ");
+document.write(--x + "<br>");     
+x = 10;
+document.write("Post-decrement (x--) : ");
+document.write(x-- + "<br>"); 
+
+<!--Comparison Operators-->
+var x = 17;
+var y = 4;    
+document.write("Equal (==) : ");
+document.write(x == y);  
+document.write("<br>");    
+document.write("Identical (===) : ");
+document.write(x === y); 
+document.write("<br>");  
+document.write("Not equal (!=) : ");
+document.write(x != y);  
+document.write("<br>");   
+document.write("Not identical (!==) : ");
+document.write(x !== y); 
+document.write("<br>");   
+document.write("Less than (<) : ");
+document.write(x < y);   
+document.write("<br>");   
+document.write("Greater than (>) : ");
+document.write(x > y);   
+document.write("<br>");    
+document.write("Greater than or equal to (>=) : ");
+document.write(x <= y);  
+document.write("<br>");	
+document.write("Less than or equal to (<=) : ");
+document.write(x >= y);
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+
+</div>
+</ul>
+</div>
+
+<div class="codebox">
+<div class="codebox-title"><h4>JavaScript Conditional Statements</h4></div>
+<ul class="html-code">    
+<div id="Conditionaltabs">
+<ul>
+<li><a href="#tab-1">If Conditions</a></li>
+<li><a href="#tab-2">Switch Statement</a></li>
+<li><a href="#tab-3">Loops Statements</a></li>
+</ul>
+
+<!-- If Conditions -->
+<div id="tab-1">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="IfConditions.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<!--If Statement-->
+<script>
+var a=20;  
+if(a>10){  
+document.write("a  is greater than 10"+ "<br>");  
+}  
+</script>
+<!--If-else Statement-->
+<script>
+var a=5;
+if(a%2==0){
+document.write("a is even number");
+} else {
+document.write("a is not a even number");
+}
+</script>
+<!--If-else if Statement:-->
+<script>
+var a=11;
+if(a==10){
+document.write("a is equal to 10");
+}else if(a==20){
+document.write("a is equal to 20");
+}else if(a==15){
+document.write("a is equal to 15");
+} else {
+document.write("a is not equal to 10,20,15");
+}
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Switch Statements -->
+<div id="tab-2">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="SwitchStatement.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script>
+var d = new Date();	
+switch(d.getDay()) {
+case 0:
+document.write("Today is Sunday.");
+break;
+case 1:
+document.write("Today is Monday.");
+break;
+case 2:
+document.write("Today is Tuesday.");
+break;
+case 3:
+document.write("Today is Wednesday.");
+break;
+case 4:
+document.write("Today is Thursday.");
+break;
+case 5:
+document.write("Today is Friday.");
+break;
+case 6:
+document.write("Today is Saturday.");
+break;   
+default:
+document.write("No information available for that day.");
+break;
+}
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Loop Statements -->
+<div id="tab-3">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="LoopStatements.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<!--For Loop-->
+<script>  
+for (i=1; i<=5; i++)  
+{  
+document.write(i + "<br/>")  
+}  
+</script>  
+<!--while loop-->
+<script>  
+var i=11;  
+while (i<=15)  
+{  
+document.write(i + "<br/>");  
+i++;  
+}  
+</script>  
+<!--do while loop-->
+<script>  
+var i=21;  
+do{  
+document.write(i + "<br/>");  
+i++;  
+}while (i<=25);  
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>	
+
+
+</div>
+</ul>
+</div>
+
+<!-- Section for JavaScript Examples -->
+<div class="codebox">
+<div class="codebox-title"><h4>JavaScript Examples</h4></div>
+<ul class="html-code">    
+<div id="ExamplesTabs">
+<ul>
+<li><a href="#tab-1">Captcha</a></li>
+<li><a href="#tab-2">Auto Refresh Page</a></li>
+<li><a href="#tab-3">Hide/Show Password</a></li>
+<li><a href="#tab-4">Errorexception</a></li>
+<li><a href="#tab-5">Drag&Drop</a></li>
+</ul>
+
+<!-- Captcha Form-->
+<div id="tab-1">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Captcha.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+function DrawCaptcha(){
+var a = Math.ceil(Math.random() * 10)+ '';
+var b = Math.ceil(Math.random() * 10)+ '';       
+var c = Math.ceil(Math.random() * 10)+ '';  
+var d = Math.ceil(Math.random() * 10)+ '';  
+var e = Math.ceil(Math.random() * 10)+ '';  
+var f = Math.ceil(Math.random() * 10)+ '';  
+var g = Math.ceil(Math.random() * 10)+ '';  
+var code = a + ' ' + b + ' ' + ' ' + c + ' ' + d + ' ' + e + ' '+ f + ' ' + g;
+document.getElementById("txtCaptcha").value = code
+}
+function ValidCaptcha(){
+var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
+var str2 = removeSpaces(document.getElementById('txtInput').value);
+if (str1 == str2) return 'Captcha Valid';        
+return 'Invalid Captcha';
+}
+function removeSpaces(string){
+return string.split(' ').join('');
+}
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Automatic Refresh Page -->
+<div id="tab-2">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="AutoRefreshPage.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+window.setTimeout(function(){
+document.location.reload(true);
+}, 10000);  //For every 10 seconds
+document.getElementById("timestamp").innerText = new Date().getTime();  
+});
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Hide/Show Password -->
+<div id="tab-3">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="HideShowPassword.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+// Change the type of input to password or text 
+function Toggle() { 
+var temp = document.getElementById("password"); 
+if (temp.type === "password") { 
+temp.type = "text"; 
+} 
+else { 
+temp.type = "password"; 
+} 
+} 
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Error Exception -->
+<div id="tab-4">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Errorexception.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+function verify() {
+var num = document.getElementById("num").value;
+if(num == 0) {
+alert("Please Enter a Number");												
+return false;
+}	
+var start = Date.now();
+try {
+if(num > 0 && num <= 1000) {
+alert("The Result is:"+Math.pow(num, num));
+} 
+else {
+throw new Error("Invalid Number is entered!");
+}
+} catch(e) {
+alert(e.message);
+} finally {
+}
+}
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- Drag & Drop Example -->
+<div id="tab-5">
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4><a href="Drag&Drop.html" target="_blank" class="try-btn" title="Try this code using online Editor">Try this code <span>»</span></a></div>						
+<div class = "jscodeclass">
+<span>
+<xmp style ="margin-top:-3%;margin-bottom:-0.8%;">
+<script type="text/javascript">
+function allowDrop(ev) {
+ev.preventDefault();
+}
+function drag(ev) {
+ev.dataTransfer.setData("text", ev.target.id);
+}
+function drop(ev) {
+ev.preventDefault();
+var data = ev.dataTransfer.getData("text");
+ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</xmp>
+</span>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</ul>
+</div>
+
+
+		</div>
+		</div>	
+
+<!-- Footer Part -->
+		<iframe src="Footer.html" style="border: none;" scrolling="no" width="99.7%" height="50"></iframe>
+		
+    </body>
+</html> 

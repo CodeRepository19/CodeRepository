@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />	
+
+			<!-- Bootstrap library, font-awesome library, custom css references -->			
+			<link rel="stylesheet" href="assets/css/Header.css">
+			<link rel="stylesheet" href="assets/css/bootstrap.3.3.7.min.css">
+			<link rel="stylesheet" href="assets/css/Scrooltop.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+			<!-- Js files -->
+			<script src="assets/js/jquery-3.1.1.min.js"></script>
+			
+			<!-- Favicon icon -->
+			<link rel="shortcut icon" href="assets/icon/favicon.ico">
+
+			<title>Image Path</title>
+					
+			<!-- FONT FAMILY -->
+			<style>
+				body,xmp {
+				font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+				}	
+			</style>
+			
+			<script>
+			
+			<!-- Script for Scroll top event -->
+				$(document).ready(function() {
+				var btn = $('#button');
+				$(window).scroll(function() {
+				if ($(window).scrollTop() > 20 ) {
+				btn.addClass('show');
+				} else {
+				btn.removeClass('show');
+				}
+				});
+				btn.on('click', function(e) {
+				e.preventDefault();
+				$('html, body').animate({scrollTop:0}, '20');
+				});
+				});
+			
+		<!--Script for Copy Code -->			
+			function divcopy() {
+			var copyobject=$("#srcdiv").clone();
+			var $temp = $("<input>");
+			$("body").append($temp);
+			var myJSON = copyobject.html();;
+			$temp.val(myJSON).select();
+			document.execCommand("copy");
+			$temp.remove();
+			var tooltip = document.getElementById("myTooltip");
+			tooltip.title = "Copied";
+			}
+			function showTutorial(name) {
+               document.myform.stage.value = name
+            }
+			</script>
+
+			</head>
+<body>
+
+<!-- Scroll top anchor tag -->
+		<a id="button"></a>
+		
+<!-- Page Header -->
+<div class="page-title container-fluid">
+				<div class="container">
+					<div class="row">
+						<div class="span12" style="margin-top:7px;">                        						
+							<h2>JavaScript</h2>
+							<p>Source code & Example</p>
+							<a href = "index.html"><i class="fa fa-home fa-3x pull-right" style = "color: white;" aria-hidden="true"></i></a>						
+							</div>					
+					</div>
+				</div>
+			</div>
+
+<div class = "container" style="padding-bottom:5%;">
+<div class = "row">
+<h3><strong><xmp>Image Path Example:</xmp></strong></h3>
+<div class = "col-md-7">
+<h3><b>Source Code:</b></h3>
+<div  style = "overflow:scroll;">
+<button type="button" onmouseout="outFunc()" class="pull-right btn btn-dark" id = "divtarget" onClick="divcopy()">
+<span id="myTooltip" title="Copy to Clipboard"  class="fa fa-copy" style="font-size:25px;"></span>
+</button>
+<xmp id = "srcdiv">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>	
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" >  </script>
+<title>Image Path</title>
+</head>
+<body>
+<form name = "myform">
+<input type = "text" name = "stage" size = "20" />
+</form>
+<!-- Create  Mappings -->
+<img src="Set Your Image Path" usemap="#image-map">
+<map name="image-map">		
+<area  
+alt="Laptop" 
+title="Laptop" 
+href="https://www.google.com/search?ei=gUtIXNfOCYn_rQG26qKIDg&q=laptop&oq=lap&gs_l=psy-ab.3.0.0i67l3j0l7.14807.15105..16227...0.0..0.173.438.0j3......0....1..gws-wiz.......0i71j0i131.IAjto1g0EI4" 
+coords="149,58,245,166" 
+shape="rect"
+target="_blank"
+onMouseOver = "showTutorial('Laptop')" 
+onMouseOut = "showTutorial('')"/>		
+<area  
+alt="Mobile" 
+title="Mobile" 
+href="https://www.google.com/search?ei=Dk1IXN31LdmsrQHxhpmQCg&q=mobile&oq=mobile&gs_l=psy-ab.3..0i67l10.23245.25010..25213...1.0..0.200.894.0j5j1......0....1..gws-wiz.......0i71j0j0i131.7QQsw9jztWk" 
+coords="116,153,131,181" 
+shape="rect"
+target="_blank"
+onMouseOver = "showTutorial('Mobile')" 
+onMouseOut = "showTutorial('')"/>		 
+<area  
+alt="Mobile" 
+title="Mobile" 
+href="https://www.google.com/search?ei=Dk1IXN31LdmsrQHxhpmQCg&q=mobile&oq=mobile&gs_l=psy-ab.3..0i67l10.23245.25010..25213...1.0..0.200.894.0j5j1......0....1..gws-wiz.......0i71j0j0i131.7QQsw9jztWk" 
+coords="89,157,105,183" 
+shape="rect"
+target="_blank"
+onMouseOver = "showTutorial('Mobile')" 
+onMouseOut = "showTutorial('')"/>
+<area alt="Coffee" 
+title="Coffee" 
+href="https://www.google.com/search?q=coffee&amp;oq=coffee&amp;aqs=chrome..69i57j0l5.3240j0j7&amp;sourceid=chrome&amp;ie=UTF-8" 
+coords="319,221,20" 
+shape="circle"
+target="_blank"
+onMouseOver = "showTutorial('Coffee')" 
+onMouseOut = "showTutorial('')"/>		 
+<area 
+alt="Ipad" 
+title="Ipad" 
+href="https://www.google.com/search?source=hp&ei=eE5IXKO1F9O89QOxu5fYAg&q=ipad&btnK=Google+Search&oq=ipad&gs_l=psy-ab.3..0l10.563.1351..1508...0.0..0.435.961.0j2j1j0j1......0....1..gws-wiz.....0..0i131.kSlQnQOiezY" 
+coords="9,159,46,134,81,161,45,189" 
+shape="poly"
+target="_blank"
+onMouseOver = "showTutorial('Ipad')" 
+onMouseOut = "showTutorial('')"/>	  
+<area alt="Speaker" 
+title="Speaker" 
+href="https://www.google.com/search?source=hp&amp;ei=0k5IXIyOLtC7rQHDlYuwAw&amp;q=speaker&amp;btnK=Google+Search&amp;oq=speaker&amp;gs_l=psy-ab.3.3.0l10.626.2855..3773...0.0..0.418.1648.0j3j2j0j2......0....1..gws-wiz.....0..0i131.HzFlnXPmw1M" 
+coords="25,78,61,62,76,112,56,132,36,122" 
+shape="poly"
+target="_blank"
+onMouseOver = "showTutorial('Speaker')" 
+onMouseOut = "showTutorial('')"/>		  
+<area alt="Speaker" 
+title="Speaker" 
+href="https://www.google.com/search?source=hp&amp;amp;ei=0k5IXIyOLtC7rQHDlYuwAw&amp;amp;q=speaker&amp;amp;btnK=Google+Search&amp;amp;oq=speaker&amp;amp;gs_l=psy-ab.3.3.0l10.626.2855..3773...0.0..0.418.1648.0j3j2j0j2......0....1..gws-wiz.....0..0i131.HzFlnXPmw1M" 
+coords="368,48,388,64,375,115,355,116,346,88,355,57" 
+shape="poly"
+target="_blank"
+onMouseOver = "showTutorial('Speaker')" 
+onMouseOut = "showTutorial('')"/>		  
+<area 
+alt="Aeroplane" 
+title="Aeroplane" 
+href="https://www.google.com/search?q=aeroplane&amp;oq=aeroplane&amp;aqs=chrome..69i57j0l5.2816j0j7&amp;sourceid=chrome&amp;ie=UTF-8" 
+coords="338,142,359,156,377,153,365,133" 
+shape="poly"
+target="_blank"
+onMouseOver = "showTutorial('Aeroplane')" 
+onMouseOut = "showTutorial('')"/>
+</map>
+</body>
+</html>
+</xmp>
+</div>
+</div>
+<div class = "col-md-5">
+<h3><b>Output:</b></h3>
+<form name = "myform">
+<input type = "text" name = "stage" size = "20" />
+</form><br>
+<!-- Create  Mappings -->
+		<img src="assets/images/imagepath.jpg" usemap="#image-map">
+
+		<map name="image-map">
+			
+			<area  
+			alt="Laptop" 
+			title="Laptop" 
+			href="https://www.google.com/search?ei=gUtIXNfOCYn_rQG26qKIDg&q=laptop&oq=lap&gs_l=psy-ab.3.0.0i67l3j0l7.14807.15105..16227...0.0..0.173.438.0j3......0....1..gws-wiz.......0i71j0i131.IAjto1g0EI4" 
+			coords="149,58,245,166" 
+			shape="rect"
+			target="_blank"
+			onMouseOver = "showTutorial('Laptop')" 
+            onMouseOut = "showTutorial('')"/>
+			
+			 <area  
+			 alt="Mobile" 
+			 title="Mobile" 
+			 href="https://www.google.com/search?ei=Dk1IXN31LdmsrQHxhpmQCg&q=mobile&oq=mobile&gs_l=psy-ab.3..0i67l10.23245.25010..25213...1.0..0.200.894.0j5j1......0....1..gws-wiz.......0i71j0j0i131.7QQsw9jztWk" 
+			 coords="116,153,131,181" 
+			 shape="rect"
+			 target="_blank"
+			 onMouseOver = "showTutorial('Mobile')" 
+             onMouseOut = "showTutorial('')"/>
+			 
+			 <area  
+			 alt="Mobile" 
+			 title="Mobile" 
+			 href="https://www.google.com/search?ei=Dk1IXN31LdmsrQHxhpmQCg&q=mobile&oq=mobile&gs_l=psy-ab.3..0i67l10.23245.25010..25213...1.0..0.200.894.0j5j1......0....1..gws-wiz.......0i71j0j0i131.7QQsw9jztWk" 
+			 coords="89,157,105,183" 
+			 shape="rect"
+			 target="_blank"
+			 onMouseOver = "showTutorial('Mobile')" 
+             onMouseOut = "showTutorial('')"/>
+			 
+			 <area alt="Coffee" 
+			 title="Coffee" 
+			 href="https://www.google.com/search?q=coffee&amp;oq=coffee&amp;aqs=chrome..69i57j0l5.3240j0j7&amp;sourceid=chrome&amp;ie=UTF-8" 
+			 coords="319,221,20" 
+			 shape="circle"
+			 target="_blank"
+			 onMouseOver = "showTutorial('Coffee')" 
+             onMouseOut = "showTutorial('')"/>
+			 
+			  <area 
+			  alt="Ipad" 
+			  title="Ipad" 
+			  href="https://www.google.com/search?source=hp&ei=eE5IXKO1F9O89QOxu5fYAg&q=ipad&btnK=Google+Search&oq=ipad&gs_l=psy-ab.3..0l10.563.1351..1508...0.0..0.435.961.0j2j1j0j1......0....1..gws-wiz.....0..0i131.kSlQnQOiezY" 
+			  coords="9,159,46,134,81,161,45,189" 
+			  shape="poly"
+			  target="_blank"
+			  onMouseOver = "showTutorial('Ipad')" 
+			  onMouseOut = "showTutorial('')"/>
+			  
+			  <area alt="Speaker" 
+			  title="Speaker" 
+			  href="https://www.google.com/search?source=hp&amp;ei=0k5IXIyOLtC7rQHDlYuwAw&amp;q=speaker&amp;btnK=Google+Search&amp;oq=speaker&amp;gs_l=psy-ab.3.3.0l10.626.2855..3773...0.0..0.418.1648.0j3j2j0j2......0....1..gws-wiz.....0..0i131.HzFlnXPmw1M" 
+			  coords="25,78,61,62,76,112,56,132,36,122" 
+			  shape="poly"
+			  target="_blank"
+			  onMouseOver = "showTutorial('Speaker')" 
+			  onMouseOut = "showTutorial('')"/>
+			  
+			  <area alt="Speaker" 
+			  title="Speaker" 
+			  href="https://www.google.com/search?source=hp&amp;amp;ei=0k5IXIyOLtC7rQHDlYuwAw&amp;amp;q=speaker&amp;amp;btnK=Google+Search&amp;amp;oq=speaker&amp;amp;gs_l=psy-ab.3.3.0l10.626.2855..3773...0.0..0.418.1648.0j3j2j0j2......0....1..gws-wiz.....0..0i131.HzFlnXPmw1M" 
+			  coords="368,48,388,64,375,115,355,116,346,88,355,57" 
+			  shape="poly"
+			  target="_blank"
+			  onMouseOver = "showTutorial('Speaker')" 
+			  onMouseOut = "showTutorial('')"/>
+			  
+			  <area 
+			  alt="Aeroplane" 
+			  title="Aeroplane" 
+			  href="https://www.google.com/search?q=aeroplane&amp;oq=aeroplane&amp;aqs=chrome..69i57j0l5.2816j0j7&amp;sourceid=chrome&amp;ie=UTF-8" 
+			  coords="338,142,359,156,377,153,365,133" 
+			  shape="poly"
+			  target="_blank"
+			  onMouseOver = "showTutorial('Aeroplane')" 
+			  onMouseOut = "showTutorial('')"/>
+
+		</map>
+</div>
+</div>
+</div>
+
+<!-- Footer -->
+    <footer>
+        <div class="container-fluid">                               
+            <div class="row">
+                <div class="copyright text-center">
+                     <p>Copyright 2019 - All rights reserved.</p>
+                </div>                    
+            </div>
+		</div>
+    </footer>
+
+</body>
+</html>

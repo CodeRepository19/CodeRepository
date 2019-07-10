@@ -1,0 +1,2960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PHP&nbsp;5 Repository</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">        
+<!-- Fontawesome CDN -->				
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">	
+<!-- CSS files -->
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap-3.3.7.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/HTML5.css">
+<link rel="stylesheet" href="assets/css/Scrooltop.css">
+<!-- Favicon icon -->
+<link rel="shortcut icon" href="assets/icon/favicon.ico">
+<!-- Javascript files -->
+<script src="assets/js/jquery-3.1.1.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script> 		
+<style>
+body,xmp {
+font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}	
+</style>
+<script>
+<!-- Script for Scroll top event -->
+$(document).ready(function() {
+var btn = $('#button');
+$(window).scroll(function() {
+if ($(window).scrollTop() > 500 ) {
+btn.addClass('show');
+} else {
+btn.removeClass('show');
+}
+});
+btn.on('click', function(e) {
+e.preventDefault();
+$('html, body').animate({scrollTop:0}, '500');
+});
+});
+
+<!-- Script for Tab to hide & show Code -->
+
+$(document).ready(function()
+{
+$(".html-code").hide();
+$(".codebox-title").on('click', function(event)
+{
+$(this).siblings(".html-code").fadeToggle(300);
+});
+});
+
+<!--Scroll event for Theory-->
+		
+$(document).ready(function(){
+$( ".PHPIntroduction,.StepstoCreateandRunthesamplePHPPageUsingXAAMP,.PHPVariables,.DifferencebetweenechoandprintinPHP,.PHPMagicConstant,.PHPDatatypes,.PHPArray,.PHPGlobalVariables,.HTTPGETandPOSTMethodsinPHP,.UsingfunctioninPHP,.DynamicDropdownUsingPHP,.CreatingCaptchaUsingPHP,.GetDateFromMysqlDatabaseUsingjQueryAJAXandPHP,.DatabasecolumnsearchusingjqueryAJAX,.CreatingGoogleRecaptchaUsingPHP,.SaveDatainDatabaseusingjQueryAJAXwithbackendvalidation,.filehandlinginphp,.DynamicSliderUsingPHPjqueryandBootstrap,.FileUploadonDragandDropusingjquery,.SessionUsingPHP,.CookieUsingPHP,.SessionCookieDifference,.FormValidationsUsingPHP" ).click(function( event ) {
+event.preventDefault();
+$("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 500);
+});
+});
+</script>
+
+</head>
+
+<body>
+
+<!-- Scroll top anchor tag -->
+<a id="button"></a>
+
+<!-- Header part -->
+
+<!-- Header part -->					
+<div class="page-title container-fluid">
+
+<div class="container">
+<div class="row" style ="display:flex;">
+
+<!-- first col -->
+<div style="width:12%;">         						
+<strong><p style="font-size:35px;">SpSoft</p></strong><br>
+</div>
+
+<!-- second col -->
+<div style="border-left: 2px solid white;margin-top:7px;margin-bottom:7px;"></div>
+
+<!-- third col -->
+<div class="span12" style="margin-left:8px;margin-top:8px;">                        						
+<h2>PHP 5</h2>
+<p>Here are the Examples and Reference Links</p>				
+</div>
+<div style="padding-left:52.5%;margin-top:8px;">
+<a href = "..\index.html"><i class="fa fa-home fa-3x" style = "color: white;" aria-hidden="true"></i></a>						
+</div>				
+
+</div>
+</div>
+
+</div>
+
+<p class = "pull-left Refp">Last Updated : 06-Feb-2019</p>			
+<a class = "pull-right Refa" target="_blank" href = "References.html">Reference Url's</a>
+
+<div class="container tagcontainer">	
+
+
+<!-- Section for PHP introduction -->
+<div class="introclass">
+
+<div style="font-size:16px;">	
+<!-- Navigations for particular div's -->
+<a href="#PHPIntroduction" class="PHPIntroduction">PHP Introduction</a><br>
+<a href="#StepstoCreateandRunthesamplePHPPageUsingXAAMP" class="StepstoCreateandRunthesamplePHPPageUsingXAAMP">Steps to Create and Run the sample PHP Page Using XAMPP.</a><br>
+<a href="#PHPVariables" class="PHPVariables">PHP Variables</a><br>
+<a href="#DifferencebetweenechoandprintinPHP" class="DifferencebetweenechoandprintinPHP">Difference between echo and print in PHP</a><br>
+<a href="#PHPMagicConstant" class="PHPMagicConstant">PHP Magic Constants</a><br>
+<a href="#PHPDatatypes" class="PHPDatatypes">PHP Data types</a><br>			
+<a href="#PHPArray" class="PHPArray">Arrays in PHP</a><br>
+<a href="#PHPGlobalVariables" class="PHPGlobalVariables">PHP Global Variables</a><br>
+<a href="#HTTPGETandPOSTMethodsinPHP" class="HTTPGETandPOSTMethodsinPHP">HTTP GET and POST Methods in PHP</a><br>
+<a href="#UsingfunctioninPHP" class="UsingfunctioninPHP">Using extract() function in PHP</a><br>
+<a href="#DynamicDropdownUsingPHP" class="DynamicDropdownUsingPHP">Dynamic Dropdown Using PHP</a><br>
+<a href="#CreatingCaptchaUsingPHP" class="CreatingCaptchaUsingPHP">Creating Captcha Using PHP</a><br>	
+<a href="#CreatingGoogleRecaptchaUsingPHP" class="CreatingGoogleRecaptchaUsingPHP">Creating Google Recaptcha Using PHP</a><br>
+<a href="#GetDateFromMysqlDatabaseUsingjQueryAJAXandPHP" class="GetDateFromMysqlDatabaseUsingjQueryAJAXandPHP">Get Date From Mysql Database Using jQuery AJAX and PHP</a><br>
+<a href="#DatabasecolumnsearchusingjqueryAJAX" class="DatabasecolumnsearchusingjqueryAJAX">Database column search using jquery AJAX(Auto Suggest in PHP)</a><br>
+<a href="#SaveDatainDatabaseusingjQueryAJAXwithbackendvalidation" class="SaveDatainDatabaseusingjQueryAJAXwithbackendvalidation">Save Data in Database using jQuery AJAX with backend validation.</a><br/>
+<a href="#filehandlinginphp" class="filehandlinginphp">File Handling in PHP(file system)</a><br>
+<a href="#DynamicSliderUsingPHPjqueryandBootstrap" class="DynamicSliderUsingPHPjqueryandBootstrap">Dynamic Slider Using PHP, jquery and Bootstrap</a><br>
+<a href="#FileUploadonDragandDropusingjquery" class="FileUploadonDragandDropusingjquery">File Upload on Drag and Drop using jquery</a><br>
+<a href="#SessionUsingPHP" class="SessionUsingPHP">PHP Sessions</a><br>
+<a href="#CookieUsingPHP" class="CookieUsingPHP">PHP Cookies</a><br>
+<a href="#SessionCookieDifference" class="SessionCookieDifference">Difference Between Session and Cookie in PHP</a><br>
+<a href="#FormValidationsUsingPHP" class="FormValidationsUsingPHP">PHP Form Validations</a>
+
+
+</div>
+
+<p id="PHPIntroduction">
+<h2>PHP Introduction</h2>
+<blockquote><p><strong>PHP</strong> is a server-side scripting language designed specifically for web development.
+PHP can actually do anything related to server-side scripting i.e backend of a website. For example, PHP can receive data from forms, generate dynamic page content, can work with databases, create sessions, send and receive cookies, send emails etc. There are also many hash functions available in PHP to encrypt user’s data that makes PHP secure and reliable to be used as a server-side scripting language. PHP performs system functions, i.e. from files on a system it can create, open, read, write, and close them. So these are some of the abilities of PHP that makes it suitable to be used as server-side scripting language.</p>
+<p>PHP can run on all major operating systems like Windows, Linux, Unix, Mac OS X etc. Almost all of the major servers available today like Apache supports PHP. PHP allows using wide range of databases like MySQL, PostgreSQL, Oracle, Sybase, Informix, and Microsoft SQL Server. And the most important factor is that it is free to use and download and anyone can download PHP from its official website <a target = "_blank" href="http://www.php.net">www.php.net.</a></P>
+</blockquote></p>
+
+<p id="StepstoCreateandRunthesamplePHPPageUsingXAAMP">
+<h2>Steps to Create and Run the sample PHP Page Using XAMPP. </h2>
+<blockquote>
+<P>PHP program can be run under various free and open source cross-platform web server solution stacks like WAMP, XAMPP etc. We will be using the <strong>XAMPP</strong> web server solution stack for our PHP application development you can download it from the following link:
+<a href="http://www.apachefriends.org/en/xampp-windows.html">http://www.apachefriends.org/en/xampp-windows.html</a>. After downloading just follow the below steps to start xampp server and to run the sample PHP Page.</p>
+<ul style="list-style: none; padding: 0%;">
+<li><strong>Step 1: </strong>Install XAMPP.</li>
+<li><strong>Step 2: </strong>Assuming that we have installed XAMPP in C Drive. Go to: <strong>C:\xampp\htdocs</strong> Create your own folder, name it for example as sampleApp.</li>
+<li><strong>Step 3: </strong>Now open the created folder sampleApp and create file name called 'subtract.php' and write the code as shown below.
+<pre class="custpre">
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Subtraction in php&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+<span class="clsdelimiter">&lt;?php</span>
+# operator
+print "&lt;h2&gt;php program to subtract two numbers&lt;/h2&gt;&lt;br/&gt;";
+$val1 = 80;
+$val2 = 20;
+$subtract = $val1 - $val2;  
+echo "Result(Subtraction): $subtract";
+<span class="clsdelimiter">?&gt;</span>
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<li><strong>Step 4: </strong>Now open <b>XAMPP CONTROL PANEL</b> in programs startup menu and  click START button for <b>Apache</b> and <b>Mysql.</b> </li>
+<P><strong>Please Note:</strong> “Apache” is an application server to run php application and "Mysql" is the database server for PHP.</p>
+<li><strong>Step 5: </strong>Now type <a>http://localhost/sampleApp/subtract.php</a> in browser, if everything goes fine you will see the screen as shown below.</li><br/>
+<img class="shotImg" src="assets/images/outscreen1.jpg" class="img-responsive" alt="Bulb Image">
+</ul>
+</blockquote>
+</p>
+<p id="PHPVariables">
+<h2>PHP Variables</h2>
+<blockquote>
+<p>A Variable is just the name of the memory location. A Variable is simply a container, i.e. used to store both numeric and non-numeric information.</p>
+<h3>Rules for Variable declaration</h3>
+<ul>
+<li>Variables in PHP start with a dollar ($) sign, followed by the name of the variable.</li>
+<li>The variable name must begin with a letter or the underscore character.</li>
+<li>A variable name can only contain alphanumeric characters and underscores (A-z, 0-9, and _).</li>
+<li>A variable name should not contain spaces.</li>
+<li>Variable names in PHP are case-sensitive.</li>
+</ul>
+<h3>Assigning Values to Variables</h3>
+<p>Assigning a value to a variable in PHP is quite easy use the equality(=) symbol, which also to the PHP’s assignment operators.
+This assigns the value on the right side of the equation to the variable on the left. A variable is created the moment you assign a value to it.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Using variables</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+$myCar = "Duster";  // Here myCar is the variable name and "Duster" is the value Assigned to it
+echo $myCar;        // This will display the myCar value on the browser.
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div> 
+<div class="post_info">
+<p><strong class="step">Output:</strong> Duster</p>
+</div>
+<h3>PHP Concatenation</h3>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Using Concatenation</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+$myCar = "Duster";
+echo $myCar." is riding";  // In PHP '.' is used as Concatenation operator
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+
+</div>
+</div>
+</div>
+<div class="post_info">
+<p><strong class="step">Output:</strong> Duster is riding</p>
+<p>In the above example Variable ($mycar) hold value=”Duster”. Now we want to concatenate variable with string. Pass this variable ($mycar) inside echo statement. To concatenate this with a string (“is riding”) use dot (.) between variable name and string.</p>
+</div>
+<h3>Destroying PHP Variables</h3>
+<p>To destroy a variable, pass the variable to PHP’s unset( ) function as in the below example.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Destroying PHP Variables</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+$name="vijay";
+echo $name;
+unset($name);  //unset( ) function destroy the variable reference.
+echo $name;
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+
+</div>
+</div>
+</div>
+<div class="post_info">
+<p><strong class="step">Output:</strong> vijay</p>
+<p>In the above example
+declare variable $name hold value=”vijay”. In this program we used unset() function to delete a particular variable. first it show the output: “vijay”, because we pass unset function after echo statement. Now pass variable name inside unset($name) function output will show an Notice error(Variable is undefined).</p>
+</div>
+
+<h3>Inspecting Variable Contents (Variable Property)</h3>
+<p>PHP offers the var_dump () function, which accepts a variable and display the values in it for you. Here’s an example</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Using var_dump()</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+//define variables
+$name = "shinzoabhi";
+$age=25;
+
+//display variable contents
+var_dump ($name);
+var_dump($age);
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+<div class="post_info">
+<p><strong class="step">Output:</strong> string (10) "shinzoabhi" int (25)</p>
+<p>In the above example We use var_dump () function to check the Contents (property) of variable, $name hold a string value =”shinzoabhi” while $age hold an integer value = 25. Now pass this variable inside var_dump ($name, $age) function. It shows all information related this (data type of variable, length (only string), value).</p>
+</div>
+
+</blockquote>
+</p>
+<p id="DifferencebetweenechoandprintinPHP">
+<h2>Difference between echo and print in PHP</h2>
+<blockquote>
+<p>PHP echo and print both are PHP Statement. Both are used to display the output in PHP.</p>
+<p><strong class="step">echo</strong> is a statement i.e used to display the output. it can be used with parentheses or without parentheses, echo can pass multiple string separated as ( , ), echo doesn’t return any value, echo is faster then print.</p>
+<p><strong class="step">print</strong> is also a statement i.e used to display the output. it can be used with parentheses print( ) or without parentheses print, using print can doesn’t pass multiple argument, print always return 1, it is slower than echo.</p>
+<p>The Example Below will show how to use both echo and print statements.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Using echo and print</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+$name="Vijay";
+// Using echo statement to print the output
+echo $name;
+// or
+echo ($name);
+// Passing Multiple Arguements using echo 
+$profile = "PHP Developer";
+$age = 25;
+echo $name , $profile , $age, " years old";
+// Using print to print the output
+print $name;
+//or
+print ($name);
+// check return type for print
+$ret =  print $name;
+//To test it returns or not
+echo $ret;
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+</blockquote>
+</p>
+<p id="PHPMagicConstant">
+<h2>PHP: Magic Constants</h2>
+<blockquote> 
+<p>Magic constants are the predefined constants in PHP which get changed on the basis of their use. They start with double underscore (__) and ends with double underscore. They are similar to other predefined constants, but as they change their values with the context, they are called magic constants. Below example will show how to use Magic Constants.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Using Magic Constants</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+$name="Vijay";
+// This is Magic constant used to check the Line number
+echo "The Line number : ". __LINE__;
+echo "&lt;br/&gt;";
+// This is Magic constant used to check the he full path and filename of the file.
+echo  "Your file name :". __FILE__;
+echo "&lt;br/&gt;";
+// This is Magic constant used to check The PHP version.
+echo "Current PHP Version you are using  : ".PHP_VERSION;
+echo "&lt;br/&gt;";
+// This is Magic constant __FUNCTION__,     __CLASS__,     __METHOD__ usage
+class demo
+{
+function test()
+{
+echo "&lt;br/&gt;";
+echo "Function of demo class : ". __FUNCTION__ ."&lt;br/&gt;";
+}
+
+function testme()
+{ 
+echo "&lt;br/&gt;";
+echo "Method of demo class : ". __METHOD__ ."&lt;br/&gt;"; 
+echo "Class : ". __CLASS__;
+}
+}
+$object=new demo();      // Creates Object for class demo.
+echo "&lt;br/&gt;";
+echo "Call test function ";  // Call test function or method from object.
+$object->test();    
+echo "Call testME function &lt;br/&gt;";
+$object->testme();    // Call testme function or method from object.
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+</blockquote>
+</p>
+<p id="PHPDatatypes">
+<h2>PHP Data types</h2>
+<blockquote>
+<p>In PHP, a variable does not need to be declared before adding a value to it. PHP automatically converts the variable to the correct data type, depending on its value. After declaring a variable it can be reused throughout the code. The assignment operator ( = ) used to assign value to a variable.</p>
+<p>Data types specify the size and type of values that can be stored. PHP is a Loosely Typed Language so here no need to define data type. To check only data type use gettype() function. To check the value, data type and size use var_dump() function below example shows how to use var_dump().</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+$num=100;
+$fnum=100.0;
+$str="Hello";
+var_dump($num,$fnum,$str);
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div> <br/>
+<p>There are 3 types of DATA TYPE in PHP these are Scalar (predefined), Compound (user-defined), Special type.</p>
+<h3>Scalar (predefined) DATA TYPE</h3>
+<ol>
+<li><p><strong class="step">Integer Data type :</strong> Integer means numeric data types. A whole number with no fractional component. Integer may be less than greater than or equal to zero.</p></li>
+<li><p><strong class="step">Float/double Data type :</strong> It is also called numeric data types.A number with a fractional component.</strong></p></li>
+<li><p><strong class="step">String Data type :</strong> Non numeric data type String can hold letters,numbers and special characters. String value must be enclosed either in single quotes or double quotes</strong></p></li>
+<p>Below example shows how to use the predefined data types.</p>
+
+</ol>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Using predefined data types.</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+$num=100;  // Declaring the integer variable
+var_dump($num);
+echo "&lt;br/&gt;";
+
+$fnum=100.0;  // Declaring the float variable
+var_dump($fnum);
+echo "&lt;br/&gt;";
+
+$str="Welcome user";   // Declaring the string variable
+$str1='how r you?';
+$str2="@";
+
+var_dump($str);
+echo "&lt;br/&gt;";
+var_dump($str1);
+echo "&lt;br/&gt;";
+var_dump($str2);
+
+$true=true;
+$false=false;
+var_dump($true,$false);
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+
+<h3>Compound(Multiple values in single variable) Data Types</h3>
+<ol>
+<li><p><strong class="step">Array</strong> </p></li>
+<li><p><strong class="step">Object</strong> </p></li>
+</ol>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Array data type.</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+$arr=array(10,20,30,40,50);   // Declaring the array
+var_dump($arr); 
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+<div> <strong class="step">Output: </strong> array(5) { [0]=&gt; int(10) [1]=&gt; int(20) [2]=&gt; int(30) [3]=&gt; int(40) [4]=&gt; int(50) }<p></p></div>
+<p>In the above example Variable ($arr) hold values an array. Now we want to print the first element of an array. Then we pass variable ($arr) name with index value [0], fetch the first element corresponding to the index value. Output will 10.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Object data type.</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+class Demo
+{
+public $aMemberVar = 'this is a variable in class DEMO'; 
+public function show()
+{
+echo "This is show method &lt;br/&gt;";
+} 
+}
+$obj= new Demo();
+var_dump($obj);
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+<div> <strong class="step">Output: </strong>  object(Demo)#1 (0) { }</div>
+<p>In the above example $aMemberVar is the variable declared in Demo class and when the $obj object is created for class Demo we will get the member variables inside the class when we check the $obj using var_dump().</p>
+<h3>Special Data types</h3>
+<ol>
+<li><p><strong class="step">NULL</strong> The special Data type “NULL” represents a variable with no value. </p></li>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Null data type.</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+$blank=null;      
+var_dump($blank);
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div> </br>
+<li><p><strong class="step">Resource Data Type</strong> The special resource type is not an actual data type. It is the storing of a reference to the functions and resources external to PHP.</p></li>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Resource Data Type.</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+$con = mysqli_connect("localhost","root","","users"); // The function will return a resource type data to be stored into $con variable.
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+</ol>
+</blockquote>
+</p>
+<p id="PHPArray">
+<h2>Arrays in PHP</h2>
+<blockquote>
+<p>Array variables are “special” because they can hold more than one value in one single variable. This makes them particularly useful for storing related values. There are three types of array.
+<ol><li>Indexed Array : An array with a numeric index.</li>
+<li>Associative Array : An array where each key is associated with a value.</li>
+<li>Nesting Array (Multi-D array) : An array containing one or more array.</li>
+</ol>
+<p>An Array can be defined in Three different ways below example shows how to define an Array.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Defining Array</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+// This is one way to define an array
+$arr = array(10,11,12,13,14,15);
+echo $arr[0]; 
+
+// This is second way to define an array
+$arr[ ]=10;
+$arr[ ]=20;
+$arr[ ]=30;
+$arr[ ]=40;
+$arr[ ]=50;
+echo $arr[0]; 
+
+// This is third way to define an array
+$arr[0]=10;
+$arr[1]=20;
+$arr[2]=30;              
+$arr[3]=40;              
+$arr[4]=50;    
+echo $arr[0]; 
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div> <br/>
+<p><strong>1. PHP numeric array or Indexed Array :</strong> Numeric array can store numbers, strings etc. Default array index will be represented by numbers. By default array index starts from 0 and ends with (number of elements – 1). In PHP array() is used to create array. Inside this can pass multiple values separated by comma( , ). Below example will show how to define and print an Indexed Array.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Indexed Array</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+// create an array with name arr and store the assigned values.
+$arr=array(10,20,30,40,50);  
+//create an arry with name col and store the assigned values.
+$col=array("red","green","blue","black"); 
+//print first value of $arr and $col array 
+echo $arr[0];
+echo $col[0]; 
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div> <br/>
+<p><strong>2. Associative Array :</strong> In an associative array index(key) can initialized according to Your own requirement. An array in PHP is actually an ordered map. A map is a type that associates values to keys. In this association use (=>) sign to define index and values. Associative arrays can not follow any types of order. There are two ways to create an associative array.
+ Below example shows how to define the associative array in two ways.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Associative Array</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+// First Way to define associative Array
+$Personage=array("Ravi"=>"30","Vishu"=>"21","vijay"=>"43");
+echo "Vijay is ".$Personage["vijay"]."Years old"; 
+// Another Way to define associative Array
+$Personage['vijay']=30;
+$Personage['Vishu']=21;
+$Personage['Harmeet']=43; 
+echo "Vijay is ".$Personage["vijay"]."Years old"; 
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div> 
+<p> Below exmple show how to loop through an Associative Array.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: loop through an Associative Array</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+$state=array("Dl"=>"Delhi","Hr"=>"Haryana","Pn"=>"Punjab","Br"=>"Bihar"); 
+  
+// Display value in foreach  
+foreach($state as $val)
+{
+echo $val." <br/>";
+}
+
+// Display key value in foreach
+foreach($state as $key=>$val)
+{
+echo $key."---".$val."<br/>";
+}
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div> <br/>
+<p><strong>3. Nesting Array(Multi-D array):</strong> A multidimensional array is an array containing one or more arrays. PHP understands multidimensional arrays that are two, three, four, five, or more levels deep. However, arrays more than three levels deep are hard to manage for most people. Below example shows how to delare and find the sum using foreach for a Multi-D array.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Loop through Multi-D array</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+error_reporting(1);
+$arr=<strong>array(</strong>array(10,50,10),array(10,10,16),array(18,10,10)<strong>)</strong>;
+$s=0;
+$s1=0;
+ 
+//using foreach loop
+foreach($arr as $k) 
+{
+foreach($k as $v)
+{
+echo $v;
+$s1=$s1+$v;
+}
+echo "<br>";
+} 
+echo "sum of array:".$s1;
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+<p>Another example that illustrates how to loop through a Two dimensional associative array ( user’s name and mobile number).</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Loop through Multi-D associative array</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+error_reporting(1);
+
+// MD associate array
+$arr=array(array("name"=>"neeraj","mob"=>342353534),
+           array("name"=>"rohit","mob"=>34235),
+           array("name"=>"deepak","mob"=>33534)
+          );
+echo '&lt;table border="2">';
+echo '&lt;tr&gt;';
+echo '&lt;td align="center"&gt;Name:&lt;/td&gt;';
+echo '&lt;td align="center"&gt;MOb:&lt;/td&gt;';
+
+foreach($arr as $k)
+{
+echo '&lt;tr&gt;';
+foreach($k as $v)
+{
+echo '&lt;td align="center"&gt;'.$v.'&lt;/td&gt;';
+}
+echo '&lt;/tr&gt;';
+}
+
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+</blockquote>
+</p>
+<p id="PHPGlobalVariables">
+<h2>PHP Global Variables</h2>
+<blockquote>
+<p>Several predefined variables in PHP are Global, which means that they are always accessible, regardless of scope and we can access them from any function, class or file without having to do anything special.The PHP global variables are:
+<kbd>$GLOBALS</kbd> <kbd>$_SERVER</kbd> <kbd>$_REQUEST</kbd> <kbd>$_POST</kbd> <kbd>$_GET</kbd> <kbd>$_FILES</kbd> <kbd>$_ENV</kbd> <kbd>$_COOKIE</kbd> <kbd>$_SESSION</kbd>
+</p>
+<p><strong class="step">$GLOBALS: </strong>$GLOBAL is a PHP super global variable which contains all global variables in PHP script, including other superglobals. PHP stores all global variables in an array called $GLOBALS [index]. The index holds the name of the variable. The example below shows how to use the super global variable $GLOBALS:</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Using $GLOBALS</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+$x = 75;
+$y = 25; 
+function substraction() 
+{
+$GLOBALS['z'] = $GLOBALS['x'] - $GLOBALS['y'];
+}
+substraction();
+echo $z;
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+<div class="post_info">
+<p><strong class="step">Output:</strong> 50</p>
+<p>In the above example, since z is a variable present within the $GLOBALS array now it can be accessible from outside the 
+function.</p>
+</div>
+<br/>
+<p><strong class="step">$_SERVER: </strong>$_SERVER is an array containing information such as headers, paths, and script locations. The entries in this array are created by the web server. Some of these elements are used to get the information from the superglobal variable $_SERVER. We have listed some regularly used Indices with $_SERVER array.
+<ul>
+<li><strong class="step">'HTTP_REFERER':</strong> If the user clicked a link to get the current page, this will contain the URL of the previous page, or it will be empty if the user entered the URL directly.</li>
+<li><strong class="step">'HTTP_USER_AGENT':</strong> The name reported by the visitor’s web browser.</li>
+<li><strong class="step">'PHP_SELF':</strong> The filename of the currently executing script, relative to the document root. For instance, $_SERVER['PHP_SELF'] in a script at the address <kbd>http://example.com/foo/bar.php</kbd> would be <kbd>/foo/bar.php</kbd>. </li>
+<li><strong class="step">'PATH_INFO':</strong> Any data passed in the URL after the script name. </li>
+<li><strong class="step">'QUERY_STRING':</strong> Includes everything after the question mark in a GET request.</li>
+<li><strong class="step">'REQUEST_TIME':</strong> The timestamp of the start of the request. Available since PHP 5.1.0.</li>
+<li><strong class="step">'REQUEST_TIME_FLOAT':</strong> The timestamp of the start of the request, with microsecond precision. Available since PHP 5.4.0.</li>
+<li><strong class="step">'REQUEST_METHOD':</strong> Which request method was used to access the page; i.e. 'GET', 'HEAD', 'POST', 'PUT'.</li>
+<li><strong class="step">'SERVER_ADDR':</strong> The IP address of the server under which the current script is executing.</li>
+<li><strong class="step">'SCRIPT_NAME':</strong> Contains the current script's path. This is useful for pages which need to point to themselves.</li>
+<li><strong class="step">'SERVER_NAME':</strong> The name of the server host under which the current script is executing. If the script is running on a virtual host, this will be the value defined for that virtual host.</li>
+</ul>
+</p>
+<p>Below is the sample PHP code that shows how to use the <strong>$_SERVER</strong> array.</p> 
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Using $_SERVER array</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+echo $_SERVER['PHP_SELF'];
+echo "&ltbr&gt;";
+echo $_SERVER['SERVER_NAME'];
+echo "&ltbr&gt;";
+echo $_SERVER['HTTP_HOST'];
+echo "&ltbr&gt;";
+echo $_SERVER['HTTP_REFERER'];
+echo "&ltbr&gt;";
+echo $_SERVER['HTTP_USER_AGENT'];
+echo "&ltbr&gt;";
+echo $_SERVER['SCRIPT_NAME'];
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+<br/>
+<p><strong class="step">$_REQUEST: </strong>$_REQUEST is used to collect the data after submitting an HTML form. $_REQUEST is not used mostly, because $_POST and $_GET perform the same task and are widely used.</p>
+<p>Below is the HTML and PHP code to explain how $_REQUEST works:</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Using $_REQUEST array</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;form method="post" action="<span class="clsdelimiter">&lt;?php</span> echo $_SERVER['PHP_SELF'];<span class="clsdelimiter">?&gt;</span>"&gt;
+NAME: &lt;input type="text" name="fname"&gt;
+&lt;button type="submit">SUBMIT&lt;/button&gt;
+&lt;/form&gt;
+<span class="clsdelimiter">&lt;?php</span>
+if ($_SERVER["REQUEST_METHOD"] == "POST") 
+{ 
+$name = htmlspecialchars($_REQUEST['fname']); 
+if(empty($name))
+echo "Name is empty"; 
+else 
+echo $name; 
+} 
+<span class="clsdelimiter">?&gt;</span>
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+</div>
+</div>
+<p>In the above code we have created a form that takes the name as input from the user and prints its name on clicking on the submit button. We transport the data accepted in the form to the same page using $_SERVER [‘PHP_SELF’] element as specified in the action attribute, because we manipulate the data in the same page using the PHP code. The data is retrieved using the $_REQUEST superglobal array variable.</p> <br/>
+<p><strong class="step">$_POST: </strong>$_POST is used to collect data from the HTML form after submitting it. When form uses method post to transfer data, the data is not visible in the query string, because of which security levels are maintained in this method.</p>
+<p>Below is the HTML and PHP code to explain how $_POST works:</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Using $_POST array</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+&lt;!DOCTYPE html&gt; 
+&lt;html&gt; 
+&lt;body&gt;   
+&lt;form method="post" action="<span class="clsdelimiter">&lt;?php</span> echo $_SERVER['PHP_SELF'];<span class="clsdelimiter">?&gt;</span>;"&gt; 
+&lt;label for="name"&gt;Please enter your name: &lt;/label&gt; 
+&lt;input name="name" type="text"&gt;&lt;br&gt; 
+&lt;label for="age"&gt;Please enter your age: &lt;/label&gt; 
+&lt;input name="age" type="text"&gt;&lt;br&gt; 
+&lt;input type="submit" value="Submit"&gt; 
+&lt;button type="submit"&gt;SUBMIT&lt;/button&gt; 
+&lt;/form&gt; 
+<span class="clsdelimiter">&lt;?php</span>
+$nm=$_POST['name']; 
+$age=$_POST['age']; 
+echo "&lt;strong&gt;".$nm." is $age years old.&lt;/strong&gt;"; 
+<span class="clsdelimiter">?&gt;</span>
+&lt;/body&gt; 
+&lt;/html&gt;  
+</pre>
+</div>
+</div>
+</div>
+<P>In the above code we have created a form that takes the name and age of the user and accesses the data using $_POST super global variable when they submit the data. Since each superglobal variable is an array it can store more than one values. Hence we retrieved name and age from the $_POST variable and stored them in $nm and $age variables.</P> <br/>
+<p><strong class="step">$_GET: </strong>$_GET is used  to collect data from the HTML form after submitting it. When form uses method get to transfer data, the data is visible in the query string, therefore the values are not hidden. $_GET super global array variable stores the values that come in the URL.</p>
+<p>Below is the HTML and PHP code to explain how $_GET works:</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Using $_GET array</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+error_reporting(0);   // To Hide the Warnings from display
+if( $_GET["name"] || $_GET["age"] ) 
+{
+echo "Welcome ". $_GET['name']. "&lt;br />";
+echo "You are ". $_GET['age']. " years old.";
+exit();
+}
+<span class="clsdelimiter">?&gt;</span>
+&lt;html>
+&lt;body>
+&lt;form action = "<span class="clsdelimiter">&lt;?php</span> $_PHP_SELF <span class="clsdelimiter">?&gt;</span>" method = "GET">
+Name: &lt;input type = "text" name = "name" />
+Age: &lt;input type = "text" name = "age" />
+&lt;input type = "submit" /&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+</div>
+</div><br/>
+<p><strong class="step">$_FILES: </strong>$_FILES is a two dimensional associative global array of items which are being uploaded by via HTTP POST method and holds the attributes of files such as <kbd>[name]</kbd> <kbd>[size]</kbd> <kbd>[type]</kbd> <kbd>[tmp_name]</kbd> <kbd>[error]</kbd> </p>
+<p>Below example should allow upload images and gives back result as uploaded file information.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Using $_FILES array</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+error_reporting(0);   // To Hide the warnings from display
+if(isset($_FILES['image'])){
+$errors= array();
+$file_name = $_FILES['image']['name'];
+$file_size = $_FILES['image']['size'];
+$file_tmp = $_FILES['image']['tmp_name'];
+$file_type = $_FILES['image']['type'];
+$file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));     
+$extensions= array("jpeg","jpg","png");
+
+if(in_array($file_ext,$extensions)=== false)
+{
+$errors[]="extension not allowed, please choose a JPEG or PNG file.";
+}
+
+if($file_size > 2097152) {
+$errors[]='File size must be excately 2 MB';
+}
+
+if(empty($errors)==true) {
+move_uploaded_file($file_tmp,"images/".$file_name);
+echo "Success";
+}else{
+print_r($errors);
+}
+}
+<span class="clsdelimiter">?&gt;</span>
+&lt;html>
+&lt;body>  
+&lt;form action = "" method = "POST" enctype = "multipart/form-data">
+&lt;input type = "file" name = "image" />
+&lt;input type = "submit"/>	
+&lt;ul>
+&lt;li>Sent file: &lt;?php echo $_FILES['image']['name'];  ?>
+&lt;li>File size: &lt;?php echo $_FILES['image']['size'];  ?>
+&lt;li>File type: &lt;?php echo $_FILES['image']['type'] ?>
+&lt;/ul>		
+&lt;/form>    
+&lt;/body>
+&lt;/html&gt;
+</pre>
+</div>
+</div>
+</div> <br/>
+<p><strong class="step">$_ENV: </strong>$_ENV contains environment variables. Environment variables are provided by the shell under which PHP is running, so they may vary according to different shells. Below is the example to display all your environment variables.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Using $_ENV array</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+echo "&lt;pre&gt;";
+print_r($_ENV);
+echo "&lt;/pre&gt;";
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div> <br/>
+<p><strong class="step">$_COOKIE: </strong> A cookie, also known as an HTTP cookie, web cookie, or browser cookie, is a small piece of data sent from a website and stored on a user's web browser while the user is browsing that website. Every time the user loads the website, the browser sends the cookie back to the server to notify the website of the user's previous activity.</p>
+<p>Below example shows how to set $_COOKIE and retrieve the stored cookie values.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Using $_COOKIE array</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+// syntax
+setcookie(cookie_name, cookie_value, [expiry_time], [cookie_path], [domain], [secure], [httponly]);
+
+// Below line will create cookie with name 'user_name' and with value 'testinguser' which will expires after 60 seconds
+setcookie("user_name", "testinguser", time()+ 120,'/');  
+echo 'The cookie has been set for 120 seconds';
+print_r($_COOKIE); //output the contents of the cookie array variable
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div> <br/>
+<p><strong class="step">$_SESSION: </strong> When you want to store user data in a session use the $_SESSION associative array. This is where you both store and retrieve session data. In previous versions of PHP there were other ways to perform this store operation, but it has been updated and this is the correct way to do it.</p>
+<p>Below example shows how to set $_SESSION and retrieve the stored session values.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Using $_SESSION array</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+session_start();        // To start the session 
+$_SESSION['views'] = 1; // store session data
+echo "Pageviews = ". $_SESSION['views']; //retrieve data
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+</blockquote>
+</p>
+<p id="HTTPGETandPOSTMethodsinPHP">
+<h2>HTTP GET and POST Methods in PHP</h2>
+<blockquote>
+<p>We know HTTP works as a request-response protocol between a client and server. Here a web browser may be the client, and an application on a computer that hosts a web site may be the server. A client (browser) submits an HTTP request to the server then the server returns a response to the client. The response contains status information about the request and may also contain the requested content.</p>
+<p>There are two HTTP request methods: <strong>GET</strong> and <strong>POST</strong></p>
+<ol style="list-style:none;padding:0%;">
+<li><strong>GET:</strong> Requests data from a specified resource. In GET method the data is sent as URL parameters that are usually strings of name and value pairs separated by ampersands (&). In general, a URL with GET data will look like this:
+<pre class="urlpre"><p>http://www.example.com/action.php?<strong>name</strong>=<em>Sam</em>&amp;<strong>weight</strong>=<em>55</em></p></pre>
+<p>In the above URL red colored elements are GET parameters and the green colored are the value of those parameters. More than one parameter=value can be embedded in the URL by concatenating with ampersands <strong>(&)</strong>.</p>
+<h4>Some Important Points Regarding GET Method :</h4>
+<p>
+<ol style="padding-left: 2%;">
+<li>The GET method is restricted to send up to 1024 characters only.</li>
+<li>Never use GET method if you have a password or other sensitive information to be sent to the server.</li>
+<li>Never use GET method if you have a password or other sensitive information to be sent to the server.</li>
+<li>GET can't be used to send binary data, like images or word documents, to the server.</li>
+<li>The data sent by GET method can be accessed using the QUERY_STRING environment variable.</li>
+<li>The PHP provides the $_GET associative array to access all the information sent using the GET method.</li>
+</ol>
+</P>
+<p>Below is sample PHP code for the GET Request, copy the below code into some test.php file and run the page.</p>	
+<p><strong>Please Note :</strong> If you Found any errors on page set error_reporting to false by including "error_reporting (0);" in page.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Sample PHP code with GET Request</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+if( $_GET["name"] || $_GET["age"] ) {
+echo "Welcome ". $_GET['name']. "&lt;br /&gt;";
+echo "You are ". $_GET['age']. " years old.";
+exit();
+}
+<span class="clsdelimiter">?&gt;</span>
+&lt;html&gt;
+&lt;body&gt;
+&lt;form action = "<span class="clsdelimiter">&lt;?php</span> $_PHP_SELF <span class="clsdelimiter">?&gt;</span>;" method = "GET"&gt;
+Name: &lt;input type = "text" name = "name" /&gt;
+Age: &lt;input type = "text"name = "age" /&gt;
+&lt;input type = "submit" /&gt;
+&lt;/form&gt;  
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+</div>
+</div>
+</li>
+<li><strong>POST:</strong> Submits data to be processed to a specified resource. The POST method transfers information via HTTP headers. The information is encoded as described in case of GET method and put into a header called QUERY_STRING.</li>
+<h4>Some Important Points Regarding POST Method :</h4>
+<p>
+<ol style="padding-left: 2%;">
+<li>The POST method does not have any restriction on data size to be sent.</li>
+<li>The POST method can be used to send ASCII as well as binary data.</li>
+<li>The data sent by POST method go through HTTP header so security depends on HTTP protocol. By using Secure HTTP you can make sure that your information is secure.</li>
+<li>The PHP provides $_POST associative array to access all the sent information using POST method.</li>
+</ol>
+</P>
+<p>Below is sample php code for the POST Request, copy the below code into some test.php file and run the page.</p>	
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Sample PHP code with POST Request</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre"><span class="clsdelimiter">&lt;?php</span>
+if( $_POST["name"] || $_POST["age"] ) {
+if (preg_match("/[^A-Za-z'-]/",$_POST['name'] )) {
+die ("invalid name and name should be alpha");
+}
+echo "Welcome ". $_POST['name']. "&lt;br /&gt;";
+echo "You are ". $_POST['age']. " years old.";     
+exit();
+}
+<span class="clsdelimiter">?&gt;</span>
+&lt;html&gt;
+&lt;body&gt;
+&lt;form action = "<span class="clsdelimiter">&lt;?php</span> $_PHP_SELF <span class="clsdelimiter">?&gt;</span>;" method = "POST"&gt;
+Name: &lt;input type = "text" name = "name" /&gt;
+Age: &lt;input type = "text" name = "age" /&gt;
+&lt;input type = "submit" /&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</span></pre>
+</div>
+</div>
+</div>
+</ol>
+</blockquote>
+</p>
+<p id="UsingfunctioninPHP">
+<h2>Using extract() function in PHP</h2>
+<blockquote>
+<p>The<strong> extract ()</strong> Function is an inbuilt function in PHP. The extract() function does array to variable conversion. That is it converts array keys into variable names and array values into variable value. In other words, we can say that the extract () functions, imports variables from an array into the symbol table.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Using extract() in PHP</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+extract($_POST); 
+if(isset($save))
+{
+echo "&lt;center&gt;";
+echo "Your Name : ".$fn."&lt;br&gt;";
+echo "Your Last Name : ".$ln."&lt;br&gt;";
+echo "Your Email : ".$eid."&lt;br&gt;";
+echo "Your Course : ".$course."&lt;br&gt;";
+echo "&lt;/center&gt;";
+} 
+<span class="clsdelimiter">?&gt;</span>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;use of extract() in Php&lt;/title&gt;
+&lt;/head&gt; 
+&lt;body style="background-color: skyblue;"&gt;
+&lt;form method="post" &gt;
+&lt;table border="1" align="center"&gt;
+&lt;tr&gt;
+&lt;td&gt;Enter your first Name&lt;/td&gt;
+&lt;td&gt;&lt;input type="text" name="fn"/&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Enter your Last name&lt;/td&gt;
+&lt;td&gt;&lt;input type="text" name="ln"/&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Enter your Email&lt;/td&gt;
+&lt;td&gt;&lt;input type="email" name="eid"/&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Select Your Course&lt;/td&gt;
+&lt;td&gt;
+&lt;select name="course"&gt;
+&lt;option&gt;Php&lt;/option&gt;
+&lt;option&gt;java&lt;/option&gt;
+&lt;option&gt;Perl&lt;/option&gt;
+&lt;/select&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr align="center"&gt; 
+&lt;td colspan="2" &gt;
+&lt;input type="submit" value="Display Output" name="save"/&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;html&gt;
+
+</pre>
+</div>
+</div>
+</div>
+</blockquote>
+</p>
+<p id="DynamicDropdownUsingPHP">
+<h2>Dynamic Dropdown Using PHP</h2>
+<blockquote>
+<p>Example below will demonstrate how to populate a date for a Dropdown from a database using PHP.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example: Sample PHP code For Dynamic Dropdown</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;&lt;title&gt;Basic Bootstrap Template&lt;/title&gt;   
+&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"&gt;&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"&gt;&lt;/script&gt;&lt;/head&gt;
+&lt;body&gt;
+
+&lt;!--Row with three equal columns--&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-md-2"&gt;&lt;!--Column left--&gt;&lt;/div&gt;
+&lt;div class="col-md-8"&gt;
+&lt;form id="form1" name="form1" method="post" action="&lt;?php echo $PHP_SELF; ?&gt;"&gt;
+Employee List :
+&lt;select Emp Name='NEW'&gt;
+&lt;option value="Select"&gt;Select&lt;/option&gt;}
+<span class="clsdelimiter">&lt;?php</span>
+mysql_connect ("localhost","root","root123"); // root is the username for Mysql Database and root123 is the password
+mysql_select_db ("company");  // company is the database name here
+$select="company";
+if (isset ($select)&&$select!="")
+{
+$select=$_POST ['NEW'];
+}
+
+$list=mysql_query("select * from employee order by emp_id asc");
+while($row_list=mysql_fetch_assoc($list))
+{
+<span class="clsdelimiter">?&gt;</span> 
+&lt;option value="<span class="clsdelimiter">&lt;?php</span> echo $row_list['emp_id'];<span class="clsdelimiter">?&gt;</span>"&gt;
+<span class="clsdelimiter">&lt;?php</span>
+if($row_list['emp_id']== $select)
+{
+echo "selected"; 
+} 
+else
+{
+echo $row_list['emp_name'];	
+}
+<span class="clsdelimiter">?&gt;</span>
+&lt;/option&gt;
+<span class="clsdelimiter">&lt;?php</span> } <span class="clsdelimiter">?&gt;</span>
+&lt;/select&gt;
+&lt;input type="submit" name="Submit" value="Select" /&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+&lt;div class="col-md-2"&gt;&lt;!--Column right--&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;                            
+                        
+</pre>
+</div>
+</div>
+</div>
+</blockquote>
+</p>
+<p id="CreatingCaptchaUsingPHP">
+<h2>Creating Captcha Using PHP</h2>
+<blockquote>
+<p>The <strong>CAPTCHA</strong> approach is used for securing forms, below are the steps to create Captcha using PHP.</p>
+
+<p><strong>1. Creating a CAPTCHA graphic using PHP: </strong> The following code needs to be saved as a stand-alone PHP file (we call it captcha.php). This file creates a PNG image containing a series of five digits. It also stores these digits in a session variable so that other scripts can know what the code is correct and validate that it's been entered correctly.</p>
+
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Captcha.php</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+  // initialise image with dimensions of 120 x 30 pixels
+  $image = @imagecreatetruecolor(120, 30) or die("Cannot Initialize new GD image stream");
+
+  // set background to white and allocate drawing colours
+  $background = imagecolorallocate($image, 0x66, 0x99, 0x66);
+  imagefill($image, 0, 0, $background);
+  $linecolor = imagecolorallocate($image, 0x99, 0xCC, 0x99);
+  $textcolor1 = imagecolorallocate($image, 0x00, 0x00, 0x00);
+  $textcolor2 = imagecolorallocate($image, 0xFF, 0xFF, 0xFF);
+
+  // draw random lines on canvas
+  for($i=0; $i &lt; 6; $i++) 
+  {
+    $textcolor = (rand() % 2) ? $textcolor1 : $textcolor2;
+    imagesetthickness($image, rand(1,3));
+    imageline($image, 0, rand(0,30), 120, rand(0,30), $linecolor);
+  }
+
+  session_start();
+
+  // add random digits to canvas
+  $digit = '';
+  for($x = 15; $x &lt;= 95; $x += 20) {
+    $digit .= ($num = rand(0, 9));
+    imagechar($image, rand(3, 5), $x, rand(2, 14), $num, $textcolor);
+  }
+
+  // record digits in session variable
+  $_SESSION['digit'] = $digit;
+
+  // display image and clean up
+  header('Content-type: image/png');
+  imagepng($image);
+  imagedestroy($image);
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+
+<p><strong>2. Adding a CAPTCHA to your forms: </strong> In your HTML form you need to make sure that the CAPTCHA image is displayed and that there's an input field for people to enter the CAPTCHA code for validation. Here's a 'skeleton' of how the HTML code for your form might appear.we can call it entercaptcha.php</p>
+
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>entercaptcha.php</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+&lt;html&gt;
+&lt;head&gt;
+&lt;script type="text/javascript"&gt;
+  function checkForm(form)
+  {
+    if(!form.captcha.value.match(/^\d{5}$/)) {
+      alert('Please enter the CAPTCHA digits in the box provided');
+      form.captcha.focus();
+      return false;
+    }
+    return true;
+  }
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+<span class="clsdelimiter">&lt;?php</span>
+&lt;form method="POST" action="formhandler.php" onsubmit="return checkForm(this);"&gt;
+// we set our captch.php as image source
+&lt;p&gt;&lt;img src="/captcha.php" width="120" height="30" border="1" alt="CAPTCHA"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;input type="text" size="6" maxlength="5" name="captcha" value=""&gt;&lt;br&gt;
+&lt;small&gt;copy the digits from the image into this box&lt;/small&gt;&lt;/p&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+<p><strong>3. Checking the Entered Captcha:</strong> Finally, on the server-side page "formhandler.php" that is the target of the form, you need to check that the code entered in the form by the user matches the session variable set by the captcha.php script.</p>
+
+
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>formhandler.php</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+
+&lt;html&gt;
+&lt;head&gt; &lt;/head&gt;
+&lt;body&gt;
+<span class="clsdelimiter">&lt;?php</span>
+error_reporting(0);
+if($_POST && "all required variables are present")
+{
+session_start();
+ if($_POST['captcha'] != $_SESSION['digit']) die("Sorry, the CAPTCHA code entered was incorrect!");
+else
+{
+echo "CAPTCHA code entered was correct";
+session_destroy();
+}
+}
+<span class="clsdelimiter">?&gt;</span>
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+</div>
+</div>
+</blockquote>
+</p>
+
+<p id="CreatingGoogleRecaptchaUsingPHP">
+<h2>Creating Google Recaptcha  Using PHP</h2>
+<blockquote>
+<p>The <strong>Google Recaptcha </strong> is designed to protect your website from spams and abuse, below are the steps to create Google Recaptcha using PHP.</p>
+<p><strong>Register your website and get Secret Key : </strong>1. Very first thing you need to do is register your website on Google Recaptcha to do that click <a title="Google Recaptcha" href="https://www.google.com/recaptcha/admin" style='color:red;' target="_blank">Here</a>.</p>
+<p>2. Login to your Google account and create the app by filling the form.</p>
+<p>3. Select the reCAPTCHA v2 and in that select “I am not a robot” checkbox option.</p>
+<p>4. Enter Domain name as localhost.</p>
+<p>5. Check the Accept the reCAPTCHA terms of services.</p>
+<p>6. For Alerts Check the send alerts to owner.</p>
+<img class="shotImg" src="assets/images/Recaptcha.jpg" class="img-responsive" alt="Register Image"><br/><br/>
+<p>7. Once submit, Google will provide you following two information.</p>
+<p><strong>1. Site key</strong></p>
+<p><strong>2. Secret key</strong></p>
+<img class="shotImg" src="assets/images/key.jpg" class="img-responsive" alt="Key Image"><br/><br/>
+<p><strong>1. Creating a Google Recaptcha using PHP: </strong> The following code needs to be saved as a stand-alone PHP file (we call it captcha.php). This file creates a PNG image containing a series of five digits. It also stores these digits in a session variable so that other scripts can know what the correct code is and validate that it's been entered correctly.</p>
+
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>captcha.php</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+  $email;$comment;$captcha;
+        if(isset($_POST['email'])){
+          $email=$_POST['email'];
+        }
+        if(isset($_POST['comment'])){
+          $comment=$_POST['comment'];
+        }
+        if(isset($_POST['g-recaptcha-response'])){
+          $captcha=$_POST['g-recaptcha-response'];
+        }
+        if(!$captcha){
+          echo 'Please check the the captcha form.';
+          exit;
+        }
+        $secretKey = "Put your secret key here";
+        $ip = $_SERVER['REMOTE_ADDR'];
+        // post request to server
+        $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
+        $response = file_get_contents($url);
+        $responseKeys = json_decode($response,true);
+        // should return JSON with success as true
+        if($responseKeys["success"]) {
+                echo 'Thanks for posting comment';
+        } else {
+                echo 'You are spammer ! Get the @$%K out';
+        }
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+
+<p><strong>2. Adding Google Recaptcha to your forms: </strong> In your HTML form you need to make sure that the Recaptcha image is displayed and that there's an input field for people to enter the CAPTCHA code for validation. Here's a 'skeleton' of how the HTML code for your form might appear. We can call it entercaptcha.php</p>
+
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>index.php</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Google recapcha&lt;/title&gt;
+&lt;script src='https://www.google.com/recaptcha/api.js' async defer"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Google Recaptcha&lt;/h1&gt;
+&lt;form id="comment_form" action="captcha.php" method="post"&gt;
+&lt;input type="email" placeholder="Type your email" size="40"&gt;&lt;br&gt;&lt;br&gt;
+&lt;textarea name="comment" rows="8" cols="39"&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+&lt;input type="submit" name="submit" value="Post comment"&gt;&lt;br&gt;&lt;br&gt;
+&lt;div class="g-recaptcha" data-sitekey="=== Your site key ==="&gt;&lt;/div&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+</div>
+</div>
+</blockquote>
+</p>
+
+<p id="GetDateFromMysqlDatabaseUsingjQueryAJAXandPHP">
+<h2>Get Data From Mysql Database Using jQuery AJAX and PHP</h2>
+<blockquote>
+<p>JQuery AJAX is used to store and retrieve the data from the database without loading the whole page. Below example shows how to get the Employee List from the Database. To implement the AJAX for Get request first create index.php and copy the below code into it.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>index.php</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+&lt;html&gt; 
+&lt;head&gt; 
+&lt;title&gt;AJAX jQuery Example with PHP MySQL&lt;/title&gt; 
+&lt;style type="text/css"&gt;
+body{
+font-family: Verdana, Geneva, sans-serif;
+}
+.container{
+width: 50%;
+margin: 0 auto;
+} 
+
+table, tr, th, td {
+border: 1px solid #e3e3e3;
+padding: 10px;
+}
+
+&lt;/style&gt; 
+
+&lt;/head&gt; 
+
+&lt;body&gt;
+
+&lt;div class = "container" &gt; 
+
+&lt;h3&gt;&lt;u&gt;AJAX jQuery GET Request with PHP MySQL&lt;/u&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Click on button to display Employee records from database&lt;/strong&gt;&lt;/p&gt; 
+
+&lt;div id="records"&gt;&lt;/div&gt; 
+
+&lt;p&gt;
+&lt;input type="button" id = "getusers" value = "Fetch Records" /&gt;
+&lt;/p&gt;
+
+&lt;/div&gt; 
+
+&lt;script src="http://code.jquery.com/jquery-3.1.1.min.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt; 
+
+$(function(){ 
+
+$("#getusers").on('click', function(){ 
+
+$.ajax({ 
+
+method: "GET", 
+
+url: "getrecords_ajax.php",
+
+}).done(function( data ) 
+{ 
+
+var result= $.parseJSON(data); 
+
+var string='&lt;table width="100%"&gt;&lt;tr&gt; &lt;th&gt;S. No&lt;/th&gt;&lt;th&gt;Name&lt;/th&gt;&lt;tr&gt;';
+
+/* from result create a string of data and append to the div */
+
+$.each( result, function( key, value ) { 
+
+string += "&lt;tr&gt; &lt;td style='text-align:center;'&gt;"+value['emp_id'] + "&lt;/td&gt;&lt;td&gt;"+value['emp_name'] +"&lt;/td&gt; &lt;/tr&gt;"; 
+}); 
+
+string += '&lt;/table&gt;'; 
+
+$("#records").html(string); 
+}); 
+
+}); 
+}); 
+&lt;/script&gt; 
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+</div>
+</div>
+</div>
+<p>In the above code we have used $.ajax method of jQuery to send the GET request to 'getrecords_ajax.php' which will handle the actual database query to fetch the data from the database table. if fetching the data is sucess  .done() method will be executed.</p>
+<p>Now create a php file with name 'getrecords_ajax' and copy the code shown below into it.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>getrecords_ajax.php</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span> 
+
+$host         = "localhost";
+
+$username     = "root";
+
+$password     = "root123";
+
+$dbname       = "company";
+
+$result_array = array();
+/* Create connection */
+$conn = new mysqli($host, $username, $password, $dbname);
+
+/* Check connection  */
+if ($conn->connect_error) {
+die("Connection to database failed: " . $conn->connect_error);
+}
+/* SQL query to get results from database */
+
+$sql = "SELECT emp_id, emp_name  FROM employee ";
+
+$result = $conn->query($sql);
+/* If there are results from database push to result array */
+
+if ($result->num_rows > 0) 
+{
+while($row = $result->fetch_assoc()) {
+array_push($result_array, $row);
+}
+}
+/* send a JSON encded array to client */
+echo json_encode($result_array);
+
+$conn->close();
+<span class="clsdelimiter">?&gt;</span> 
+</pre>
+</div>
+</div>
+</div>
+<P>For the above code to work we need to create database with name 'company' and table with name 'employee', Copy the below SQL commands to create and insert the some sample data to 'employee' table.</P>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Sql script for employee table</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+--
+-- Table structure for table `employee`
+--
+
+CREATE TABLE `employee` (
+  `emp_id` int(10) NOT NULL,
+  `emp_name` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `employee`
+--
+
+INSERT INTO `employee` (`emp_id`, `emp_name`) VALUES
+(1, 'Vijay'),
+(2, 'Rohit Sharma'),
+(3, 'Suribabu'),
+(4, 'Prasad'),
+(5, 'Rajesh'),
+(6, 'Priyanka Sachan');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `employee`
+--
+ALTER TABLE `employee`
+  ADD PRIMARY KEY (`emp_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `employee`
+--
+ALTER TABLE `employee`
+  MODIFY `emp_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+COMMIT;
+</pre>
+</div>
+</div>
+</div>
+</blockquote>
+</p>
+
+<p id="DatabasecolumnsearchusingjqueryAJAX">
+<h2>Database column search using jquery AJAX(Auto Suggest in PHP)</h2>
+<blockquote>
+<p>Database column Search functionality can also be implemented using jquery AJAX, for this first we need to create a PHP file with name 'search' and copy the below code into it.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>search.php</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Live Search using AJAX&lt;/title&gt;
+&lt;!-- Including jQuery is required. --&gt;
+&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"&gt;&lt;/script&gt;
+&lt;!-- Including our scripting file. --&gt;
+&lt;script type="text/javascript" src="script.js"&gt;&lt;/script&gt;
+&lt;!-- Including CSS file. --&gt;
+&lt;link rel="stylesheet" type="text/css" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- Search box. --&gt;
+&lt;input type="text" id="search" placeholder="Search" /&gt;
+&lt;br&gt;
+&lt;!-- Suggestions will be displayed in below div. --&gt;
+&lt;div id="display"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+</div>
+</div>
+<p>Now Create a script file with name <strong>script.js</strong> and copy the code shown below into it ().</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>script.js</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+function fill(Value) 
+{
+//Assigning value to "search" div in "search.php" file.
+$('#search').val(Value);
+//Hiding "display" div in "search.php" file.
+$('#display').hide();
+}
+$(document).ready(function() 
+{
+//On pressing a key on "Search box" in "search.php" file. This function will be called.
+$("#search").keyup(function() 
+{
+//Assigning search box value to javascript variable named as "name".
+var name = $('#search').val();
+//Validating, if "name" is empty.
+if (name == "") 
+{
+//Assigning empty value to "display" div in "search.php" file.
+$("#display").html("");
+}
+//If name is not empty.
+else {
+//AJAX is called.
+$.ajax({
+//AJAX type is "Post".
+type: "POST",
+//Data will be sent to "ajax.php".
+url: "ajax.php",
+//Data, that will be sent to "ajax.php".
+data: {
+//Assigning value of "name" into "search" variable.
+search: name
+},
+//If result found, this funtion will be called.
+success: function(html) 
+{
+//Assigning result to "display" div in "search.php" file.
+$("#display").html(html).show();
+},
+error: function (request, status, error) 
+{
+alert(request.responseText);
+}
+});
+}
+});
+});
+</pre>
+</div>
+</div>
+</div>
+<p>Now create a file with name <strong>ajax.php</strong> and copy the below code into it.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>ajax.php</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+//Including Database configuration file.
+include "db.php";
+//Getting value of "search" variable from "script.js".
+if (isset($_POST['search'])) 
+{
+//Search box value assigning to $Name variable.
+$Name = $_POST['search'];
+//Search query.
+$Query = "SELECT emp_name FROM employee WHERE emp_name LIKE '%$Name%' LIMIT 5";
+//Query execution
+$ExecQuery = MySQLi_query($con, $Query);
+//Creating unordered list to display result.
+echo '&lt;ul style="list-style:none;">';
+//Fetching result from database.
+while ($Result = MySQLi_fetch_array($ExecQuery)) 
+{
+<span class="clsdelimiter">?&gt;</span>
+&lt;!-- Creating unordered list items.
+Calling javascript function named as "fill" found in "script.js" file.
+By passing fetched result as parameter. --&gt;
+&lt;li onclick='fill("&lt;?php echo $Result['emp_name']; ?&gt;")'&gt;
+&lt;a&gt;
+&lt;!-- Assigning searched result in "Search box" in "search.php" file. --&gt;
+<span class="clsdelimiter">&lt;?php</span> echo $Result['emp_name']; ?&gt;
+&lt;/li&gt;&lt;/a&gt;
+&lt;!-- Below php code is just for closing parenthesis. Don't be confused. --&gt;
+&lt;?php
+}}
+<span class="clsdelimiter">?&gt;</span>
+&lt;/ul&gt;
+</pre>
+</div>
+</div>
+</div>
+<p>Above code will exeute our search functionality in the database and display the returned results in unordered list item.</p>
+<p>Now create the file <strong>db.php</strong> to configure the database as shown below.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>db.php</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+//Database connection.
+$con = MySQLi_connect(
+"localhost", //Server host name.
+"root", //Database username.
+"root123", //Database password.
+"company" //Database name or anything you would like to call it.
+);
+//Check connection
+if (MySQLi_connect_errno()) {
+echo "Failed to connect to MySQL: " . MySQLi_connect_error();
+}
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+<p><b>Please Note:</b> The Datbase and table used are <strong>company</strong> and <strong>employee</strong>(which are used for above example).</P>
+</blockquote>
+</p>
+
+<p id="SaveDatainDatabaseusingjQueryAJAXwithbackendvalidation">
+<h2>Save Data in Database using jQuery AJAX with backend validation.</h2>
+<blockquote>
+<p>Below example will save the data to a database using jQuery, AJAX, to implement this, first we need to create a file with name <strong>ajaxpost.php</strong> and copy the below code into it.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>ajaxpost.php</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Space-O | Ajax submit form&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="container"&gt;
+&lt;!--Row with three equal columns--&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-md-2"&gt;&lt;!--Column left--&gt;&lt;/div&gt;
+&lt;div class="col-md-8"&gt;
+&lt;!--Column middle--&gt;
+&lt;h1&gt;jQuery post form data using .ajax() method&lt;/h1&gt;
+&lt;!-- our form --&gt;
+&lt;form id='userForm'&gt;
+&lt;div&gt;&lt;input type='text' name='first_name' placeholder='First Name' /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;input type='text' name='last_name' placeholder='Last Name' /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;input type='text' name='email' placeholder='Email' /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;input type='submit' value='Submit' /&gt;&lt;/div&gt;
+&lt;/form&gt;
+&lt;!-- where the response will be displayed --&gt;
+&lt;div id='response'&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-md-2"&gt;&lt;!--Column right--&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/style&gt;
+&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+$('#userForm').submit(function()
+{
+// show that something is loading
+$('#response').html("&lt;b&gt;Loading response...&lt;/b&gt;");
+// Call ajax for pass data to other place
+$.ajax({
+type: 'POST',
+url: 'saverecords_ajax.php',
+data: $(this).serialize() // getting filed value in serialize form
+})
+.done(function(data)
+{ 
+$('#response').html(data); 
+// if getting done then call.
+if(data==1)
+{
+// show the response
+$('#response').html("&lt;span style='color:green;font-weight:bold;'&gt;Data Saved successfully&lt;/span&gt;"); 
+}
+else if(data==2)
+{
+$('#response').html("&lt;span style='color:red;font-weight:bold;'&gt;Please enter all the fields&lt;/span&gt;"); 
+}
+else if(data==3)
+{
+$('#response').html("&lt;span style='color:brown;font-weight:bold;'&gt;Please enter valid Email&lt;/span&gt;"); 
+}
+})
+.fail(function() 
+{ 
+// if fail then getting message
+// just in case posting your form failed
+alert( "Posting failed." );
+});
+// to prevent refreshing the whole page page
+return false;
+});
+});
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+</div>
+</div>
+<p>The above code will take the user input data and send the AJAX request to the page <strong>saverecords_ajax.php</strong> which will do the validation and store the submitted data if it is valid, Now create the file <strong>saverecords_ajax.php</strong>  and copy the code shown below into it.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>saverecords_ajax.php</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+$host         = "localhost";
+$username     = "root";
+$password     = "root123";
+$dbname       = "company";
+$result = 0;
+/* Create connection */
+$conn = new mysqli($host, $username, $password, $dbname);
+/* Check connection */
+if ($conn->connect_error) {
+die("Connection to database failed: " . $conn->connect_error);
+}
+/* Get data from Client side using $_POST array */
+$fname  = $_POST['first_name'];
+$lname  = $_POST['last_name'];
+$email  = $_POST['email'];
+/* validate whether user has entered all values. */
+if(!$fname || !$lname || !$email)
+{
+$result = 2;
+}
+elseif (!strpos($email, "@") || !strpos($email, ".")) 
+{
+$result = 3;
+}
+else {
+//SQL query to get results from database
+$sql    = "insert into users (first_name, last_name, email) values (?, ?, ?)  ";
+$stmt   = $conn->prepare($sql);
+$stmt->bind_param('sss', $fname, $lname, $email);
+if($stmt->execute())
+{
+$result = 1;
+}
+}
+echo $result;
+$conn->close();
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+<p><b>Please Note:</b> The above code will work only if we have the table with name <strong>users</strong> exist in the <strong>company</strong> database. Below is the sql script to create users table</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>users table sql script</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `first_name` varchar(200) NOT NULL,
+  `last_name` varchar(200) NOT NULL,
+  `email` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+COMMIT;
+
+</pre>
+</div>
+</div>
+</div>
+</blockquote>
+</p>
+
+<p id="filehandlinginphp">
+<h2>File Handling in PHP(file system)</h2>
+<blockquote>
+<p>The file system functions allow you to access and manipulate the file. The file system provides a concept to start a specific data using different types of file format. That means file gives us a linear type database concept. There is no any type of relations will be found with value because it doesn’t support RDBMS concept. The DOS, Windows, OS/2, Macintosh, and UNIX-based operating systems all have file systems in which files are placed somewhere in a hierarchical (tree) structure. A file is placed in a directory (folder in Windows) or sub-directory at the desired place in the tree structure.</p>
+<p>The example below will illustrate how to create and delete files like text, document, pdf and how to create and delete a directory if exists and lists the contents in a directory. Create a PHP file with name, <strong>filehandling</strong> and copy the below code into it.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>filehandling.php</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;&lt;title&gt;File Handling Template&lt;/title&gt;   
+&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"&gt;&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!--Row with three equal columns--&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-md-6"&gt;
+&lt;form method="post" action="filehandling.php" style="padding:5%;"&gt; 
+&lt;div&gt;
+&lt;table style="text-align:left;" cellspacing="10" &gt;   
+&lt;tr&gt; 
+&lt;td  align="center"colspan="2"&gt;&lt;font color="#0000FF" size="5"&gt;Create File&lt;/font&gt;&lt;/td&gt;   
+&lt;/tr&gt; 
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Enter File Name&lt;/strong&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;input type="Text" placeholder="Enter File Name" name="fname" /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="Height:15px;"&gt;&lt;/td&gt;
+&lt;/tr&gt; 
+&lt;tr&gt; 
+&lt;td&gt;&lt;strong&gt;Select File Type to be created&lt;/strong&gt; &lt;/td&gt; 
+&lt;td&gt;
+&lt;select name="operation"&gt;
+&lt;option value="doc"&gt;Document&lt;/option&gt;
+&lt;option value="pdf"&gt;PDF&lt;/option&gt;
+&lt;option value="txt"&gt;TextFile&lt;/option&gt;
+&lt;select&gt;
+&lt;/td&gt;   
+&lt;/tr&gt; 
+&lt;tr&gt;
+&lt;td style="Height:15px;"&gt;&lt;/td&gt;
+&lt;/tr&gt; 
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;input type="submit" value="Create File" name="submit" /&gt;&lt;/td&gt; 
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div style="min-height:50px"&gt;&lt;/div&gt;
+&lt;div&gt;
+&lt;table style="text-align:left;" cellspacing="10" &gt;   
+&lt;tr&gt; 
+&lt;td  align="center"colspan="2"&gt;&lt;font color="#0000FF" size="5"&gt;Delete File&lt;/font&gt;&lt;/td&gt;   
+&lt;/tr&gt; 
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Enter File Name&lt;/strong&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;input type="Text" placeholder="Enter File Name" name="dfname" /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="Height:15px;"&gt;&lt;/td&gt;
+&lt;/tr&gt; 
+&lt;tr&gt; 
+&lt;td&gt;&lt;strong&gt;Select File Type to be deleted&lt;/strong&gt; &lt;/td&gt; 
+&lt;td&gt;
+&lt;select name="doperation"&gt;
+&lt;option value="doc"&gt;Document&lt;/option&gt;
+&lt;option value="pdf"&gt;PDF&lt;/option&gt;
+&lt;option value="txt"&gt;TextFile&lt;/option&gt;
+&lt;select&gt;
+&lt;/td&gt;   
+&lt;/tr&gt; 
+&lt;tr&gt;
+&lt;td style="Height:15px;"&gt;&lt;/td&gt;
+&lt;/tr&gt; 
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;input type="submit" value="Delete File" name="dsubmit" /&gt;&lt;/td&gt; 
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div style="min-height:50px"&gt;&lt;/div&gt;
+&lt;div&gt;
+&lt;table style="text-align:left;" cellspacing="10" &gt;   
+&lt;tr&gt; 
+&lt;td  align="center"colspan="2"&gt;&lt;font color="#0000FF" size="5"&gt;Create Directory&lt;/font&gt;&lt;/td&gt;   
+&lt;/tr&gt; 
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Enter Directory Name&lt;/strong&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;input type="Text" placeholder="Enter Directory Name" name="dname" /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="Height:15px;"&gt;&lt;/td&gt;
+&lt;/tr&gt; 
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;input type="submit" value="Create Directory" name="cdirectory" /&gt;&lt;/td&gt; 
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div style="min-height:50px"&gt;&lt;/div&gt;
+&lt;div&gt;
+&lt;table style="text-align:left;" cellspacing="10" &gt;   
+&lt;tr&gt; 
+&lt;td  align="center"colspan="2"&gt;&lt;font color="#0000FF" size="5"&gt;Remove Directory&lt;/font&gt;&lt;/td&gt;   
+&lt;/tr&gt; 
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Remove Directory Name&lt;/strong&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;input type="Text" placeholder="Remove Directory Name" name="rdname" /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="Height:15px;"&gt;&lt;/td&gt;
+&lt;/tr&gt; 
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;input type="submit" value="Remove Directory" name="rdirectory" /&gt;&lt;/td&gt; 
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div&gt;
+<span class="clsdelimiter">&lt;?php</span>
+error_reporting(1);
+if(!empty($_POST))
+{    
+
+if($_POST["submit"]!= null && $_POST["fname"]!= null)
+{
+//using switch
+switch ($_POST["operation"])
+{
+case "doc":
+{
+touch($_POST["fname"].".".$_POST["operation"]);
+echo "Document File Created with Name".$_POST["fname"].".".$_POST["operation"];	
+break;
+}
+case "pdf":
+{
+touch($_POST["fname"].".".$_POST["operation"]);
+echo "PDF File Created with Name".$_POST["fname"].".".$_POST["operation"];	
+break;
+}
+case "txt":
+{
+touch($_POST["fname"].".".$_POST["operation"]);
+echo "Text File  Created with Name".$_POST["fname"].".".$_POST["operation"];	
+break;
+}
+} 
+}
+else if($_POST["dsubmit"]!= null && $_POST["dfname"]!= null)
+{
+$file_pointer= $_POST["dfname"].".".$_POST["doperation"];
+echo $file_pointer;
+if (file_exists($file_pointer))  
+{ 
+unlink($file_pointer);
+echo "The file $file_pointer Deleted"; 
+} 
+else 
+{ 
+echo "&lt;br/&gt;";
+echo "The file $file_pointer does  not exists:Please enter exising file Name"; 
+} 
+}
+else if($_POST["dname"]!= null && $_POST["cdirectory"]!= null)
+{
+mkdir($_POST["dname"]);
+echo("Directory with Name ".$_POST["dname"]." is created");
+}
+else if($_POST["rdname"]!= null && $_POST["rdirectory"]!= null)
+{
+if (file_exists($_POST["rdname"]))  
+{ 
+rmdir($_POST["rdname"]);
+echo("Directory with Name ".$_POST["rdname"]." is Removed");
+}
+else
+echo "Please Enter a Valid Directory Name";
+}
+else
+{
+echo("Pleas enter the Requiered Fields");
+}
+
+}
+<span class="clsdelimiter">?&gt;</span>
+&lt;/div&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+&lt;div class="col-md-6"&gt;
+&lt;div&gt;
+&lt;table style="text-align:left;" cellspacing="10" &gt;   
+&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt; 
+&lt;td  align="center"colspan="2"&gt;&lt;font color="#0000FF" size="5"&gt;get files(contents) from directory&lt;/font&gt;&lt;/td&gt;   
+&lt;/tr&gt; 
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Files in Root Directory&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="Height:15px;"&gt;
+<span class="clsdelimiter">&lt;?php</span>
+$dir = new DirectoryIterator(dirname(__FILE__));
+foreach ($dir as $fileinfo) 
+{
+if (!$fileinfo-&gt;isDot()) 
+{   
+var_dump($fileinfo-&gt;getFilename());
+echo "&lt;br/&gt;";
+}
+}
+<span class="clsdelimiter">?&gt;</span>
+&lt;/td&gt;
+&lt;/tr&gt; 
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt; 
+</pre>
+</div>
+</div>
+</div>
+</blockquote>
+</p>
+
+<p id="DynamicSliderUsingPHPjqueryandBootstrap">
+<h2>Dynamic Slider Using PHP, jquery and Bootstrap</h2>
+<blockquote>
+<p>Dynamic Slider means this slider will read the images in the <strong>sliderimages</strong> folder(where our slider images will reside), To create the dynamic  slider first create a PHP file with name <strong>slider</strong> and copy the below code into it.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>slider.php</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;PHP Practice&lt;/title&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;meta name="description" content=""&gt;
+&lt;meta name="author" content=""&gt;
+&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function()
+{
+$("div div:first-child").addClass("item active");
+$('.carousel').carousel({
+interval: 500
+});
+});
+&lt;/script&gt;
+&lt;style&gt;
+.carousel-control
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body data-spy="scroll" data-target=".bs-docs-sidebar"&gt;
+&lt;div class="container"&gt;
+&lt;!-- Carousel --&gt;
+&lt;section id="carousel"&gt;
+&lt;div class="page-header"&gt;
+&lt;h1&gt;Dynamic carousel using PHP and bootstrap&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div class="bs-docs-example"&gt;
+&lt;div id="myCarousel" class="carousel slide"&gt;
+&lt;div class="carousel-inner"&gt;
+<span class="clsdelimiter">&lt;?php</span>
+$files = glob("sliderimages/*.*");
+for ($i=0; $i&lt;count($files); $i++)
+{
+<span class="clsdelimiter">?&gt;</span>
+&lt;div class="item"&gt;
+<span class="clsdelimiter">&lt;?php</span>
+$image = $files[$i];  
+$supported_file = array('gif', 'jpg', 'jpeg', 'png' );
+
+$ext = strtolower(pathinfo($image, PATHINFO_EXTENSION));
+if (in_array($ext, $supported_file)) 
+{
+<span class="clsdelimiter">?&gt;</span>
+&lt;img src="&lt;?php echo $image ?&gt;" alt=""&gt;
+<span class="clsdelimiter">&lt;?php</span>
+} 
+else 
+{
+continue;
+}
+<span class="clsdelimiter">?&gt;</span> 
+&lt;/div&gt;
+<span class="clsdelimiter">&lt;?php</span> } <span class="clsdelimiter">?&gt;</span>
+&lt;/div&gt;
+&lt;a class="left carousel-control" href="#myCarousel" style="font-size:95px;padding-top: 20%;" data-slide="prev"&gt;&lt;span&gt;&lsaquo;&lt;span&gt;&lt;/a&gt;
+&lt;a class="right carousel-control" href="#myCarousel" style="font-size:95px;padding-top: 20%;" data-slide="next"&gt;&lt;span&gt;&rsaquo;&lt;span&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+</div>
+</div>
+<p><strong>Please Note:</strong> The Above code will work only if have a folder with name <strong>sliderimages</strong> exists.</p>
+</blockquote>
+</p>
+
+<p id="FileUploadonDragandDropusingjquery">
+<h2> File Upload on Drag and Drop using jquery</h2>
+<blockquote>
+<p>To create drag and drop functionality create a PHP file <strong>fileupload</strong> and copy the below code into it.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>fileupload.php</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;PHP practice&lt;/title&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;meta name="description" content=""&gt;
+&lt;meta name="author" content=""&gt;
+
+&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"&gt;
+&lt;link href="css/custom.css" rel="stylesheet"&gt;
+&lt;link href="css/jquery-ui.css" rel="stylesheet"&gt;
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+$(document).ready(function()
+{
+//Jquery Drag and Drop File upload
+$("#dropFiles").on('dragover dragenter', function(ev) 
+{
+// Entering drop area. Highlight area
+$("#dropFiles").addClass("highlightDropArea");
+$("#dropFiles").addClass('is-dragover');
+});
+
+$("#dropFiles").on('dragleave', function(ev) 
+{
+// Going out of drop area. Remove Highlight
+$("#dropFiles").removeClass("highlightDropArea");
+$("#dropFiles").removeClass('is-dragover');
+})
+$("#dropFiles").on('drop', function(ev)
+{
+// Dropping files
+ev.preventDefault();
+ev.stopPropagation();
+// Clear previous messages
+$("#messages").empty();
+if(ev.originalEvent.dataTransfer)
+{
+if(ev.originalEvent.dataTransfer.files.length) 
+{
+var droppedFiles = ev.originalEvent.dataTransfer.files;
+for(var i = 0; i &lt; droppedFiles.length; i++)
+{
+console.log(droppedFiles[i]);
+var fileExtension = droppedFiles[i].name.substring(droppedFiles[i].name.lastIndexOf('.') + 1); 
+if ($.inArray(fileExtension, ['gif','png','jpg','jpeg']) &gt; 0)
+{
+// alert("you uploaded image file")
+$("#slable").hide();
+//$(".uploadspan").append("&lt;br /&gt; "+ droppedFiles[i].name);
+
+var img = $('&lt;img id="dynamic" class="thumbimg"&gt;');    //Equivalent: $(document.createElement('img'))
+img.attr('src', droppedFiles[i]);
+img.appendTo('#dropFiles');
+var reader = new FileReader();
+reader.onload = function (e) 
+{
+img.attr('src', e.target.result);
+
+}
+reader.readAsDataURL(droppedFiles[i]);
+var file_data = droppedFiles[0];   
+var form_data = new FormData();                  
+form_data.append('file', file_data);
+// Upload droppedFiles[i] to server                       
+$.ajax({
+url: 'upload.php', // point to server-side PHP script 
+dataType: 'text',  // what to expect back from the PHP script, if anything
+cache: false,
+contentType: false,
+processData: false,
+data: form_data,                         
+type: 'post',
+success: function(php_script_response)
+{
+alert("File Uploaded successfully"); // display response from the PHP script, if any
+}
+});
+}
+else
+{
+alert("Please uploaded image file only")
+}
+}
+}
+}
+$("#dropFiles").removeClass("highlightDropArea");
+return false;
+});
+$("#dropFiles").on('dragover', function(ev) 
+{
+ev.preventDefault();
+});
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body data-spy="scroll" data-target=".bs-docs-sidebar"&gt;
+&lt;div class="container"&gt;
+&lt;div  id="#uploadiv" class="container"&gt;
+&lt;h4&gt;File Upload using Drag and Drop &lt;/h4&gt;
+&lt;div id="dropFiles" class="dropFiles"&gt;
+&lt;span id="slable" class="uploadspan"&gt;Drag and drop File Here.&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+</div>
+</div>
+<p>The Above code will display the drop area to the user and after dropping the file it will verify whether it is an image or not, then send AJAX POST request to <strong>upload.php</strong> which will upload the image to server folder.</p>
+<p>Now create a php file with name <strong>upload.php</strong> and copy the below code into it.</P>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>upload.php</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+$data = array();
+//check with your logic
+if (isset($_FILES)) 
+{
+$error = false;
+$files = array();
+$uploaddir = "uploads/";
+foreach ($_FILES as $file) 
+{
+if (move_uploaded_file($file['tmp_name'], $uploaddir . basename( $file['name']))) 
+{
+$files[] = $uploaddir . $file['name'];
+} 
+else 
+{
+$error = true;
+}
+}
+$data = ($error) ? array('error' => 'There was an error uploading your files') : array('files' => $files);
+} 
+else 
+{
+$data = array('success' => 'NO FILES ARE SENT','formData' => $_REQUEST);
+}
+echo json_encode($data);
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+</blockquote>
+</p>
+
+<p id="SessionUsingPHP">
+<h2>PHP Sessions</h2>
+<blockquote>
+<p>A <strong>PHP session</strong> stores data on the server rather than user's computer. In a session based environment, every user is identified through a unique number called session identifier or SID. This unique session ID is used to link each user with their own information on the server like emails, posts, etc.</p>
+<p><strong>Starting a PHP Session: </strong></p>
+<p>Before you can store any information in session variables, you must first start up the session. To begin a new session, simply call the PHP session_start() function. It will create a new session and generate a unique session ID for the user.</p>
+<p>The PHP code in the example below, simply starts a new session.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+// Starting session
+session_start();
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+<p><strong>Storing and Accessing Session Data :</strong></p>
+<p>You can store all your session data as key-value pairs in the $_SESSION[] superglobal array. The stored data can be accessed during lifetime of a session. Consider the following script, which creates a new session and registers two session variables.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+// Starting session
+session_start();
+ 
+// Storing session data
+$_SESSION["name"] = "Raju";
+$_SESSION["email"] = "Raju@gmail.com";
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+<p>To access the session data, we set in our previous example from any other page on the same web domain — simply recreate the session by calling session_start () and then pass the corresponding key in the $_SESSION associative array.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+// Starting session
+session_start();
+ 
+// Accessing session data
+echo 'Hi, ' . $_SESSION["name"] . ' ' . $_SESSION["email"];
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+<p><strong>Destroying a Session :</strong></p>
+<p>If you want to remove certain session data, simply unset the corresponding key of the $_SESSION associative array, as shown in the following example:</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+// Starting session
+session_start();
+
+// Removing session data
+if(isset($_SESSION["lastname"])){
+unset($_SESSION["lastname"]);
+}
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+<p>However, to destroy a session completely, simply call the session_destroy() function. This function does not need any argument and a single call destroys all the session data.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Example</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+// Starting session
+session_start();
+ 
+// Destroying session
+session_destroy();
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div> <br/>
+<p><strong>Automatic Logout after 15 minutes of inactivity of website using PHP session_destroy():</strong></p>
+<p>Below PHP code is used to destory the session after certain time of inactivity please include this code in the required pages  if we need to track the session create a PHP file with name <strong>session.php</strong> and copy the below code into it.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>session.php</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+session_start();
+$inactive = 1500; // Set timeout period in seconds
+
+if (isset($_SESSION['timeout'])) 
+{
+$session_life = time() - $_SESSION['timeout'];
+if ($session_life > $inactive) {
+session_destroy();
+header("Location: logout.php");
+}
+}
+$_SESSION['timeout'] = time();
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+<p><strong>Please Note :</strong> You should mention <strong>require_once "Session.php"</strong> on each page.</p>
+</blockquote>
+</p>
+
+<p id="CookieUsingPHP">
+<h2>PHP Cookies</h2>
+<blockquote>
+<p>A <strong>cookie </strong> is a small text file that lets you store a small amount of data (nearly 4KB) on the user's computer. They are typically used to keeping track of information such as username that the site can retrieve to personalize the page when user visit the website next time.</p>
+<p><strong>Setting a Cookie in PHP : </strong></p>
+<p>The setcookie() function is used to set a cookie in PHP. Make sure you call the setcookie() function before any output generated by your script otherwise cookie will not set.</p>
+<p>The basic syntax of this function can be given to :</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+setcookie(name, value, expire, path, domain, secure);
+</pre>
+</div>
+</div>
+</div>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><p>The parameters of the setcookie() function have the following meanings:</p></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th scope="col">S.No</th>
+      <th scope="col">Parameter</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>name</td>
+      <td>The name of the cookie.</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>value</td>
+      <td>The value of the cookie. Do not store sensitive information since this value is stored on the user's computer.</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>expires</td>
+      <td>The expiry date in UNIX timestamp format. After this time cookie will become inaccessible. The default value is 0.</td>
+     
+    </tr>
+	<tr>
+      <th scope="row">4</th>
+      <td>path</td>
+      <td>Specify the path on the server for which the cookie will be available. If set to /, the cookie will be available within the entire domain.</td>
+     
+    </tr>
+	<tr>
+      <th scope="row">5</th>
+      <td>domain</td>
+      <td>Specify the domain for which the cookie is available to e.g www.example.com.</td>
+     
+    </tr>
+	<tr>
+      <th scope="row">6</th>
+      <td>secure</td>
+      <td>This field, if present, indicates that the cookie should be sent only if a secure HTTPS connection exists.</td>
+     
+    </tr>
+  </tbody>
+</table>
+</pre>
+</div>
+</div>
+</div>
+<p>Here's an example that uses setcookie () function to create a cookie named username and assign the value value Raju to it. It also specifies that the cookie will expire after 30 days (30 days * 24 hours * 60 min * 60 Sec).</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+// Setting a cookie
+setcookie("username", "Raju", time()+30*24*60*60);
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+<p><strong>Accessing Cookies Values : </strong></p>
+<p>The PHP $_COOKIE superglobal variable is used to retrieve a cookie value. It typically an associative array that contains a list of all the cookie values sent by the browser in the current request, keyed by cookie name. The individual cookie value can be accessed using standard array notation, for example to display the username cookie set in the previous example, you could use the following code.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+// Accessing an individual cookie value
+echo $_COOKIE["username"];
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+<p>It's a good practice to check whether a cookie is set or not before accessing its value. To do this you can use the PHP <strong>isset()</strong> function, as show belwo:</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Using isset () to verify the existence of the cookie variable.</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+// Verifying whether a cookie is set or not
+if(isset($_COOKIE["username"])){
+echo "Hi " . $_COOKIE["username"];
+} else{
+echo "Welcome Guest!";
+}
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+<p>You can use the print_r() function like print_r($_COOKIE); to see the structure of this $_COOKIE associative array, like you with other arrays.</p>
+<p><strong>Removing Cookies :</strong></p>
+<p>You can delete a cookie by calling the same setcookie() function with the cookie name and any value (such as an empty string) however this time you need the set the expiration date in the past, as shown in the example below:</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Syntax</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+// Deleting a cookie
+setcookie("username", "", time()-3600);
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+</blockquote>
+</p>
+
+<p id="SessionCookieDifference">
+<h2>Difference Between Session and Cookie in PHP</h2>
+<blockquote>
+<p><strong>Cookies </strong>  are stored in the browser as a text file format. It is stored limit amount of data. It is only allowing 4kb [4096bytes]. It is not holding the multiple variable in cookies.</p>
+<p><strong>Session</strong> is stored in server side. It is stored unlimited amount of data. It is holding the multiple variable in sessions. We cannot access the cookie values in easily. So it is more secure.</p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Differences</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th scope="col">S.No</th>
+      <th scope="col">Cookies</th>
+      <th scope="col">Sessions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Cookies are stored in browser as text file format.</td>
+      <td>Sessions are stored in server side.</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>It is stored limit amount of data.</td>
+      <td>It is stored unlimited amount of data.</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>It is only allowing 4kb [4096bytes].</td>
+      <td>It is holding the multiple variable in sessions.</td>
+     
+    </tr>
+	<tr>
+      <th scope="row">4</th>
+      <td>It is not holding the multiple variable in cookies.</td>
+      <td>It is holding the multiple variable in sessions.</td>
+     
+    </tr>
+	<tr>
+      <th scope="row">5</th>
+      <td>We can access the cookie values in easily. So it is less secure.</td>
+      <td>We cannot access the session values in easily. So it is more secure.</td>
+     
+    </tr>
+	<tr>
+      <th scope="row">6</th>
+      <td>Setting the cookie time to expire the cookie.</td>
+      <td>Using session_destory (), we we will destroy the sessions.</td>
+     
+    </tr>
+	<tr>
+      <th scope="row">7</th>
+      <td>The setcookie() function must appear BEFORE the <html> tag.</td>
+      <td>The session_start() function must be the very first thing in your document. Before any HTML tags.</td>
+     
+    </tr>
+  </tbody>
+</table>
+</pre>
+</div>
+</div>
+</div>
+</blockquote>
+</p>
+
+<!---->
+<p id="SessionCookieDifference">
+<h2>XML Reading in PHP</h2>
+<p>To read and update, create and manipulate an XML document, you will need an XML parser. In PHP there are two major types of XML parsers: Tree-Based Parsers, Event-Based Parsers.</p>
+<p><strong>SimpleXML</strong> is a tree-based parser, SimpleXML provides an easy way of getting an element's name, attributes and text content if you know the XML document's structure or layout. SimpleXML turns an XML document into a data structure you can iterate through like a collection of arrays and objects. Compared to DOM or the Expat parser, SimpleXML takes a few lines of code to read text data from an element.</p>
+<blockquote>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Reading XML File using SimpleXML parser</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+$myXMLData =
+"&lt;?xml version='1.0' encoding='UTF-8'?&gt;
+&lt;coachingcenter&gt;
+  &lt;class category='Designing'&gt;
+    &lt;title lang='en'&gt;HTML&lt;/title&gt;
+    &lt;lecture&gt;Vijay&lt;/lecture&gt;
+    &lt;time&gt;09:05&lt;/time&gt;
+    &lt;price&gt;3000&lt;/price&gt;
+  &lt;/class&gt;
+  &lt;class category='Database'&gt;
+    &lt;title lang='en'&gt;MySQl&lt;/title&gt;
+    &lt;lecture&gt;Suribabu&lt;/lecture&gt;
+    &lt;time&gt;11:35&lt;/time&gt;
+    &lt;price&gt;2000&lt;/price&gt;
+  &lt;/class&gt;
+  &lt;class category='Development'&gt;
+    &lt;title lang='en'&gt;PHP&lt;/title&gt;
+    &lt;lecture&gt;Guptha&lt;/lecture&gt;
+    &lt;time&gt;16:00&lt;/time&gt;
+    &lt;price&gt;4500&lt;/price&gt;
+  &lt;/class&gt;
+&lt;/coachingcenter&gt;";
+$xml=simplexml_load_string($myXMLData) or die("Error: Cannot create object");
+print_r($xml);
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+<br>
+<p><strong>Error Handling with XML File using SimpleXML parser</strong> </p>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>Error Handling</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+libxml_use_internal_errors(true);
+$myXMLData =
+"&lt;CD
+&lt;TITLE&gt;Employee Details&lt;/TITLE&gt;
+&lt;ARTIST&gt;Akhil Varma&lt;/ARTIST&gt;
+&lt;COUNTRY&gt;USA&lt;/COUNTRY&gt;
+&lt;COMPANY&gt;Texas&lt;/COMPANY&gt;
+&lt;PRICE&gt;10.90&lt;/PRICE&gt;
+&lt;YEAR&gt;1997&lt;/YEAR&gt;
+&lt;/CD&gt;";
+$xml = simplexml_load_string($myXMLData);
+if ($xml === false) {
+echo "Failed loading XML: ";
+foreach(libxml_get_errors() as $error) {
+echo "&lt;br&gt;", $error->message;
+}
+}else {
+print_r($xml);
+}
+<span class="clsdelimiter">?&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+</blockquote>
+<p><strong>XML DOM:</strong> The DOM parser is a tree-based parser, The DOM parser functions are part of the PHP core. There is no installation needed to use these functions.</p>
+<blockquote>
+
+<div class="example">
+
+<div class="codebox">
+
+<div class="codebox-title"><h4>Syntax to load XML file and save</h4></div>				
+
+<div class="jscodeclass">
+
+<pre class="custpre">
+
+<span class="clsdelimiter">&lt;?php</span>
+
+$xmlDoc = new DOMDocument();
+
+$xmlDoc->load("--Enter here xml file path--");
+
+print $xmlDoc->saveXML();
+
+<span class="clsdelimiter">?&gt;</span>
+
+</pre>
+
+</div>
+
+</div>
+
+</div>
+<p><strong>Please Note:</strong> The the saveXML() function in above code puts the internal XML document into a string, so we can output it.</p>
+</blockquote>
+</p>
+<p id="FormValidationsUsingPHP">
+<h2>PHP Form Validations</h2>
+<p>The below example describes how to performs PHP validations, create a file with name <strong>phpformvaldation.php</strong> and copy the code below.</p>
+<blockquote>
+<div class="example">
+<div class="codebox">
+<div class="codebox-title"><h4>phpformvaldation.php</h4></div>				
+<div class="jscodeclass">
+<pre class="custpre">
+<span class="clsdelimiter">&lt;?php</span>
+// define variables and set to empty values
+$nameErr = $emailErr = $genderErr = $websiteErr = "";
+$name = $email = $gender = $comment = $website = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (empty($_POST["name"])) {
+$nameErr = "Name is required";
+}else {
+$name = test_input($_POST["name"]);
+}
+
+if (empty($_POST["email"])) {
+$emailErr = "Email is required";
+}else {
+$email = test_input($_POST["email"]);
+
+// check if e-mail address is well-formed
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+$emailErr = "Invalid email format"; 
+}
+}
+
+if (empty($_POST["website"])) {
+$website = "";
+}else {
+$website = test_input($_POST["website"]);
+}
+
+if (empty($_POST["comment"])) {
+$comment = "";
+}else {
+$comment = test_input($_POST["comment"]);
+}
+
+if (empty($_POST["gender"])) {
+$genderErr = "Gender is required";
+}else {
+$gender = test_input($_POST["gender"]);
+}
+}
+
+function test_input($data) {
+$data = trim($data);
+$data = stripslashes($data);
+$data = htmlspecialchars($data);
+return $data;
+}
+<span class="clsdelimiter">?&gt;</span>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.error {color: #FF0000;}
+&lt;/style&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+&lt;title&gt;PHP Form Validations&lt;/title&gt;
+&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class="container"&gt;
+&lt;!--Row with three equal columns--&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-md-2"&gt;&lt;!--Column left--&gt;&lt;/div&gt;
+&lt;div class="col-md-8"&gt;
+&lt;h2&gt;Form validations&lt;/h2&gt;
+
+&lt;p&gt;&lt;span class = "error"&gt;* Indicates Required Field.&lt;/span&gt;&lt;/p&gt;
+&lt;form method = "post" action = "<span class="clsdelimiter">&lt;?php</span> echo htmlspecialchars($_SERVER["PHP_SELF"]);<span class="clsdelimiter">?&gt;</span>"&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;Name:&lt;/td&gt;
+&lt;td&gt;&lt;input type = "text" name = "name"&gt;
+&lt;span class = "error"&gt;* <span class="clsdelimiter">&lt;?php</span> echo $nameErr;<span class="clsdelimiter">?&gt;</span>&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;E-mail: &lt;/td&gt;
+&lt;td&gt;&lt;input type = "text" name = "email"&gt;
+&lt;span class = "error"&gt;* <span class="clsdelimiter">&lt;?php</span> echo $emailErr;<span class="clsdelimiter">?&gt;</span>&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;URL:&lt;/td&gt;
+&lt;td&gt; &lt;input type = "text" name = "website"&gt;
+&lt;span class = "error"&gt;<span class="clsdelimiter">&lt;?php</span> echo $websiteErr;<span class="clsdelimiter">?&gt;</span>&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Comments:&lt;/td&gt;
+&lt;td&gt; &lt;textarea name = "comment" rows = "5" cols = "40"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Gender:&lt;/td&gt;
+&lt;td&gt;
+&lt;input type = "radio" name = "gender" value = "female"&gt;Female
+&lt;input type = "radio" name = "gender" value = "male"&gt;Male
+&lt;span class = "error"&gt;* <span class="clsdelimiter">&lt;?php</span> echo $genderErr;<span class="clsdelimiter">?&gt;</span>&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;td&gt;
+&lt;input type = "submit" name = "submit" value = "Submit"&gt; 
+&lt;/td&gt;
+&lt;/table&gt;
+&lt;/form&gt;
+<span class="clsdelimiter">&lt;?php</span>
+echo "&lt;h2&gt;Your given values are as:&lt;/h2&gt;";
+echo $name;
+echo "&lt;br&gt;";
+
+echo $email;
+echo "&lt;br&gt;";
+
+echo $website;
+echo "&lt;br&gt;";
+
+echo $comment;
+echo "&lt;br&gt;";
+
+echo $gender;
+<span class="clsdelimiter">?&gt;</span>
+&lt;/div&gt;
+&lt;div class="col-md-2"&gt;&lt;!--Column right--&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+</div>
+</div>
+</div>
+</blockquote>
+</p>
+</div>	 
+</div>
+
+<!-- Footer Part -->
+<iframe src="Footer.html" style="border: none;" scrolling="no" width="99.7%" height="50"></iframe>
+
+</body>
+</html>

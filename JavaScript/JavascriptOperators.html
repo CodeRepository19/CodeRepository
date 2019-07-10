@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />	
+
+			<!-- Bootstrap library, font-awesome library, custom css references -->			
+			<link rel="stylesheet" href="assets/css/Header.css">
+			<link rel="stylesheet" href="assets/css/bootstrap.3.3.7.min.css">
+			<link rel="stylesheet" href="assets/css/Scrooltop.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+			<!-- Js files -->
+			<script src="assets/js/jquery-3.1.1.min.js"></script>
+			
+			<!-- Favicon icon -->
+			<link rel="shortcut icon" href="assets/icon/favicon.ico">
+
+			<title>JavaScript Operators</title>
+			
+			<!-- FONT FAMILY -->
+			<style>
+				body,xmp {
+				font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+				}	
+			</style>
+			
+			<!--Script for Copy Code -->
+			<script>
+			function divcopy() {
+			var copyobject=$("#srcdiv").clone();
+			var $temp = $("<input>");
+			$("body").append($temp);
+			var myJSON = copyobject.html();;
+			$temp.val(myJSON).select();
+			document.execCommand("copy");
+			$temp.remove();
+			var tooltip = document.getElementById("myTooltip");
+			tooltip.title = "Copied";
+			}
+			function outFunc() {
+			var tooltip = document.getElementById("myTooltip");
+			tooltip.title = "Copy to Clipboard";
+			}
+			
+			<!-- Script for Scroll top event -->
+				$(document).ready(function() {
+				var btn = $('#button');
+				$(window).scroll(function() {
+				if ($(window).scrollTop() > 500 ) {
+				btn.addClass('show');
+				} else {
+				btn.removeClass('show');
+				}
+				});
+				btn.on('click', function(e) {
+				e.preventDefault();
+				$('html, body	').animate({scrollTop:0}, '500');
+				});
+				});
+			</script>
+
+			</head>
+<body>
+
+<!-- Scroll top anchor tag -->
+		<a id="button"></a>
+
+
+<!-- Page Header -->
+<div class="page-title container-fluid">
+				<div class="container">
+					<div class="row">
+						<div class="span12" style="margin-top:7px;">                        						
+							<h2>JavaScript</h2>
+							<p>Source code & Example</p>
+							<a href = "index.html"><i class="fa fa-home fa-3x pull-right" style = "color: white;" aria-hidden="true"></i></a>						
+							</div>					
+					</div>
+				</div>
+			</div>
+
+<div class = "container" style="padding-bottom:5%;">
+<div class = "row">
+<h3><strong><xmp>JavaScript Operators:</xmp></strong></h3>
+<div class = "col-md-7">
+<h3><b>Source Code:</b></h3>
+<div  style = "overflow:scroll;">
+<button type="button" onmouseout="outFunc()" class="pull-right btn btn-dark" id = "divtarget" onClick="divcopy()">
+<span id="myTooltip" title="Copy to Clipboard"  class="fa fa-copy" style="font-size:25px;"></span>
+</button>
+<xmp id = "srcdiv">
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Operators</title>
+</head>
+<body>
+<h4>Arithmetic Operators:</h4>
+<p><b>Let  x=17  y=4</b></p>
+<script>
+var x = 17;
+var y = 4;
+document.write("Addition (+) : ");
+document.write(x + y); 
+document.write("<br>");    
+document.write("Subtraction (-) : ");
+document.write(x - y); 
+document.write("<br>");    
+document.write("Multiplication (*) : ");
+document.write(x * y); 
+document.write("<br>");
+document.write("Division (/) : ");
+document.write(x / y); 
+document.write("<br>");   
+document.write("Modulus (%) : ");
+document.write(x % y); 
+</script>
+<h4>Assignment Operators:</h4>
+<p><b>Let  x=50  y=20</b></p>
+<script>
+var x; 
+var y;
+x = 50; y=20;
+document.write("Assign(=): x = ");
+document.write(x + "<br>");    
+x += y;
+document.write("Add and assign operartor (x=x+y) : ");
+document.write(x + "<br>");     
+x = 50;
+x -= y;
+document.write("Sub and assign operartor (x=x-y) : ");
+document.write(x + "<br>");     
+x = 50;
+x *= y;
+document.write("Multiply and assign operartor (x=x*y) : ");
+document.write(x + "<br>");      
+x = 50;
+x /= y;
+document.write("Divide and assign quotient operartor  (x=x/y) : ");
+document.write(x + "<br>");     
+x = 50; y=20;
+x %= y;
+document.write("Divide and assign modulus operartor (x=x%y) : ");
+document.write(x); 
+</script>
+<h4>String Operators:</h4>
+<p><b>Let  str1=Good  str2=Vibes</b></p>
+<script>
+var str1 = "Good";
+var str2 = " Vibes!";  
+document.write("Concatenation (str1+str2) : ");
+document.write(str1 + str2 + "<br>"); !   
+document.write("Concatenation assignment (str1+=str2) : ");
+str1 += str2;
+document.write(str1); 
+</script>
+<h4>Incrementing and Decrementing Operators:</h4>
+<p><b>Let x=10</b></p>
+<script>
+var x; 
+x = 10;
+document.write("Pre-increment (++x) : ");
+document.write(++x + "<br>"); 
+x = 10;
+document.write("Post-increment (x++) : ");
+document.write(x++ + "<br>");      
+x = 10;
+document.write("Pre-decrement (--x) : ");
+document.write(--x + "<br>");     
+x = 10;
+document.write("Post-decrement (x--) : ");
+document.write(x-- + "<br>"); 
+</script>
+<h4>Comparison Operators:</h4>
+<p><b>Let  x=17  y=4</b></p>
+<script>
+var x = 17;
+var y = 4;    
+document.write("Equal (==) : ");
+document.write(x == y);  
+document.write("<br>");    
+document.write("Identical (===) : ");
+document.write(x === y); 
+document.write("<br>");  
+document.write("Not equal (!=) : ");
+document.write(x != y);  
+document.write("<br>");   
+document.write("Not identical (!==) : ");
+document.write(x !== y); 
+document.write("<br>");   
+document.write("Less than (<) : ");
+document.write(x < y);   
+document.write("<br>");   
+document.write("Greater than (>) : ");
+document.write(x > y);   
+document.write("<br>");    
+document.write("Greater than or equal to (>=) : ");
+document.write(x <= y);  
+document.write("<br>");	
+document.write("Less than or equal to (<=) : ");
+document.write(x >= y);  
+</script>
+</body>
+</html>
+</xmp>
+</div>
+</div>
+<div class = "col-md-5">
+<h3><b>Output:</b></h3>
+<h4>Arithmetic Operators:</h4>
+<p><b>Let &nbsp; x=17 &nbsp; y=4</b></p>
+<script>
+    var x = 17;
+    var y = 4;
+	document.write("Addition &nbsp;(+) : ");
+    document.write(x + y); 
+    document.write("<br>");
+    
+	document.write("Subtraction &nbsp;(-) : ");
+    document.write(x - y); 
+    document.write("<br>");
+    
+	document.write("Multiplication &nbsp;(*) : ");
+    document.write(x * y); 
+    document.write("<br>");
+    
+	document.write("Division &nbsp;(/) : ");
+    document.write(x / y); 
+    document.write("<br>");
+    
+	document.write("Modulus &nbsp;(%) : ");
+    document.write(x % y); 
+</script>
+<h4>Assignment Operators:</h4>
+<p><b>Let &nbsp; x=50 &nbsp; y=20</b></p>
+<script>
+    var x; 
+    var y;
+	
+    x = 50; y=20;
+	document.write("Assign(=): x = ");
+    document.write(x + "<br>"); 
+    
+    x += y;
+	document.write("Add and assign operartor &nbsp;(x=x+y) : ");
+    document.write(x + "<br>"); 
+     
+    x = 50;
+    x -= y;
+	document.write("Sub and assign operartor &nbsp;(x=x-y) : ");
+    document.write(x + "<br>"); 
+     
+	x = 50;
+    x *= y;
+	document.write("Multiply and assign operartor &nbsp;(x=x*y) : ");
+    document.write(x + "<br>"); 
+     
+    x = 50;
+    x /= y;
+	document.write("Divide and assign quotient operartor  &nbsp;&nbsp;(x=x/y) : ");
+    document.write(x + "<br>"); 
+     
+    x = 50; y=20;
+    x %= y;
+	document.write("Divide and assign modulus operartor &nbsp;(x=x%y) : ");
+    document.write(x); 
+    </script>
+	<h4>String Operators:</h4>
+<p><b>Let &nbsp; str1=Good &nbsp; str2=Vibes</b></p>
+<script>
+    var str1 = "Good";
+    var str2 = " Vibes!";
+    
+	document.write("Concatenation &nbsp;(str1+str2) : ");
+    document.write(str1 + str2 + "<br>"); !
+     
+	 document.write("Concatenation assignment &nbsp;(str1+=str2) : ");
+    str1 += str2;
+    document.write(str1); 
+    </script>
+	<h4>Incrementing and Decrementing Operators:</h4>
+<p><b>Let x=10</b></p>
+<script>
+
+    var x; 
+ 
+    x = 10;
+	document.write("Pre-increment &nbsp;&nbsp;&nbsp;(++x) : ");
+    document.write(++x + "<br>"); 
+     
+    x = 10;
+	document.write("Post-increment &nbsp;&nbsp;(x++) : ");
+    document.write(x++ + "<br>"); 
+     
+    x = 10;
+	document.write("Pre-decrement &nbsp;&nbsp;(--x) : ");
+    document.write(--x + "<br>"); 
+     
+    x = 10;
+	document.write("Post-decrement &nbsp;(x--) : ");
+    document.write(x-- + "<br>"); 
+    </script>
+	<h4>Comparison Operators:</h4>
+<p><b>Let &nbsp; x=17 &nbsp; y=4</b></p>
+<script>
+    var x = 17;
+    var y = 4;
+     
+	document.write("Equal &nbsp;(==) : ");
+    document.write(x == y);  
+    document.write("<br>");
+    
+	document.write("Identical &nbsp;(===) : ");
+    document.write(x === y); 
+    document.write("<br>");
+    
+	document.write("Not equal &nbsp;(!=) : ");
+    document.write(x != y);  
+    document.write("<br>");
+    
+	document.write("Not identical &nbsp;(!==) : ");
+    document.write(x !== y); 
+    document.write("<br>");
+    
+	document.write("Less than &nbsp;(<) : ");
+    document.write(x < y);   
+    document.write("<br>");
+    
+	document.write("Greater than &nbsp;(>) : ");
+    document.write(x > y);   
+    document.write("<br>");
+    
+	document.write("Greater than or equal to &nbsp;(>=) : ");
+    document.write(x <= y);  
+    document.write("<br>");
+	
+    document.write("Less than or equal to &nbsp;(<=) : ");
+    document.write(x >= y);  
+    </script>
+</div>
+</div>
+</div>
+
+<!-- Footer -->
+        <footer>
+            <div class="container-fluid">                               
+                <div class="row">
+                    <div class="copyright text-center">
+                        <p>Copyright 2019 - All rights reserved.</p>
+                    </div>                    
+                </div>
+            </div>
+        </footer>
+
+</body>
+</html>
